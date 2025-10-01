@@ -1,33 +1,92 @@
 //Maya ASCII 2026 scene
 //Name: NewRoomScene.ma
-//Last modified: Wed, Oct 01, 2025 03:34:18 PM
+//Last modified: Wed, Oct 01, 2025 04:12:25 PM
 //Codeset: 1252
 file -rdi 1 -ns "WallShape" -rfn "WallShapeRN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/WallShape.ma";
 file -rdi 1 -ns "WindowWall" -rfn "WindowWallRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/WindowWall.ma";
+file -rdi 1 -ns "pPlaneShape1" -rfn "pPlaneShape1RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/pPlaneShape1.ma";
+file -rdi 1 -ns "tableShape" -rfn "tableShapeRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/tableShape.ma";
+file -rdi 1 -ns "Rounded_SeatShape" -rfn "Rounded_SeatShapeRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/Rounded_SeatShape.ma";
+file -rdi 1 -ns "Beanbag_Chair" -rfn "Beanbag_ChairRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/Beanbag_Chair.ma";
+file -rdi 1 -ns "BookshelfShape" -rfn "BookshelfShapeRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookshelfShape.ma";
+file -rdi 1 -ns "BookShape1" -rfn "BookShape1RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape1.ma";
+file -rdi 1 -ns "BookShape2" -rfn "BookShape2RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape2.ma";
+file -rdi 1 -ns "BookShape3" -rfn "BookShape3RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape3.ma";
+file -rdi 1 -ns "BookShape4" -rfn "BookShape4RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape4.ma";
+file -rdi 1 -ns "BookShape5" -rfn "BookShape5RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape5.ma";
+file -rdi 1 -ns "BookShape6" -rfn "BookShape6RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape6.ma";
+file -rdi 1 -ns "CarpetShape" -rfn "CarpetShapeRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/CarpetShape.ma";
+file -rdi 1 -ns "HorizontalBookShape" -rfn "HorizontalBookShapeRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/HorizontalBookShape.ma";
+file -rdi 1 -ns "HorizontalLeanBookShape" -rfn "HorizontalLeanBookShapeRN" 
+		-op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/HorizontalLeanBookShape.ma";
+file -rdi 1 -ns "Pencil_holderShape" -rfn "Pencil_holderShapeRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/Pencil_holderShape.ma";
+file -rdi 1 -ns "PencilShape" -rfn "PencilShapeRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/PencilShape.ma";
 file -r -ns "WallShape" -dr 1 -rfn "WallShapeRN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/WallShape.ma";
 file -r -ns "WindowWall" -dr 1 -rfn "WindowWallRN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/WindowWall.ma";
+file -r -ns "pPlaneShape1" -dr 1 -rfn "pPlaneShape1RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/pPlaneShape1.ma";
+file -r -ns "tableShape" -dr 1 -rfn "tableShapeRN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/tableShape.ma";
+file -r -ns "Rounded_SeatShape" -dr 1 -rfn "Rounded_SeatShapeRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/Rounded_SeatShape.ma";
+file -r -ns "Beanbag_Chair" -dr 1 -rfn "Beanbag_ChairRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/Beanbag_Chair.ma";
+file -r -ns "BookshelfShape" -dr 1 -rfn "BookshelfShapeRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookshelfShape.ma";
+file -r -ns "BookShape1" -dr 1 -rfn "BookShape1RN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape1.ma";
+file -r -ns "BookShape2" -dr 1 -rfn "BookShape2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape2.ma";
+file -r -ns "BookShape3" -dr 1 -rfn "BookShape3RN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape3.ma";
+file -r -ns "BookShape4" -dr 1 -rfn "BookShape4RN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape4.ma";
+file -r -ns "BookShape5" -dr 1 -rfn "BookShape5RN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape5.ma";
+file -r -ns "BookShape6" -dr 1 -rfn "BookShape6RN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/BookShape6.ma";
+file -r -ns "CarpetShape" -dr 1 -rfn "CarpetShapeRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/CarpetShape.ma";
+file -r -ns "HorizontalBookShape" -dr 1 -rfn "HorizontalBookShapeRN" -op "v=0;" 
+		-typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/HorizontalBookShape.ma";
+file -r -ns "HorizontalLeanBookShape" -dr 1 -rfn "HorizontalLeanBookShapeRN" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/HorizontalLeanBookShape.ma";
+file -r -ns "Pencil_holderShape" -dr 1 -rfn "Pencil_holderShapeRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/Pencil_holderShape.ma";
+file -r -ns "PencilShape" -dr 1 -rfn "PencilShapeRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya/assets/PencilShape.ma";
 requires maya "2026";
+requires "mtoa" "5.5.3";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "9A7E8FB2-4C05-DD8B-BE86-10931BFADB16";
+fileInfo "UUID" "F5DC6F20-4120-C48B-536C-70AE61C0A760";
 createNode transform -s -n "persp";
 	rename -uid "F46347BF-438D-11A7-B818-A59377ACC307";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.245026132559955 7.8155052991347977 11.956061747163721 ;
-	setAttr ".r" -type "double3" -19.538352729605254 40.600000000000193 2.0944783839044272e-15 ;
+	setAttr ".t" -type "double3" -2.0544100062607091 3.9275743653911399 -2.7307549204170423 ;
+	setAttr ".r" -type "double3" -29.738352729410273 87.399999999978775 1.0517014462457171e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FF101A4E-4027-40D4-C8DA-3F906622720A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 19.030885762945282;
+	setAttr ".coi" 1.3816610044820998;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" -3.2528707960849879 3.2422152363446695 -2.7851767064303208 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "565707B9-4D27-857D-10B1-B9B3C43A11E6";
@@ -77,20 +136,20 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2DF637B3-4520-5E99-A036-5CACF04FE6FF";
-	setAttr -s 2 ".lnk";
-	setAttr -s 2 ".slnk";
+	rename -uid "040D0480-476C-4C26-E4EE-8ABBA79E5C0A";
+	setAttr -s 3 ".lnk";
+	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "71972C86-4C5D-10F6-4184-B1816D6811CE";
+	rename -uid "EB45EEE1-4AAC-375C-C0A2-9493F020CD81";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3AC6FC9A-487E-3429-7710-768E849F4929";
+	rename -uid "F497AD81-411C-5288-38D7-4DB5FEF4BFD2";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "8A56C3D8-4A35-8381-7AC5-ED8D8B7AF9CB";
+	rename -uid "BE673F74-40C3-5723-3D75-EAB9CE50102F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C531725E-454E-1886-8052-2DBA02DEC78B";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F589D0A0-44D3-FBB8-ED4B-C8BBD68A572E";
+	rename -uid "094DD903-4548-5BD4-60D1-909D0725F2C3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BA61D3A0-44E2-3C73-E7B8-33B838C7C7C8";
 	setAttr ".g" yes;
@@ -156,20 +215,236 @@ createNode reference -n "WallShapeRN";
 lockNode -l 1 ;
 createNode reference -n "WindowWallRN";
 	rename -uid "EB5F3415-4B6B-1BD3-8370-279F22AEA44C";
+	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"WindowWallRN"
 		"WindowWallRN" 0
-		"WindowWallRN" 3
+		"WindowWallRN" 6
 		2 "|WindowWall:group34|WindowWall:pasted__Wall1" "translate" " -type \"double3\" -4.71922605791248451 0 2.25167514250296374"
 		
 		2 "|WindowWall:group34|WindowWall:pasted__Wall1" "rotate" " -type \"double3\" 0 89.99999999999997158 0"
 		
-		2 "|WindowWall:group34|WindowWall:pasted__Wall1" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+		2 "|WindowWall:group34|WindowWall:pasted__Wall1" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		3 "WindowWall:pasted__groupId49.groupId" "|WindowWall:group34|WindowWall:pasted__Wall1|WindowWall:WindowWall.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		""
+		3 "|WindowWall:group34|WindowWall:pasted__Wall1|WindowWall:WindowWall.compInstObjGroups.compObjectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "WindowWallRN" "|WindowWall:group34|WindowWall:pasted__Wall1|WindowWall:WindowWall.instObjGroups" 
+		"WindowWallRN.placeHolderList[1]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode lambert -n "lambert2";
+	rename -uid "BC2173BF-4510-2388-0650-4383D460E082";
+createNode shadingEngine -n "lambert2SG";
+	rename -uid "10AF6209-4A5F-C91F-66FF-B6AAFD76DA98";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "C9886F15-454D-67D0-36BC-448222EBFD6E";
+createNode reference -n "pPlaneShape1RN";
+	rename -uid "C97C267A-4AD3-1B95-56A8-C4ADFE45AFCB";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"pPlaneShape1RN"
+		"pPlaneShape1RN" 0
+		"pPlaneShape1RN" 1
+		2 "|pPlaneShape1:pPlane1" "translate" " -type \"double3\" 0 0 -2.99797164543931238";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "tableShapeRN";
+	rename -uid "EB6E274C-4840-2501-3474-C9B25A5CFDA3";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"tableShapeRN"
+		"tableShapeRN" 0
+		"tableShapeRN" 1
+		2 "|tableShape:table" "translate" " -type \"double3\" -4.009765625 0 -6.59425319577955893";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Rounded_SeatShapeRN";
+	rename -uid "1298B8E4-4A82-482F-1EBB-8A89FD672A23";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Rounded_SeatShapeRN"
+		"Rounded_SeatShapeRN" 0
+		"Rounded_SeatShapeRN" 3
+		2 "|Rounded_SeatShape:Rounded_Seat" "translate" " -type \"double3\" -1.61084761399069021 0 -4.82088624342154493"
+		
+		2 "|Rounded_SeatShape:Rounded_Seat" "rotate" " -type \"double3\" 0 89.99999999999997158 0"
+		
+		2 "|Rounded_SeatShape:Rounded_Seat" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Beanbag_ChairRN";
+	rename -uid "C2317497-47D5-C674-98EE-7E9B633128A3";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Beanbag_ChairRN"
+		"Beanbag_ChairRN" 0
+		"Beanbag_ChairRN" 3
+		2 "|Beanbag_Chair:pSphere1" "translate" " -type \"double3\" -2.85520635502475884 0 3.8247441524051129"
+		
+		2 "|Beanbag_Chair:pSphere1" "rotate" " -type \"double3\" 0 90.1152927218316222 0"
+		
+		2 "|Beanbag_Chair:pSphere1" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BookshelfShapeRN";
+	rename -uid "E43BBCD6-421A-3A40-7615-1DBD1E923058";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookshelfShapeRN"
+		"BookshelfShapeRN" 0
+		"BookshelfShapeRN" 3
+		2 "|BookshelfShape:Bookshelf" "translate" " -type \"double3\" -8.68846409963658495 0 -1.0106051506378595"
+		
+		2 "|BookshelfShape:Bookshelf" "rotate" " -type \"double3\" 0 89.99999999999997158 0"
+		
+		2 "|BookshelfShape:Bookshelf" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BookShape1RN";
+	rename -uid "67EAE5C6-4943-D319-E85E-FC85ACA63085";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookShape1RN"
+		"BookShape1RN" 0
+		"BookShape1RN" 3
+		2 "|BookShape1:Book1" "translate" " -type \"double3\" -7.87594524803116869 -0.0009131702845501799 -1.46714650603026309"
+		
+		2 "|BookShape1:Book1" "rotate" " -type \"double3\" 0 89.99999999999997158 0"
+		
+		2 "|BookShape1:Book1" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BookShape2RN";
+	rename -uid "7AC6072C-4545-A984-EC71-F4BD9DE1318D";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookShape2RN"
+		"BookShape2RN" 0
+		"BookShape2RN" 3
+		2 "|BookShape2:group26|BookShape2:Book2" "translate" " -type \"double3\" -8.07102713224649548 -0.0009131702845501799 -1.27379729180402812"
+		
+		2 "|BookShape2:group26|BookShape2:Book2" "rotate" " -type \"double3\" 0 104.99999999999998579 0"
+		
+		2 "|BookShape2:group26|BookShape2:Book2" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BookShape3RN";
+	rename -uid "395B252B-49F8-431C-C833-5388C319D383";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookShape3RN"
+		"BookShape3RN" 0
+		"BookShape3RN" 5
+		2 "|BookShape3:group21|BookShape3:Book3" "translate" " -type \"double3\" -7.22469617418441423 -1.55022092082264029 -2.07491123936424593"
+		
+		2 "|BookShape3:group21|BookShape3:Book3" "rotate" " -type \"double3\" -2.54680323054258562 6.58280499196757685 33.6139111636579031"
+		
+		2 "|BookShape3:group21|BookShape3:Book3" "rotatePivot" " -type \"double3\" 4.35423313472064688 1.95044304368508614 -1.62875862941649396"
+		
+		2 "|BookShape3:group21|BookShape3:Book3" "rotatePivotTranslate" " -type \"double3\" 0.14768320503716037 0.034722358523252561 0.024963466492143538"
+		
+		2 "|BookShape3:group21|BookShape3:Book3" "scalePivot" " -type \"double3\" 4.35423313472064599 1.95044304368508259 -1.62875862941649752";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BookShape4RN";
+	rename -uid "8018A404-4C68-FBFC-7CEA-52932B944A74";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookShape4RN"
+		"BookShape4RN" 0
+		"BookShape4RN" 3
+		2 "|BookShape4:group20|BookShape4:Book4" "translate" " -type \"double3\" -7.7642425833347648 0.00052827437394542542 -0.58671381902781627"
+		
+		2 "|BookShape4:group20|BookShape4:Book4" "rotate" " -type \"double3\" 0 270.00000000000011369 0"
+		
+		2 "|BookShape4:group20|BookShape4:Book4" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BookShape5RN";
+	rename -uid "F4CEC592-408D-59EA-3D14-B1AFE0CDABBF";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookShape5RN"
+		"BookShape5RN" 0
+		"BookShape5RN" 3
+		2 "|BookShape5:Book5" "translate" " -type \"double3\" -7.92550247103572669 0.002096291858573629 -0.45773501008311035"
+		
+		2 "|BookShape5:Book5" "rotate" " -type \"double3\" 0 -89.99999999999997158 0"
+		
+		2 "|BookShape5:Book5" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BookShape6RN";
+	rename -uid "447741C8-4CBB-58E3-FDBA-249D5C815CE3";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookShape6RN"
+		"BookShape6RN" 0
+		"BookShape6RN" 3
+		2 "|BookShape6:Book6" "translate" " -type \"double3\" -8.04023568032935643 -0.64378861194506998 -0.99995696087792796"
+		
+		2 "|BookShape6:Book6" "rotate" " -type \"double3\" 0 -104.99999999999998579 0"
+		
+		2 "|BookShape6:Book6" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "CarpetShapeRN";
+	rename -uid "613F2946-415F-09D2-D948-BC82BE964F45";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"CarpetShapeRN"
+		"CarpetShapeRN" 0
+		"CarpetShapeRN" 3
+		2 "|CarpetShape:Carpet" "translate" " -type \"double3\" -2.72443680064683313 0 -5.50988292640139043"
+		
+		2 "|CarpetShape:Carpet" "rotate" " -type \"double3\" 0 89.99999999999997158 0"
+		
+		2 "|CarpetShape:Carpet" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "HorizontalBookShapeRN";
+	rename -uid "0BFD2E45-4F5F-1D83-6AD2-80AC7B823166";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"HorizontalBookShapeRN"
+		"HorizontalBookShapeRN" 0
+		"HorizontalBookShapeRN" 3
+		2 "|HorizontalBookShape:group22|HorizontalBookShape:Book9" "translate" " -type \"double3\" -0.011346852136111488 6.66335487242829316 -0.92979018328838736"
+		
+		2 "|HorizontalBookShape:group22|HorizontalBookShape:Book9" "rotate" " -type \"double3\" -90.00000000000002842 0 0"
+		
+		2 "|HorizontalBookShape:group22|HorizontalBookShape:Book9" "rotatePivotTranslate" 
+		" -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "HorizontalLeanBookShapeRN";
+	rename -uid "9A6FCA1E-4E24-B6B3-8FB6-A79977F259F3";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"HorizontalLeanBookShapeRN"
+		"HorizontalLeanBookShapeRN" 0
+		"HorizontalLeanBookShapeRN" 3
+		2 "|HorizontalLeanBookShape:group23|HorizontalLeanBookShape:pasted__group21|HorizontalLeanBookShape:Book8" 
+		"translate" " -type \"double3\" -4.11961815217566585 -6.39172908995716593 -1.16153517764202863"
+		
+		2 "|HorizontalLeanBookShape:group23|HorizontalLeanBookShape:pasted__group21|HorizontalLeanBookShape:Book8" 
+		"rotate" " -type \"double3\" -269.65229546604615507 -12.22043661415484372 -21.10627656816365771"
+		
+		2 "|HorizontalLeanBookShape:group23|HorizontalLeanBookShape:pasted__group21|HorizontalLeanBookShape:Book8" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Pencil_holderShapeRN";
+	rename -uid "0E92DBAC-4840-DC55-D436-228DFB316EAD";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Pencil_holderShapeRN"
+		"Pencil_holderShapeRN" 0
+		"Pencil_holderShapeRN" 1
+		2 "|Pencil_holderShape:Pencil_holder" "translate" " -type \"double3\" -8.00844326868456591 0.012323368924764821 -1.31506513770409983";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "PencilShapeRN";
+	rename -uid "39A0D8CF-41D3-3958-4F55-078A6BD20268";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PencilShapeRN"
+		"PencilShapeRN" 0
+		"PencilShapeRN" 1
+		2 "|PencilShape:Pencil1" "translate" " -type \"double3\" -8.02470905369316867 -0.031676849206894619 -1.32302349071464942";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 75;
+	setAttr ".unw" 75;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -178,10 +453,10 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 2 ".st";
+	setAttr -s 3 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 6 ".s";
+	setAttr -s 7 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -192,8 +467,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 4 ".dsm";
+	setAttr -s 22 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 5 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -213,11 +489,19 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+connectAttr "WindowWallRN.phl[1]" "lambert2SG.dsm" -na;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "lambert2.oc" "lambert2SG.ss";
+connectAttr "lambert2SG.msg" "materialInfo1.sg";
+connectAttr "lambert2.msg" "materialInfo1.m";
+connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of NewRoomScene.ma
