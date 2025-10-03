@@ -1,7 +1,11 @@
 //Maya ASCII 2026 scene
 //Name: Test_Scene_Cleaned.ma
-//Last modified: Wed, Oct 01, 2025 09:00:22 PM
+//Last modified: Fri, Oct 03, 2025 03:54:05 PM
 //Codeset: 1252
+file -rdi 1 -ns "Unit4_CurvesLab1" -rfn "Unit4_CurvesLabRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Unit4_CurvesLab.ma";
+file -r -ns "Unit4_CurvesLab1" -dr 1 -rfn "Unit4_CurvesLabRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Unit4_CurvesLab.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.3";
@@ -11,23 +15,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "904585E5-4CDE-21E4-EBCF-0EA5411F38FB";
+fileInfo "UUID" "CA4B4717-406F-570C-C18E-29A6BE54F0F3";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "E3966AD9-4062-017F-1FED-7F839BC7DA88";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -13.853801818343484 11.933960405575769 19.640947029775578 ;
-	setAttr ".r" -type "double3" -25.799999999998828 1039.599999999981 -2.0882433949726103e-15 ;
+	setAttr ".t" -type "double3" -4.6128578420409614 14.833020732755351 11.581557987259815 ;
+	setAttr ".r" -type "double3" -34.799999999996047 1046.3999999999896 0 ;
 	setAttr ".rpt" -type "double3" 1.6274873696827714e-16 -2.3510523053056138e-16 -4.1022956404332476e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8A35ECD4-4F5D-7B3A-9404-50AD140B47CA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 26.479808343751515;
+	setAttr ".coi" 18.556166141157718;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.45809838203487518 0.15989674163570278 0.89086448314834776 ;
+	setAttr ".tp" -type "double3" 3.8193801197271515 4.2427649517912274 -1.1099804265070805 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "7C4EF3E3-46E3-A41D-FCBC-6F884975D565";
@@ -32835,20 +32839,20 @@ createNode mesh -n "WallShape" -p "Wall2";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "BEB3ED6E-48EC-DE48-4380-97B869F43386";
+	rename -uid "31AFB433-431B-B12A-7BE7-7AB35854DE50";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "AD577BF1-47A8-C679-6859-FA825C73F6D2";
+	rename -uid "65570D3F-4A57-887A-9265-378DBD433710";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "1947DAF6-47B5-8B0C-C44A-B7AF5B8C1C83";
+	rename -uid "CCF182B4-4113-D60F-3C5D-878F7476C761";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D46E02F6-4C99-4BB1-9214-8782C0F53906";
+	rename -uid "277B5043-45F8-F0F2-28E4-6A9BB3FE7B16";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C5F3650C-4608-A791-43D6-A796AC86CC7A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1E303624-44E5-DC08-4E5F-4BA941AA51A9";
+	rename -uid "46103EDA-4D61-C980-20B6-FC9669AA0E5F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "54FE33CF-4F57-48F0-EBD4-E9BCAB99B87A";
 	setAttr ".g" yes;
@@ -32858,32 +32862,32 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 555\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
 		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
-		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 555\n            -sceneRenderFilter 0\n"
 		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n"
 		+ "            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n"
 		+ "            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n"
-		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n"
-		+ "            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
-		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
-		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1681\n            -height 1043\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
-		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
-		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
-		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
-		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
-		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n"
-		+ "                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n"
-		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n"
-		+ "                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n"
-		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n"
-		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n"
-		+ "                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 555\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
+		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1681\n            -height 1043\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n"
+		+ "            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n"
+		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
+		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n"
+		+ "            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n"
+		+ "                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
+		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n"
+		+ "                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n"
+		+ "                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
+		+ "                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n"
+		+ "                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n"
+		+ "                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
 		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
 		+ "                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n"
@@ -36128,6 +36132,1106 @@ createNode groupId -n "groupId105";
 createNode groupId -n "groupId106";
 	rename -uid "8404C1F9-4CE4-157B-E862-2497A8F59A75";
 	setAttr ".ihi" 0;
+createNode reference -n "Unit4_CurvesLabRN";
+	rename -uid "7905A45E-4A7F-7E61-B530-2EA462769C4B";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Unit4_CurvesLabRN"
+		"Unit4_CurvesLabRN" 0
+		"Unit4_CurvesLabRN" 497
+		2 "|Unit4_CurvesLab1:Vase" "translate" " -type \"double3\" 0 0 0"
+		2 "|Unit4_CurvesLab1:Vase" "rotate" " -type \"double3\" 0 0 0"
+		2 "|Unit4_CurvesLab1:Vase" "scale" " -type \"double3\" 1 1 1"
+		2 "|Unit4_CurvesLab1:Vase" "rotatePivot" " -type \"double3\" 4.32278173500406027 3.37115336383853226 -1.43433908767689822"
+		
+		2 "|Unit4_CurvesLab1:Vase" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Unit4_CurvesLab1:Vase" "scalePivot" " -type \"double3\" 4.32278173500405938 3.37115336383854114 -1.43433908767689977"
+		
+		2 "|Unit4_CurvesLab1:Vase" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts" " -s 337"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[0]" " -type \"float3\" 4.35618969999999983 -2.58997250000000001 -0.064274586999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[1]" " -type \"float3\" 4.29140139999999981 -2.58997250000000001 -2.84572339999999979"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[2]" " -type \"float3\" 4.45745710000000006 0.82386225000000002 2.2347608000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[3]" " -type \"float3\" 4.1901345000000001 0.82386225000000002 -5.14475869999999968"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[4]" " -type \"float3\" 0.63403606000000001 0.82386225000000002 -1.32133759999999989"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[5]" " -type \"float3\" 2.93307140000000022 -2.58997250000000001 -1.4226048"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[6]" " -type \"float3\" 4.3636374 -2.01696710000000001 0.25545189000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[7]" " -type \"float3\" 2.61334489999999997 -2.01696710000000001 -1.41515740000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[8]" " -type \"float3\" 3.14249659999999986 -2.01696710000000001 -0.21735536999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[9]" " -type \"float3\" 3.36331129999999989 -2.58997250000000001 -0.44870239000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[10]" " -type \"float3\" 3.92031740000000006 -2.01696710000000001 0.20606632999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[11]" " -type \"float3\" 3.99573780000000012 -2.58997250000000001 -0.10442844"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[12]" " -type \"float3\" 4.40349910000000033 -3.30566020000000016 1.96676920000000011"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[13]" " -type \"float3\" 3.5166347 -3.30566020000000016 1.8679732"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[14]" " -type \"float3\" 4.40363409999999966 -2.80636550000000007 1.97255910000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[15]" " -type \"float3\" 3.51526879999999986 -2.80636550000000007 1.87359579999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[16]" " -type \"float3\" 1.96059889999999992 -3.30566020000000016 1.02091540000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[17]" " -type \"float3\" 3.6568208000000002 -2.58997250000000001 -0.23565212999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[18]" " -type \"float3\" 2.68275640000000015 -3.30566020000000016 1.545108"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[19]" " -type \"float3\" 3.50348380000000015 -2.01696710000000001 0.044674709"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[20]" " -type \"float3\" 2.6799795999999998 -2.80636550000000007 1.55018450000000008"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[21]" " -type \"float3\" 1.95660030000000007 -2.80636550000000007 1.02510459999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[22]" " -type \"float3\" 2.86394290000000007 -2.01696710000000001 -0.56575083999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[23]" " -type \"float3\" 3.13682630000000007 -2.58997250000000001 -0.73197365000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[24]" " -type \"float3\" 1.4033506 -3.30566020000000016 0.32394793999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[25]" " -type \"float3\" 1.39840889999999995 -2.80636550000000007 0.32695812000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[26]" " -type \"float3\" 0.90202760999999998 -3.30566020000000016 -1.37529579999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[27]" " -type \"float3\" 2.989965 -2.58997250000000001 -1.06441279999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[28]" " -type \"float3\" 1.04200960000000009 -3.30566020000000016 -0.49399313"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[29]" " -type \"float3\" 2.68331810000000015 -2.01696710000000001 -0.97461748000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[30]" " -type \"float3\" 1.03645659999999995 -2.80636550000000007 -0.49236706000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[31]" " -type \"float3\" 0.89623772999999995 -2.80636550000000007 -1.37516079999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[32]" " -type \"float3\" 1.80925460000000005 0.82386225000000002 1.24856780000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[33]" " -type \"float3\" 4.43118239999999997 -0.87420600999999998 3.15525149999999988"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[34]" " -type \"float3\" 1.13978990000000002 -0.87420600999999998 1.8808745"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[35]" " -type \"float3\" 3.2362833000000002 -0.87420600999999998 3.02214070000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[36]" " -type \"float3\" 4.3905763999999996 -1.0372068000000001 1.4119858999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[37]" " -type \"float3\" 3.64750240000000003 -1.0372068000000001 1.329208"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[38]" " -type \"float3\" 2.11277410000000021 -0.87420600999999998 2.5871350999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[39]" " -type \"float3\" 2.94882389999999983 -1.0372068000000001 1.05869009999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[40]" " -type \"float3\" 2.34375240000000007 -1.0372068000000001 0.61948650999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[41]" " -type \"float3\" 3.499469 0.82386225000000002 2.14055509999999982"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[42]" " -type \"float3\" 4.45976309999999998 -0.14852383999999999 3.87012460000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[43]" " -type \"float3\" 3.0791647000000002 -0.14852383999999999 3.71945570000000014"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[44]" " -type \"float3\" 2.5955111999999998 0.82386225000000002 1.8039206000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[45]" " -type \"float3\" 1.7802496000000001 -0.14852383999999999 3.21987630000000014"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[46]" " -type \"float3\" 0.65450788000000004 -0.14852383999999999 2.4065751999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[47]" " -type \"float3\" -0.28645482999999999 -0.87420600999999998 -1.34761240000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[48]" " -type \"float3\" 0.38899231000000001 -0.87420600999999998 0.94182949999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[49]" " -type \"float3\" 1.87685279999999999 -1.0372068000000001 0.035521239000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[50]" " -type \"float3\" -0.097852870999999994 -0.87420600999999998 -0.160207"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[51]" " -type \"float3\" 1.574097 -1.0372068000000001 -0.64980417000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[52]" " -type \"float3\" 1.456811 -1.0372068000000001 -1.38821829999999991"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[53]" " -type \"float3\" 1.19846809999999993 0.82386225000000002 0.50455463"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[54]" " -type \"float3\" -0.21518323 -0.14852383999999999 1.32380579999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[55]" " -type \"float3\" 0.79730999000000002 0.82386225000000002 -0.37267666999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[56]" " -type \"float3\" -0.78039908000000002 -0.14852383999999999 0.052077971000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[57]" " -type \"float3\" -1.0013278000000001 -0.14852383999999999 -1.31903180000000009"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[58]" " -type \"float3\" 4.28395409999999988 -2.01696710000000001 -3.16544990000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[59]" " -type \"float3\" 3.31749889999999992 -2.58997250000000001 -2.41548350000000012"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[60]" " -type \"float3\" 3.08615210000000006 -2.01696710000000001 -2.63629820000000015"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[61]" " -type \"float3\" 2.97322540000000002 -2.58997250000000001 -1.78305709999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[62]" " -type \"float3\" 2.66273049999999989 -2.01696710000000001 -1.85847739999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[63]" " -type \"float3\" 1.00082359999999992 -3.30566020000000016 -2.26216010000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[64]" " -type \"float3\" 0.99520098999999995 -2.80636550000000007 -2.263526"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[65]" " -type \"float3\" 1.8478813999999999 -3.30566020000000016 -3.81819579999999981"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[66]" " -type \"float3\" 3.104449 -2.58997250000000001 -2.121974"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[67]" " -type \"float3\" 1.32368869999999994 -3.30566020000000016 -3.09603830000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[68]" " -type \"float3\" 2.82412220000000014 -2.01696710000000001 -2.275311"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[69]" " -type \"float3\" 1.31861230000000007 -2.80636550000000007 -3.09881520000000021"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[70]" " -type \"float3\" 1.8436922 -2.80636550000000007 -3.82219430000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[71]" " -type \"float3\" 3.60077049999999987 -2.58997250000000001 -2.64196849999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[72]" " -type \"float3\" 3.43454740000000003 -2.01696710000000001 -2.91485189999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[73]" " -type \"float3\" 2.54484889999999986 -3.30566020000000016 -4.37544440000000012"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[74]" " -type \"float3\" 2.54183860000000017 -2.80636550000000007 -4.38038590000000028"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[75]" " -type \"float3\" 4.24409249999999982 -3.30566020000000016 -4.87676719999999975"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[76]" " -type \"float3\" 3.93320990000000004 -2.58997250000000001 -2.7888297999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[77]" " -type \"float3\" 3.36278990000000011 -3.30566020000000016 -4.73678539999999959"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[78]" " -type \"float3\" 3.84341450000000018 -2.01696710000000001 -3.09547660000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[79]" " -type \"float3\" 3.3611639000000002 -2.80636550000000007 -4.74233819999999984"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[80]" " -type \"float3\" 4.24395749999999961 -2.80636550000000007 -4.88255689999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[81]" " -type \"float3\" 1.620229 0.82386225000000002 -3.96954010000000013"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[82]" " -type \"float3\" 0.98792230999999997 -0.87420600999999998 -4.63900470000000009"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[83]" " -type \"float3\" -0.15334391999999999 -0.87420600999999998 -2.54251149999999981"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[84]" " -type \"float3\" 1.53958879999999998 -1.0372068000000001 -2.13129230000000014"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[85]" " -type \"float3\" 0.28166163 -0.87420600999999998 -3.66602059999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[86]" " -type \"float3\" 1.81010680000000002 -1.0372068000000001 -2.8299707999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[87]" " -type \"float3\" 2.24931029999999987 -1.0372068000000001 -3.43504239999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[88]" " -type \"float3\" 0.72824162000000003 0.82386225000000002 -2.27932569999999979"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[89]" " -type \"float3\" -0.85065882999999998 -0.14852383999999999 -2.69963"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[90]" " -type \"float3\" 1.06487620000000005 0.82386225000000002 -3.18328360000000021"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[91]" " -type \"float3\" -0.35107939999999999 -0.14852383999999999 -3.99854520000000013"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[92]" " -type \"float3\" 0.46222155999999998 -0.14852383999999999 -5.12428710000000009"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[93]" " -type \"float3\" 4.21640920000000019 -0.87420600999999998 -6.0652493999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[94]" " -type \"float3\" 1.92696730000000005 -0.87420600999999998 -5.38980250000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[95]" " -type \"float3\" 2.83327580000000001 -1.0372068000000001 -3.901942"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[96]" " -type \"float3\" 3.02900390000000019 -0.87420600999999998 -5.8766474999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[97]" " -type \"float3\" 3.51860119999999998 -1.0372068000000001 -4.20469760000000026"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[98]" " -type \"float3\" 4.25701519999999967 -1.0372068000000001 -4.32198379999999993"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[99]" " -type \"float3\" 2.36424209999999979 0.82386225000000002 -4.58032660000000025"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[100]" " -type \"float3\" 1.544991 -0.14852383999999999 -5.993978"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[101]" " -type \"float3\" 3.24147339999999984 0.82386225000000002 -4.98148489999999988"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[102]" " -type \"float3\" 2.81671860000000018 -0.14852383999999999 -6.5591936000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[103]" " -type \"float3\" 4.18782850000000018 -0.14852383999999999 -6.78012230000000038"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[104]" " -type \"float3\" 4.46359589999999962 6.3679686000000002 4.5468105999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[105]" " -type \"float3\" -1.67801390000000006 6.3679686000000002 -1.31519879999999989"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[106]" " -type \"float3\" 0.17872919000000001 6.3679686000000002 2.88777490000000014"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[107]" " -type \"float3\" 2.90802840000000007 6.3679686000000002 4.37352179999999979"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[108]" " -type \"float3\" 4.44934180000000001 3.14200690000000016 3.42273279999999991"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[109]" " -type \"float3\" 3.1847 3.14200690000000016 3.2849813000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[110]" " -type \"float3\" 4.4349236000000003 4.92784639999999996 3.3158774000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[111]" " -type \"float3\" 3.19839330000000022 4.92784639999999996 3.178129"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[112]" " -type \"float3\" 0.96349275000000001 3.14200690000000016 2.08285259999999983"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[113]" " -type \"float3\" 1.9948132999999999 3.14200690000000016 2.82761620000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[114]" " -type \"float3\" 1.44539890000000004 6.3679686000000002 3.80721329999999991"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[115]" " -type \"float3\" 2.03573989999999982 4.92784639999999996 2.727967"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[116]" " -type \"float3\" 1.02885589999999993 4.92784639999999996 1.99709979999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[117]" " -type \"float3\" -0.79868919000000005 6.3679686000000002 1.66528870000000007"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[118]" " -type \"float3\" 0.16666146000000001 3.14200690000000016 1.09121080000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[119]" " -type \"float3\" 0.25189987000000003 4.92784639999999996 1.0253372999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[120]" " -type \"float3\" -0.55393612000000003 3.14200690000000016 -1.329453"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[121]" " -type \"float3\" -0.3513096 3.14200690000000016 -0.073572106999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[122]" " -type \"float3\" -1.4324844000000001 6.3679686000000002 0.23061324999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[123]" " -type \"float3\" -0.25190783 4.92784639999999996 -0.11509513"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[124]" " -type \"float3\" -0.4470807 4.92784639999999996 -1.34387089999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[125]" " -type \"float3\" 4.40439079999999983 7.36821370000000009 2.0050631000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[126]" " -type \"float3\" 1.934152 7.36821370000000009 1.04862370000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[127]" " -type \"float3\" 3.50760149999999982 7.36821370000000009 1.90516130000000006"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[128]" " -type \"float3\" 4.44746020000000009 7.34196139999999975 3.8540757000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[129]" " -type \"float3\" 3.0714378 7.34196139999999975 3.70078750000000012"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[130]" " -type \"float3\" 2.664391 7.36821370000000009 1.57868279999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[131]" " -type \"float3\" 1.77762639999999994 7.34196139999999975 3.1998435999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[132]" " -type \"float3\" 0.65715712000000004 7.34196139999999975 2.38652750000000013"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[133]" " -type \"float3\" 4.36503740000000029 7.38061050000000041 0.31556737000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[134]" " -type \"float3\" 3.90613680000000008 7.38061050000000041 0.26444607999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[135]" " -type \"float3\" 3.47465320000000011 7.38061050000000041 0.097382143000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[136]" " -type \"float3\" 3.10097859999999992 7.38061050000000041 -0.17385692999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[137]" " -type \"float3\" 0.86373376999999996 7.36821370000000009 -1.37440370000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[138]" " -type \"float3\" 1.37066719999999997 7.36821370000000009 0.34385653999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[139]" " -type \"float3\" -0.20744689999999999 7.34196139999999975 1.30514189999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[140]" " -type \"float3\" 1.00528240000000002 7.36821370000000009 -0.48323833999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[141]" " -type \"float3\" -0.7680884 7.34196139999999975 0.036058134999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[142]" " -type \"float3\" -0.98527878999999996 7.34196139999999975 -1.33133469999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[143]" " -type \"float3\" 2.81263489999999994 7.38061050000000041 -0.53449720000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[144]" " -type \"float3\" 2.6256621 7.38061050000000041 -0.95773410999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[145]" " -type \"float3\" 2.55322929999999992 7.38061050000000041 -1.41375720000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[146]" " -type \"float3\" 4.18399569999999965 6.3679686000000002 -7.45680859999999957"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[147]" " -type \"float3\" -0.018978150999999999 6.3679686000000002 -5.60006570000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[148]" " -type \"float3\" -1.50472490000000003 6.3679686000000002 -2.87076639999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[149]" " -type \"float3\" -0.41618433999999999 3.14200690000000016 -2.59409480000000014"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[150]" " -type \"float3\" -0.30933221999999999 4.92784639999999996 -2.58040139999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[151]" " -type \"float3\" 0.78594410000000003 3.14200690000000016 -4.81530189999999969"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[152]" " -type \"float3\" 0.041180494999999998 3.14200690000000016 -3.78398130000000021"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[153]" " -type \"float3\" -0.93841660000000005 6.3679686000000002 -4.333396"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[154]" " -type \"float3\" 0.14082966999999999 4.92784639999999996 -3.74305490000000018"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[155]" " -type \"float3\" 0.87169706999999996 4.92784639999999996 -4.749939"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[156]" " -type \"float3\" 1.20350810000000008 6.3679686000000002 -6.57748410000000039"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[157]" " -type \"float3\" 1.777586 3.14200690000000016 -5.61213349999999966"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[158]" " -type \"float3\" 1.84345939999999997 4.92784639999999996 -5.526895"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[159]" " -type \"float3\" 4.19824980000000014 3.14200690000000016 -6.33273080000000022"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[160]" " -type \"float3\" 2.942369 3.14200690000000016 -6.13010449999999985"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[161]" " -type \"float3\" 2.63818360000000007 6.3679686000000002 -7.21127889999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[162]" " -type \"float3\" 2.983892 4.92784639999999996 -6.03070259999999969"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[163]" " -type \"float3\" 4.21266750000000023 4.92784639999999996 -6.22587539999999962"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[164]" " -type \"float3\" 1.8201731000000001 7.36821370000000009 -3.8446425999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[165]" " -type \"float3\" 0.96363555999999995 7.36821370000000009 -2.27119330000000019"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[166]" " -type \"float3\" -0.83199078000000004 7.34196139999999975 -2.70735690000000018"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[167]" " -type \"float3\" 1.29011389999999992 7.36821370000000009 -3.1144037"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[168]" " -type \"float3\" -0.33104682000000002 7.34196139999999975 -4.00116829999999979"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[169]" " -type \"float3\" 0.48226934999999999 7.34196139999999975 -5.12163780000000024"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[170]" " -type \"float3\" 2.60435080000000019 7.38061050000000041 -1.872658"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[171]" " -type \"float3\" 2.77141480000000007 7.38061050000000041 -2.30414150000000006"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[172]" " -type \"float3\" 3.042654 7.38061050000000041 -2.67781620000000009"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[173]" " -type \"float3\" 4.24320029999999981 7.36821370000000009 -4.915061"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[174]" " -type \"float3\" 2.52494029999999992 7.36821370000000009 -4.4081273000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[175]" " -type \"float3\" 1.5636547999999999 7.34196139999999975 -5.98624180000000017"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[176]" " -type \"float3\" 3.352035 7.36821370000000009 -4.77351240000000043"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[177]" " -type \"float3\" 2.83273859999999988 7.34196139999999975 -6.54688309999999962"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[178]" " -type \"float3\" 4.20013140000000007 7.34196139999999975 -6.76407340000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[179]" " -type \"float3\" 3.4032941000000001 7.38061050000000041 -2.96615979999999979"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[180]" " -type \"float3\" 3.82653089999999985 7.38061050000000041 -3.15313270000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[181]" " -type \"float3\" 4.28255409999999959 7.38061050000000041 -3.2255653999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[182]" " -type \"float3\" 5.71452 -2.58997250000000001 -1.48739310000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[183]" " -type \"float3\" 8.01355550000000072 0.82386225000000002 -1.58866039999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[184]" " -type \"float3\" 6.03424639999999979 -2.01696710000000001 -1.49484050000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[185]" " -type \"float3\" 5.28428029999999982 -2.58997250000000001 -2.46129579999999981"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[186]" " -type \"float3\" 5.505095 -2.01696710000000001 -2.69264269999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[187]" " -type \"float3\" 4.651854 -2.58997250000000001 -2.80556919999999987"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[188]" " -type \"float3\" 4.72727390000000014 -2.01696710000000001 -3.11606430000000012"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[189]" " -type \"float3\" 5.13095709999999983 -3.30566020000000016 -4.77797129999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[190]" " -type \"float3\" 5.13232279999999985 -2.80636550000000007 -4.78359369999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[191]" " -type \"float3\" 6.68699259999999995 -3.30566020000000016 -3.9309132"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[192]" " -type \"float3\" 4.99077079999999995 -2.58997250000000001 -2.67434569999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[193]" " -type \"float3\" 5.96483519999999956 -3.30566020000000016 -4.45510580000000012"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[194]" " -type \"float3\" 5.14410779999999956 -2.01696710000000001 -2.95467259999999987"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[195]" " -type \"float3\" 5.96761229999999987 -2.80636550000000007 -4.46018220000000021"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[196]" " -type \"float3\" 6.6909913999999997 -2.80636550000000007 -3.93510250000000017"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[197]" " -type \"float3\" 5.51076560000000004 -2.58997250000000001 -2.17802430000000014"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[198]" " -type \"float3\" 5.78364849999999997 -2.01696710000000001 -2.34424710000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[199]" " -type \"float3\" 7.24424080000000004 -3.30566020000000016 -3.23394579999999987"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[200]" " -type \"float3\" 7.24918270000000042 -2.80636550000000007 -3.2369561"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[201]" " -type \"float3\" 7.745564 -3.30566020000000016 -1.53470229999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[202]" " -type \"float3\" 5.65762660000000039 -2.58997250000000001 -1.84558489999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[203]" " -type \"float3\" 7.60558180000000039 -3.30566020000000016 -2.4160048999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[204]" " -type \"float3\" 5.96427350000000001 -2.01696710000000001 -1.93538019999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[205]" " -type \"float3\" 7.611135 -2.80636550000000007 -2.41763089999999981"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[206]" " -type \"float3\" 7.75135370000000012 -2.80636550000000007 -1.53483710000000007"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[207]" " -type \"float3\" 6.83833689999999983 0.82386225000000002 -4.15856549999999991"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[208]" " -type \"float3\" 7.50780150000000024 -0.87420600999999998 -4.79087260000000015"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[209]" " -type \"float3\" 5.41130829999999996 -0.87420600999999998 -5.93213840000000037"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[210]" " -type \"float3\" 5.00008919999999968 -1.0372068000000001 -4.23920579999999969"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[211]" " -type \"float3\" 6.53481719999999999 -0.87420600999999998 -5.49713329999999978"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[212]" " -type \"float3\" 5.69876770000000032 -1.0372068000000001 -3.968688"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[213]" " -type \"float3\" 6.30383919999999964 -1.0372068000000001 -3.52948450000000014"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[214]" " -type \"float3\" 5.14812229999999982 0.82386225000000002 -5.0505532999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[215]" " -type \"float3\" 5.56842659999999956 -0.14852383999999999 -6.6294537"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[216]" " -type \"float3\" 6.05208060000000003 0.82386225000000002 -4.7139186999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[217]" " -type \"float3\" 6.867342 -0.14852383999999999 -6.12987419999999972"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[218]" " -type \"float3\" 7.99308350000000001 -0.14852383999999999 -5.31657310000000027"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[219]" " -type \"float3\" 8.93404669999999967 -0.87420600999999998 -1.56238560000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[220]" " -type \"float3\" 8.2585993000000002 -0.87420600999999998 -3.8518273999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[221]" " -type \"float3\" 6.77073859999999961 -1.0372068000000001 -2.945519"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[222]" " -type \"float3\" 8.74544430000000084 -0.87420600999999998 -2.74979089999999982"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[223]" " -type \"float3\" 7.0734944000000004 -1.0372068000000001 -2.26019380000000014"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[224]" " -type \"float3\" 7.19078060000000008 -1.0372068000000001 -1.52177969999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[225]" " -type \"float3\" 7.44912340000000039 0.82386225000000002 -3.4145525000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[226]" " -type \"float3\" 8.8627748000000004 -0.14852383999999999 -4.23380370000000017"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[227]" " -type \"float3\" 7.85028170000000003 0.82386225000000002 -2.53732129999999989"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[228]" " -type \"float3\" 9.42799089999999929 -0.14852383999999999 -2.96207619999999983"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[229]" " -type \"float3\" 9.64891910000000053 -0.14852383999999999 -1.59096609999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[230]" " -type \"float3\" 5.33009239999999984 -2.58997250000000001 -0.49451466999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[231]" " -type \"float3\" 5.56143949999999965 -2.01696710000000001 -0.27369981999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[232]" " -type \"float3\" 5.674366 -2.58997250000000001 -1.12694059999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[233]" " -type \"float3\" 5.98486090000000015 -2.01696710000000001 -1.05152029999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[234]" " -type \"float3\" 7.64676810000000007 -3.30566020000000016 -0.64783782000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[235]" " -type \"float3\" 7.6523905000000001 -2.80636550000000007 -0.64647204000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[236]" " -type \"float3\" 6.7997103000000001 -3.30566020000000016 0.90819788000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[237]" " -type \"float3\" 5.54314280000000004 -2.58997250000000001 -0.78802401"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[238]" " -type \"float3\" 7.32390260000000026 -3.30566020000000016 0.18604045999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[239]" " -type \"float3\" 5.82346960000000013 -2.01696710000000001 -0.63468712999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[240]" " -type \"float3\" 7.328979 -2.80636550000000007 0.18881730999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[241]" " -type \"float3\" 6.80389930000000032 -2.80636550000000007 0.91219645999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[242]" " -type \"float3\" 5.04682109999999984 -2.58997250000000001 -0.26802942000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[243]" " -type \"float3\" 5.21304419999999968 -2.01696710000000001 0.0048539079999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[244]" " -type \"float3\" 6.1027427000000003 -3.30566020000000016 1.46544619999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[245]" " -type \"float3\" 6.10575289999999971 -2.80636550000000007 1.47038779999999991"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[246]" " -type \"float3\" 4.71438169999999968 -2.58997250000000001 -0.12116782"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[247]" " -type \"float3\" 5.28480150000000037 -3.30566020000000016 1.82678720000000006"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[248]" " -type \"float3\" 4.80417679999999958 -2.01696710000000001 0.18547857000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[249]" " -type \"float3\" 5.28642750000000028 -2.80636550000000007 1.83234009999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[250]" " -type \"float3\" 7.02736230000000006 0.82386225000000002 1.0595422000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[251]" " -type \"float3\" 7.65966940000000029 -0.87420600999999998 1.7290068999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[252]" " -type \"float3\" 8.80093570000000014 -0.87420600999999998 -0.36748657000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[253]" " -type \"float3\" 7.10800270000000012 -1.0372068000000001 -0.77870547999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[254]" " -type \"float3\" 8.36592959999999941 -0.87420600999999998 0.75602263000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[255]" " -type \"float3\" 6.83748480000000036 -1.0372068000000001 -0.080026805000000006"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[256]" " -type \"float3\" 6.39828110000000017 -1.0372068000000001 0.52504432000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[257]" " -type \"float3\" 7.91934969999999971 0.82386225000000002 -0.63067222000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[258]" " -type \"float3\" 9.49825 -0.14852383999999999 -0.21036793000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[259]" " -type \"float3\" 7.58271549999999994 0.82386225000000002 0.27328565999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[260]" " -type \"float3\" 8.99867060000000052 -0.14852383999999999 1.08854720000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[261]" " -type \"float3\" 8.18537040000000005 -0.14852383999999999 2.21428890000000012"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[262]" " -type \"float3\" 6.72062440000000016 -0.87420600999999998 2.47980450000000019"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[263]" " -type \"float3\" 5.81431580000000015 -1.0372068000000001 0.99194406999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[264]" " -type \"float3\" 5.618588 -0.87420600999999998 2.96664979999999989"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[265]" " -type \"float3\" 5.12899019999999961 -1.0372068000000001 1.29469970000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[266]" " -type \"float3\" 6.28334949999999992 0.82386225000000002 1.67032859999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[267]" " -type \"float3\" 7.10260059999999971 -0.14852383999999999 3.08398009999999978"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[268]" " -type \"float3\" 5.40611789999999992 0.82386225000000002 2.0714866999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[269]" " -type \"float3\" 5.830873 -0.14852383999999999 3.64919590000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[270]" " -type \"float3\" 10.325605 6.3679686000000002 -1.59479919999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[271]" " -type \"float3\" 8.46886250000000018 6.3679686000000002 -5.79777290000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[272]" " -type \"float3\" 5.739563 6.3679686000000002 -7.28351970000000026"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[273]" " -type \"float3\" 5.46289159999999985 3.14200690000000016 -6.19497919999999969"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[274]" " -type \"float3\" 5.44919819999999966 4.92784639999999996 -6.08812710000000035"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[275]" " -type \"float3\" 7.68409869999999984 3.14200690000000016 -4.99285080000000026"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[276]" " -type \"float3\" 6.65277809999999992 3.14200690000000016 -5.73761420000000033"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[277]" " -type \"float3\" 7.20219279999999973 6.3679686000000002 -6.71721120000000038"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[278]" " -type \"float3\" 6.61185169999999989 4.92784639999999996 -5.63796520000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[279]" " -type \"float3\" 7.61873579999999961 4.92784639999999996 -4.90709779999999984"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[280]" " -type \"float3\" 9.4462805000000003 6.3679686000000002 -4.57528690000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[281]" " -type \"float3\" 8.4809303000000007 3.14200690000000016 -4.00120879999999968"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[282]" " -type \"float3\" 8.39569189999999921 4.92784639999999996 -3.93533540000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[283]" " -type \"float3\" 9.20152760000000036 3.14200690000000016 -1.58054490000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[284]" " -type \"float3\" 8.99890139999999938 3.14200690000000016 -2.83642580000000022"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[285]" " -type \"float3\" 10.080076 6.3679686000000002 -3.14061119999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[286]" " -type \"float3\" 8.89949889999999932 4.92784639999999996 -2.79490280000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[287]" " -type \"float3\" 9.09467219999999976 4.92784639999999996 -1.56612710000000011"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[288]" " -type \"float3\" 6.71343949999999978 7.36821370000000009 -3.95862150000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[289]" " -type \"float3\" 5.13998989999999978 7.36821370000000009 -4.81515930000000036"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[290]" " -type \"float3\" 5.57615380000000016 7.34196139999999975 -6.61078550000000043"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[291]" " -type \"float3\" 5.98320059999999998 7.36821370000000009 -4.48868080000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[292]" " -type \"float3\" 6.86996509999999994 7.34196139999999975 -6.10984130000000025"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[293]" " -type \"float3\" 7.99043460000000039 7.34196139999999975 -5.29652550000000044"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[294]" " -type \"float3\" 4.74145459999999996 7.38061050000000041 -3.174444"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[295]" " -type \"float3\" 5.17293830000000021 7.38061050000000041 -3.00738"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[296]" " -type \"float3\" 5.54661269999999984 7.38061050000000041 -2.73614069999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[297]" " -type \"float3\" 7.78385779999999983 7.36821370000000009 -1.53559420000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[298]" " -type \"float3\" 7.27692409999999956 7.36821370000000009 -3.25385450000000009"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[299]" " -type \"float3\" 8.85503860000000032 7.34196139999999975 -4.21513989999999961"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[300]" " -type \"float3\" 7.64230919999999969 7.36821370000000009 -2.42675969999999985"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[301]" " -type \"float3\" 9.41567990000000066 7.34196139999999975 -2.94605609999999984"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[302]" " -type \"float3\" 9.63287069999999979 7.34196139999999975 -1.5786633000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[303]" " -type \"float3\" 5.83495659999999994 7.38061050000000041 -2.37550069999999991"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[304]" " -type \"float3\" 6.02192930000000004 7.38061050000000041 -1.95226370000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[305]" " -type \"float3\" 6.09436230000000023 7.38061050000000041 -1.49624069999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[306]" " -type \"float3\" 8.66656970000000015 6.3679686000000002 2.69006750000000006"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[307]" " -type \"float3\" 10.152316 6.3679686000000002 -0.039231621000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[308]" " -type \"float3\" 9.063776 3.14200690000000016 -0.31590312999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[309]" " -type \"float3\" 8.95692350000000026 4.92784639999999996 -0.32959652"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[310]" " -type \"float3\" 7.8616476000000004 3.14200690000000016 1.90530409999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[311]" " -type \"float3\" 8.606411 3.14200690000000016 0.87398343999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[312]" " -type \"float3\" 9.58600810000000081 6.3679686000000002 1.4233979000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[313]" " -type \"float3\" 8.50676160000000081 4.92784639999999996 0.83305680999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[314]" " -type \"float3\" 7.77589459999999999 4.92784639999999996 1.83994089999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[315]" " -type \"float3\" 7.44408370000000019 6.3679686000000002 3.667486"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[316]" " -type \"float3\" 6.87000559999999982 3.14200690000000016 2.70213530000000013"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[317]" " -type \"float3\" 6.804132 4.92784639999999996 2.61689689999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[318]" " -type \"float3\" 5.70522259999999992 3.14200690000000016 3.22010640000000015"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[319]" " -type \"float3\" 6.009408 6.3679686000000002 4.301281"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[320]" " -type \"float3\" 5.66369960000000017 4.92784639999999996 3.12070470000000011"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[321]" " -type \"float3\" 6.82741829999999972 7.36821370000000009 0.93464475999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[322]" " -type \"float3\" 7.68395609999999962 7.36821370000000009 -0.63880473000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[323]" " -type \"float3\" 9.47958279999999931 7.34196139999999975 -0.20264094999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[324]" " -type \"float3\" 7.35747769999999957 7.36821370000000009 0.20440570999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[325]" " -type \"float3\" 8.97863860000000003 7.34196139999999975 1.09117039999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[326]" " -type \"float3\" 8.1653222999999997 7.34196139999999975 2.21163959999999982"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[327]" " -type \"float3\" 6.043241 7.38061050000000041 -1.03733980000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[328]" " -type \"float3\" 5.87617679999999964 7.38061050000000041 -0.60585635999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[329]" " -type \"float3\" 5.60493760000000041 7.38061050000000041 -0.23218164999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[330]" " -type \"float3\" 6.12265109999999968 7.36821370000000009 1.49812949999999989"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[331]" " -type \"float3\" 7.08393669999999975 7.34196139999999975 3.07624360000000019"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[332]" " -type \"float3\" 5.2955565 7.36821370000000009 1.8635143999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[333]" " -type \"float3\" 5.81485270000000032 7.34196139999999975 3.63688520000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[334]" " -type \"float3\" 5.24429750000000006 7.38061050000000041 0.056161801999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[335]" " -type \"float3\" 4.32379580000000008 7.38621950000000016 -1.454999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[336]" " -type \"float3\" 4.82106070000000031 7.38061050000000041 0.24313473999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1" "rotatePivot" " -type \"double3\" 4.35698505945700809 3.61340830171540173 -1.46639832913587465"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1" "scalePivot" " -type \"double3\" 4.35698505945700809 3.61340830171540173 -1.46639832913587465"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts" " -s 77"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[0]" " -type \"float3\" 4.34798569999999973 -1.624992 -0.20644568999999999"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[1]" " -type \"float3\" 4.41769079999999992 -8.66180420000000062 2.43362670000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[2]" " -type \"float3\" 4.42121839999999988 -8.5416641000000002 2.58485869999999984"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[3]" " -type \"float3\" 4.34822229999999976 -1.74804709999999996 -0.17489398"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[4]" " -type \"float3\" 4.33560370000000006 -6.56770180000000003 -0.60776627000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[5]" " -type \"float3\" 4.38128950000000028 -6.03079650000000012 1.2471371"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[6]" " -type \"float3\" 4.86537790000000037 -6.04969789999999996 0.52103758"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[7]" " -type \"float3\" 4.35569 -1.15865759999999995 0.039307176999999999"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[8]" " -type \"float3\" 4.329505 -4.48158030000000007 -0.62230920999999995"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[9]" " -type \"float3\" 4.28779839999999979 -4.05398369999999986 0.24016982000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[10]" " -type \"float3\" 4.32038260000000029 -4.29076340000000034 -0.41660534999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[11]" " -type \"float3\" 4.35004040000000014 -1.39922060000000004 -0.15893768999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[12]" " -type \"float3\" 4.33616729999999961 -3.26243470000000002 -0.42459332999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[13]" " -type \"float3\" 4.29362340000000042 -3.04199889999999984 -0.28924543000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[14]" " -type \"float3\" 4.30149559999999997 -4.11987210000000026 -0.10579079"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[15]" " -type \"float3\" 4.35361050000000027 -1.1861695000000001 -0.043384372999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[16]" " -type \"float3\" 4.25895829999999975 -2.85303620000000002 -0.069287360000000006"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[17]" " -type \"float3\" 4.24381349999999991 -2.81096410000000008 0.16653195000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[18]" " -type \"float3\" 4.6216955000000004 -6.47603560000000034 -0.36752256999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[19]" " -type \"float3\" 4.32763529999999985 -5.37615439999999989 -0.75122606999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[20]" " -type \"float3\" 4.40294890000000017 -5.22547479999999975 -0.50010460999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[21]" " -type \"float3\" 4.32958269999999956 -6.0402288000000004 -0.76234071999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[22]" " -type \"float3\" 4.51268289999999972 -5.92687849999999994 -0.49755465999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[23]" " -type \"float3\" 4.43932250000000028 -4.95933060000000037 0.297793"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[24]" " -type \"float3\" 4.43772840000000013 -5.05987930000000041 -0.1194371"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[25]" " -type \"float3\" 4.81087539999999958 -6.257566 0.061916857999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[26]" " -type \"float3\" 4.62246609999999958 -5.74748850000000022 -0.075074315000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[27]" " -type \"float3\" 4.64839360000000035 -5.60027689999999989 0.378566"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[28]" " -type \"float3\" 4.36884210000000017 -4.518115 0.92647855999999995"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[29]" " -type \"float3\" 4.35419269999999958 -1.40916320000000006 0.015799165"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[30]" " -type \"float3\" 4.291945 -4.14793210000000023 0.55651128000000005"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[31]" " -type \"float3\" 4.25713779999999975 -2.98209290000000005 0.35884737999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[32]" " -type \"float3\" 4.35074230000000028 -1.70878079999999999 -0.076992482000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[33]" " -type \"float3\" 4.31826639999999973 -4.33497290000000035 0.79848874000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[34]" " -type \"float3\" 4.29727169999999958 -3.23620129999999984 0.48568338"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[35]" " -type \"float3\" 4.35970309999999994 -3.394063 0.53459561"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[36]" " -type \"float3\" 4.7669902000000004 -5.95927429999999969 0.87904632000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[37]" " -type \"float3\" 4.41692160000000023 -4.981811 0.66874778000000001"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[38]" " -type \"float3\" 4.5892343999999996 -5.56061940000000021 0.75633645000000005"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[39]" " -type \"float3\" 4.37497950000000024 -5.24826719999999991 1.10656139999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[40]" " -type \"float3\" 4.38866089999999964 -5.09609459999999981 0.94969230999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[41]" " -type \"float3\" 4.57806919999999984 -5.96910139999999956 1.117799"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[42]" " -type \"float3\" 4.48315239999999982 -5.61111689999999985 1.02725979999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[43]" " -type \"float3\" 4.3783259000000001 -5.71099089999999965 1.17921089999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[44]" " -type \"float3\" 4.42283630000000016 -8.67266270000000006 2.65389279999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[45]" " -type \"float3\" 4.36159560000000024 -7.47453449999999986 0.26731133000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[46]" " -type \"float3\" 5.13228940000000033 -6.70780370000000037 1.08906790000000009"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[47]" " -type \"float3\" 4.743052 -7.37222430000000006 0.36495680000000003"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[48]" " -type \"float3\" 4.346478 -7.03809880000000021 -0.25534140999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[49]" " -type \"float3\" 4.70465369999999972 -6.94485949999999974 -0.078442394999999998"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[50]" " -type \"float3\" 5.03289079999999966 -7.03833529999999996 0.70140517000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[51]" " -type \"float3\" 4.96026369999999961 -6.66345209999999977 0.31938939999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[52]" " -type \"float3\" 5.0420771000000002 -6.38506079999999976 0.75634610999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[53]" " -type \"float3\" 4.4183855000000003 -8.70764830000000067 2.48438569999999981"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[54]" " -type \"float3\" 4.37963910000000034 -7.88544029999999996 0.91781002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[55]" " -type \"float3\" 4.71989540000000041 -7.78845450000000028 0.94897330000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[56]" " -type \"float3\" 4.39890670000000039 -8.27855779999999974 1.65397320000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[57]" " -type \"float3\" 4.61777929999999959 -8.22328470000000067 1.66013670000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[58]" " -type \"float3\" 5.09020470000000014 -7.12544250000000012 1.51722029999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[59]" " -type \"float3\" 4.99212270000000036 -7.45530559999999998 1.20616070000000009"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[60]" " -type \"float3\" 4.4205646999999999 -8.70662880000000072 2.5776273999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[61]" " -type \"float3\" 4.80085280000000036 -7.98697519999999983 1.83215890000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[62]" " -type \"float3\" 4.86955019999999994 -7.74509809999999987 2.03913739999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[63]" " -type \"float3\" 4.39354750000000038 -6.65779109999999985 1.61720749999999991"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[64]" " -type \"float3\" 4.982688 -6.56321330000000014 1.37526510000000002"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[65]" " -type \"float3\" 4.91013379999999966 -6.2584023000000002 1.08464880000000008"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[66]" " -type \"float3\" 4.68816279999999974 -6.57440469999999966 1.54491390000000006"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[67]" " -type \"float3\" 4.65177390000000024 -6.25981089999999973 1.29029379999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[68]" " -type \"float3\" 4.38630720000000007 -6.3223022999999996 1.39256"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[69]" " -type \"float3\" 4.423142 -8.62321659999999923 2.6671263999999999"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[70]" " -type \"float3\" 4.94957829999999976 -6.9851150999999998 1.74169160000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[71]" " -type \"float3\" 4.77528760000000041 -7.63514949999999981 2.1750364000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[72]" " -type \"float3\" 4.40247060000000001 -7.09878870000000006 1.902779"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[73]" " -type \"float3\" 4.67238039999999977 -7.00431779999999993 1.86471959999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[74]" " -type \"float3\" 4.42236419999999963 -8.57372280000000053 2.63386319999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[75]" " -type \"float3\" 4.58916330000000006 -7.640645 2.23306389999999988"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
+		"pnts[76]" " -type \"float3\" 4.41218950000000021 -7.7064938999999999 2.23122"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2" "rotatePivot" " -type \"double3\" 4.29133684469143528 3.58969250529162842 -1.53672777380399528"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2" "scalePivot" " -type \"double3\" 4.29133684469143528 3.58969250529162842 -1.53672777380399528"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts" " -s 39"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[0]" " -type \"float3\" 4.58111569999999979 -10.510598 -6.15521429999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[1]" " -type \"float3\" 4.33464619999999989 -4.36798950000000019 -3.06761149999999994"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[2]" " -type \"float3\" 4.32898810000000012 -3.72893380000000008 -3.310524"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[3]" " -type \"float3\" 4.57778449999999992 -9.86464020000000019 -6.26735069999999972"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[4]" " -type \"float3\" 4.289371 -8.48576450000000015 -4.74127909999999986"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[5]" " -type \"float3\" 4.26905350000000006 -6.544487 -5.7954106000000003"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[6]" " -type \"float3\" 4.27627850000000009 -10.011666 -5.21210669999999965"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[7]" " -type \"float3\" 4.25545880000000043 -7.98213479999999986 -6.10928869999999957"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[8]" " -type \"float3\" 4.30243640000000038 -10.406809 -5.775938"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[9]" " -type \"float3\" 4.32997890000000041 -8.98667619999999978 -6.26790809999999965"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[10]" " -type \"float3\" 4.916337 -9.86011219999999966 -6.02135040000000021"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[11]" " -type \"float3\" 4.95561790000000002 -10.534019 -6.519917"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[12]" " -type \"float3\" 4.93413259999999987 -8.80655669999999979 -5.70859909999999982"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[13]" " -type \"float3\" 4.27268169999999969 -10.199501 -5.3435630999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[14]" " -type \"float3\" 4.91693689999999961 -9.07912450000000071 -5.77247709999999969"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[15]" " -type \"float3\" 4.25810620000000029 -8.23428730000000009 -6.1597824000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[16]" " -type \"float3\" 4.27959919999999983 -9.76332659999999919 -5.09194040000000037"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[17]" " -type \"float3\" 4.2570686000000002 -7.71900750000000002 -6.05528829999999996"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[18]" " -type \"float3\" 4.96291159999999998 -8.53184410000000071 -5.64125540000000036"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[19]" " -type \"float3\" 5.1476898000000002 -7.44672010000000029 -5.27443979999999968"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[20]" " -type \"float3\" 4.2851581999999997 -9.14996340000000075 -4.88862850000000027"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[21]" " -type \"float3\" 5.05237479999999994 -7.9838180999999997 -5.476902"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[22]" " -type \"float3\" 4.26265050000000034 -7.14891819999999978 -5.939363"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[23]" " -type \"float3\" 4.30012460000000019 -6.95504090000000019 -4.4732094"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[24]" " -type \"float3\" 4.28677650000000021 -5.1272316 -5.12272070000000035"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[25]" " -type \"float3\" 4.29289960000000015 -7.86486149999999995 -4.64944649999999982"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[26]" " -type \"float3\" 4.27541260000000012 -5.94120410000000021 -5.59549710000000022"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[27]" " -type \"float3\" 5.19961260000000003 -6.93146039999999974 -5.040195"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[28]" " -type \"float3\" 5.09070490000000042 -6.225832 -4.635745"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[29]" " -type \"float3\" 4.29724790000000034 -7.26432129999999976 -4.55052189999999968"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[30]" " -type \"float3\" 5.158772 -6.45015669999999997 -4.77733760000000007"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[31]" " -type \"float3\" 4.28245740000000019 -5.37982750000000021 -5.307806"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[32]" " -type \"float3\" 4.30359550000000013 -6.63050169999999994 -4.3636961000000003"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[33]" " -type \"float3\" 4.2916894000000001 -4.89312930000000001 -4.91180609999999973"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[34]" " -type \"float3\" 4.99552490000000038 -6.01196670000000033 -4.48944709999999958"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[35]" " -type \"float3\" 4.32081560000000042 -4.873908 -3.66139750000000008"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[36]" " -type \"float3\" 4.31725069999999977 -5.54529620000000012 -3.81442259999999989"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[37]" " -type \"float3\" 4.63080119999999962 -5.42209390000000013 -4.04803319999999989"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
+		"pnts[38]" " -type \"float3\" 4.30917840000000041 -4.27536540000000009 -4.16098120000000016"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3" "rotatePivot" " -type \"double3\" 4.30370779553125882 3.60840134158503201 -1.52660362549623785"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3" "scalePivot" " -type \"double3\" 4.30370779553125882 3.60840134158503201 -1.52660362549623785"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts" " -s 27"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[0]" " -type \"float3\" 4.3310808999999999 -9.536478 0.12510192000000001"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[1]" " -type \"float3\" 4.34470419999999979 -20.215178 0.91884695999999999"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[2]" " -type \"float3\" 3.76083610000000013 -20.693579 -0.10834984"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[3]" " -type \"float3\" 4.3139504999999998 -9.00615879999999969 -0.53598486999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[4]" " -type \"float3\" 4.38573270000000015 -13.248713 2.28696440000000001"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[5]" " -type \"float3\" 3.86596820000000019 -13.169095 -2.00407219999999997"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[6]" " -type \"float3\" 4.3763747000000004 -11.709984 1.89319339999999992"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[7]" " -type \"float3\" 4.15576360000000022 -11.493996 -1.89981149999999999"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[8]" " -type \"float3\" 5.6406307 -13.935218 -0.80994474999999999"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[9]" " -type \"float3\" 4.494411 -10.261206 -0.52688164000000004"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[10]" " -type \"float3\" 4.35638569999999969 -10.532836 1.10720280000000004"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[11]" " -type \"float3\" 5.30588339999999992 -12.161179 -0.84948265999999995"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[12]" " -type \"float3\" 4.27699660000000037 -10.163842 -1.33342889999999992"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[13]" " -type \"float3\" 5.362031 -15.539915 -0.2286754"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[14]" " -type \"float3\" 4.38271470000000019 -12.422852 2.15136340000000015"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[15]" " -type \"float3\" 5.563168 -14.746322 -0.56503462999999998"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[16]" " -type \"float3\" 4.03720329999999983 -12.277647 -2.02414849999999991"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[17]" " -type \"float3\" 4.3809155999999998 -15.26955 2.15777539999999979"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[18]" " -type \"float3\" 3.42031030000000014 -15.313641 -1.52162480000000011"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[19]" " -type \"float3\" 4.83202510000000007 -17.254532 0.36529967000000002"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[20]" " -type \"float3\" 4.384985 -14.202634 2.28365449999999992"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[21]" " -type \"float3\" 5.09804250000000003 -16.360989 0.11086003"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[22]" " -type \"float3\" 3.643645 -14.183901 -1.8240094"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[23]" " -type \"float3\" 4.32378769999999957 -21.661503 0.16640246"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[24]" " -type \"float3\" 4.365468 -17.651968 1.636366"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[25]" " -type \"float3\" 4.45715090000000025 -19.340023 0.44077018000000001"
+		
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
+		"pnts[26]" " -type \"float3\" 3.21940230000000005 -17.860252 -0.75378668000000004";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 120;
 	setAttr ".unw" 120;
@@ -36146,6 +37250,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
+	setAttr -s 2 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -36153,7 +37258,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 31 ".dsm";
+	setAttr -s 35 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 74 ".gn";
 select -ne :initialParticleSE;
