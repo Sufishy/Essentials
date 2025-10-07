@@ -1,11 +1,15 @@
 //Maya ASCII 2026 scene
 //Name: Test_Scene_Cleaned.ma
-//Last modified: Fri, Oct 03, 2025 03:54:05 PM
+//Last modified: Tue, Oct 07, 2025 04:47:21 PM
 //Codeset: 1252
 file -rdi 1 -ns "Unit4_CurvesLab1" -rfn "Unit4_CurvesLabRN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Unit4_CurvesLab.ma";
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Curved_Leaf_Plant.ma";
+file -rdi 1 -ns "Sofa_End_Table" -rfn "Sofa_End_TableRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Sofa_End_Table.ma";
 file -r -ns "Unit4_CurvesLab1" -dr 1 -rfn "Unit4_CurvesLabRN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Unit4_CurvesLab.ma";
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Curved_Leaf_Plant.ma";
+file -r -ns "Sofa_End_Table" -dr 1 -rfn "Sofa_End_TableRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Sofa_End_Table.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.3";
@@ -15,23 +19,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "CA4B4717-406F-570C-C18E-29A6BE54F0F3";
+fileInfo "UUID" "0BF1E290-42D4-8735-3A85-578FEC00C133";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "E3966AD9-4062-017F-1FED-7F839BC7DA88";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.6128578420409614 14.833020732755351 11.581557987259815 ;
-	setAttr ".r" -type "double3" -34.799999999996047 1046.3999999999896 0 ;
+	setAttr ".t" -type "double3" -9.8342545821729708 8.8997369031224629 16.179275517048954 ;
+	setAttr ".r" -type "double3" -15.60000000000632 1040.3999999999889 0 ;
 	setAttr ".rpt" -type "double3" 1.6274873696827714e-16 -2.3510523053056138e-16 -4.1022956404332476e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8A35ECD4-4F5D-7B3A-9404-50AD140B47CA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 18.556166141157718;
+	setAttr ".coi" 17.842840155900426;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 3.8193801197271515 4.2427649517912274 -1.1099804265070805 ;
+	setAttr ".tp" -type "double3" 1.1202309131622314 4.1014435291290283 2.9375772476196289 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "7C4EF3E3-46E3-A41D-FCBC-6F884975D565";
@@ -32838,21 +32842,191 @@ createNode mesh -n "WallShape" -p "Wall2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode fosterParent -n "Sofa_End_TableRNfosterParent1";
+	rename -uid "ACAD4C2B-4F1E-597D-70E6-AB924C929752";
+createNode transform -n "Book_11" -p "Sofa_End_TableRNfosterParent1";
+	rename -uid "10A597C7-4C81-C1F6-FBBE-77ACFF1DFD24";
+	setAttr ".rp" -type "double3" -1.8220796316036512 0.5576221788723168 -0.74574490766477952 ;
+	setAttr ".sp" -type "double3" -1.8220796316036512 0.5576221788723168 -0.74574490766477952 ;
+createNode mesh -n "Book_Shape11" -p "Book_11";
+	rename -uid "691B2649-4994-1F3B-2854-968CE845EB7F";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[2]" "f[6:13]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 1.611309289932251 1.1551499366760254 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 37 ".uvst[0].uvsp[0:36]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.75
+		 0.625 0.75 0.375 0 2.84761858 2.73380327 2.84761858 2.73380327 2.84761858 2.73380327
+		 2.84761858 2.73380327 2.73280382 2.73380327 2.73280382 2.73380327 2.73280382 2.73380327
+		 2.73280382 2.73380327 2.73280382 2.31029987 2.73280382 2.31029987 2.73280382 2.31029987
+		 2.73280382 2.31029987 2.84761858 2.31029987 2.84761858 2.31029987 2.84761858 2.31029987
+		 2.84761858 2.31029987;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".pt[0:15]" -type "float3"  -1.3220792 1.0576221 -1.2457429 
+		-2.3090665 1.0491116 -1.5084035 -0.93502474 0.061241865 -1.2266843 -1.9220121 0.052731395 
+		-1.4893446 -0.93591261 0.17599154 -0.23044825 -1.9229 0.16748083 -0.49310857 -1.3229671 
+		1.1723716 -0.24950695 -2.3099544 1.163861 -0.51216716 -0.94077015 0.078240156 -1.2275199 
+		-1.9277573 0.069729924 -1.49018 -1.9283812 0.15037727 -0.49282604 -0.94139433 0.15888834 
+		-0.23016572 -1.3172216 1.1553729 -0.24867147 -2.3042088 1.1468629 -0.5113318 -2.3035846 
+		1.066215 -1.5086858 -1.3165975 1.0747255 -1.2460256;
+	setAttr -s 16 ".vt[0:15]"  -0.49999988 -0.5 0.49999809 0.50000012 -0.5 0.49999809
+		 -0.49999988 0.5 0.49999809 0.50000012 0.5 0.49999809 -0.49999988 0.5 -0.5 0.50000012 0.5 -0.5
+		 -0.49999988 -0.5 -0.5 0.50000012 -0.5 -0.5 -0.49999988 0.5 0.49999809 0.50000012 0.5 0.49999809
+		 0.50000012 0.5 -0.5 -0.49999988 0.5 -0.5 -0.49999988 -0.5 -0.5 0.50000012 -0.5 -0.5
+		 0.50000012 -0.5 0.49999809 -0.49999988 -0.5 0.49999809;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 1 3 0 3 2 0 2 0 0 8 9 0 9 10 0 10 11 0
+		 11 8 0 4 5 0 5 7 0 7 6 0 6 4 0 12 13 0 13 14 0 14 15 0 15 12 0 1 7 0 5 3 0 15 8 0
+		 11 12 0 3 9 0 8 2 0 5 10 0 4 11 0 7 13 0 12 6 0 1 14 0 0 15 0;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 0 1 3 2
+		f 4 4 5 6 7
+		mu 0 4 14 15 16 17
+		f 4 8 9 10 11
+		mu 0 4 4 5 7 6
+		f 4 12 13 14 15
+		mu 0 4 18 19 9 8
+		f 4 16 -10 17 -2
+		mu 0 4 1 10 11 3
+		f 4 -16 18 -8 19
+		mu 0 4 12 20 14 13
+		f 4 -3 20 -5 21
+		mu 0 4 21 22 23 24
+		f 4 -18 22 -6 -21
+		mu 0 4 22 25 26 23
+		f 4 -9 23 -7 -23
+		mu 0 4 25 27 28 26
+		f 4 -11 24 -13 25
+		mu 0 4 29 30 31 32
+		f 4 -17 26 -14 -25
+		mu 0 4 30 33 34 31
+		f 4 -1 27 -15 -27
+		mu 0 4 33 35 36 34
+		f 4 -4 -22 -19 -28
+		mu 0 4 35 21 24 36
+		f 4 -12 -26 -20 -24
+		mu 0 4 27 29 32 28;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Book_12" -p "Sofa_End_TableRNfosterParent1";
+	rename -uid "72D649DA-4D7B-9697-0504-CDB922DB2C45";
+	setAttr ".rp" -type "double3" -1.9201180848344324 0.62136326959396238 -0.83536998715364263 ;
+	setAttr ".sp" -type "double3" -1.920118084834427 0.62136326959396238 -0.83536998715364486 ;
+createNode mesh -n "Book_Shape12" -p "Book_12";
+	rename -uid "87B82D6A-406D-9F3A-A42A-D9A51C35D2F0";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[2]" "f[6:13]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 1.611309289932251 1.1551499366760254 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 37 ".uvst[0].uvsp[0:36]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.75
+		 0.625 0.75 0.375 0 2.84761858 2.73380327 2.84761858 2.73380327 2.84761858 2.73380327
+		 2.84761858 2.73380327 2.73280382 2.73380327 2.73280382 2.73380327 2.73280382 2.73380327
+		 2.73280382 2.73380327 2.73280382 2.31029987 2.73280382 2.31029987 2.73280382 2.31029987
+		 2.73280382 2.31029987 2.84761858 2.31029987 2.84761858 2.31029987 2.84761858 2.31029987
+		 2.84761858 2.31029987;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".pt[0:15]" -type "float3"  -1.4185853 1.1932878 -1.2182381 
+		-2.4185853 1.1932878 -1.6438124 -1.8395944 0.19328761 -1.2182381 -2.8395941 0.19328761 
+		-1.6438124 -1.8395944 0.051827908 -0.21823996 -2.8395941 0.051827908 -0.64381415 
+		-1.4185853 1.0518281 -0.21823996 -2.4185853 1.0518281 -0.64381415 -1.833488 0.17226768 
+		-1.2182381 -2.833488 0.17226768 -1.6438124 -2.833488 0.072848082 -0.64381415 -1.833488 
+		0.072848082 -0.21823996 -1.4246912 1.0728481 -0.21823996 -2.4246912 1.0728481 -0.64381415 
+		-2.4246912 1.1722677 -1.6438124 -1.4246912 1.1722677 -1.2182381;
+	setAttr -s 16 ".vt[0:15]"  -0.49999988 -0.5 0.49999809 0.50000012 -0.5 0.49999809
+		 -0.49999988 0.5 0.49999809 0.50000012 0.5 0.49999809 -0.49999988 0.5 -0.5 0.50000012 0.5 -0.5
+		 -0.49999988 -0.5 -0.5 0.50000012 -0.5 -0.5 -0.49999988 0.5 0.49999809 0.50000012 0.5 0.49999809
+		 0.50000012 0.5 -0.5 -0.49999988 0.5 -0.5 -0.49999988 -0.5 -0.5 0.50000012 -0.5 -0.5
+		 0.50000012 -0.5 0.49999809 -0.49999988 -0.5 0.49999809;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 1 3 0 3 2 0 2 0 0 8 9 0 9 10 0 10 11 0
+		 11 8 0 4 5 0 5 7 0 7 6 0 6 4 0 12 13 0 13 14 0 14 15 0 15 12 0 1 7 0 5 3 0 15 8 0
+		 11 12 0 3 9 0 8 2 0 5 10 0 4 11 0 7 13 0 12 6 0 1 14 0 0 15 0;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 0 1 3 2
+		f 4 4 5 6 7
+		mu 0 4 14 15 16 17
+		f 4 8 9 10 11
+		mu 0 4 4 5 7 6
+		f 4 12 13 14 15
+		mu 0 4 18 19 9 8
+		f 4 16 -10 17 -2
+		mu 0 4 1 10 11 3
+		f 4 -16 18 -8 19
+		mu 0 4 12 20 14 13
+		f 4 -3 20 -5 21
+		mu 0 4 21 22 23 24
+		f 4 -18 22 -6 -21
+		mu 0 4 22 25 26 23
+		f 4 -9 23 -7 -23
+		mu 0 4 25 27 28 26
+		f 4 -11 24 -13 25
+		mu 0 4 29 30 31 32
+		f 4 -17 26 -14 -25
+		mu 0 4 30 33 34 31
+		f 4 -1 27 -15 -27
+		mu 0 4 33 35 36 34
+		f 4 -4 -22 -19 -28
+		mu 0 4 35 21 24 36
+		f 4 -12 -26 -20 -24
+		mu 0 4 27 29 32 28;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "31AFB433-431B-B12A-7BE7-7AB35854DE50";
+	rename -uid "CE01BF1E-4CED-8F16-E40D-488F5B600992";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "65570D3F-4A57-887A-9265-378DBD433710";
+	rename -uid "0C610ADC-4256-8C67-3E23-60934C0EAC3B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "CCF182B4-4113-D60F-3C5D-878F7476C761";
+	rename -uid "F533A1F0-4D46-CFF5-3E63-3E86E23E596E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "277B5043-45F8-F0F2-28E4-6A9BB3FE7B16";
+	rename -uid "34F9307D-4EB4-1861-BF9C-3285FDA1D33E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C5F3650C-4608-A791-43D6-A796AC86CC7A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "46103EDA-4D61-C980-20B6-FC9669AA0E5F";
+	rename -uid "36276750-47EB-9811-F758-1C8A9CF7F632";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "54FE33CF-4F57-48F0-EBD4-E9BCAB99B87A";
 	setAttr ".g" yes;
@@ -32862,32 +33036,32 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 555\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
 		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
-		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 555\n            -sceneRenderFilter 0\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n"
 		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n"
 		+ "            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n"
 		+ "            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n"
-		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 555\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
-		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
-		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1681\n            -height 1043\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n"
-		+ "            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n"
-		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
-		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n"
-		+ "            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n"
-		+ "                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
-		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n"
-		+ "                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n"
-		+ "                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n"
-		+ "                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n"
-		+ "                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
-		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n"
+		+ "            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
+		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
+		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1681\n            -height 1043\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
+		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
+		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
+		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
+		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
+		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n"
+		+ "                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n"
+		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n"
+		+ "                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n"
+		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n"
+		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n"
+		+ "                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
 		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
 		+ "                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n"
@@ -36137,7 +36311,7 @@ createNode reference -n "Unit4_CurvesLabRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Unit4_CurvesLabRN"
 		"Unit4_CurvesLabRN" 0
-		"Unit4_CurvesLabRN" 497
+		"Unit4_CurvesLabRN" 20
 		2 "|Unit4_CurvesLab1:Vase" "translate" " -type \"double3\" 0 0 0"
 		2 "|Unit4_CurvesLab1:Vase" "rotate" " -type \"double3\" 0 0 0"
 		2 "|Unit4_CurvesLab1:Vase" "scale" " -type \"double3\" 1 1 1"
@@ -36150,1086 +36324,135 @@ createNode reference -n "Unit4_CurvesLabRN";
 		2 "|Unit4_CurvesLab1:Vase" "scalePivotTranslate" " -type \"double3\" 0 0 0"
 		
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts" " -s 337"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[0]" " -type \"float3\" 4.35618969999999983 -2.58997250000000001 -0.064274586999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[1]" " -type \"float3\" 4.29140139999999981 -2.58997250000000001 -2.84572339999999979"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[2]" " -type \"float3\" 4.45745710000000006 0.82386225000000002 2.2347608000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[3]" " -type \"float3\" 4.1901345000000001 0.82386225000000002 -5.14475869999999968"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[4]" " -type \"float3\" 0.63403606000000001 0.82386225000000002 -1.32133759999999989"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[5]" " -type \"float3\" 2.93307140000000022 -2.58997250000000001 -1.4226048"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[6]" " -type \"float3\" 4.3636374 -2.01696710000000001 0.25545189000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[7]" " -type \"float3\" 2.61334489999999997 -2.01696710000000001 -1.41515740000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[8]" " -type \"float3\" 3.14249659999999986 -2.01696710000000001 -0.21735536999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[9]" " -type \"float3\" 3.36331129999999989 -2.58997250000000001 -0.44870239000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[10]" " -type \"float3\" 3.92031740000000006 -2.01696710000000001 0.20606632999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[11]" " -type \"float3\" 3.99573780000000012 -2.58997250000000001 -0.10442844"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[12]" " -type \"float3\" 4.40349910000000033 -3.30566020000000016 1.96676920000000011"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[13]" " -type \"float3\" 3.5166347 -3.30566020000000016 1.8679732"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[14]" " -type \"float3\" 4.40363409999999966 -2.80636550000000007 1.97255910000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[15]" " -type \"float3\" 3.51526879999999986 -2.80636550000000007 1.87359579999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[16]" " -type \"float3\" 1.96059889999999992 -3.30566020000000016 1.02091540000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[17]" " -type \"float3\" 3.6568208000000002 -2.58997250000000001 -0.23565212999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[18]" " -type \"float3\" 2.68275640000000015 -3.30566020000000016 1.545108"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[19]" " -type \"float3\" 3.50348380000000015 -2.01696710000000001 0.044674709"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[20]" " -type \"float3\" 2.6799795999999998 -2.80636550000000007 1.55018450000000008"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[21]" " -type \"float3\" 1.95660030000000007 -2.80636550000000007 1.02510459999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[22]" " -type \"float3\" 2.86394290000000007 -2.01696710000000001 -0.56575083999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[23]" " -type \"float3\" 3.13682630000000007 -2.58997250000000001 -0.73197365000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[24]" " -type \"float3\" 1.4033506 -3.30566020000000016 0.32394793999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[25]" " -type \"float3\" 1.39840889999999995 -2.80636550000000007 0.32695812000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[26]" " -type \"float3\" 0.90202760999999998 -3.30566020000000016 -1.37529579999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[27]" " -type \"float3\" 2.989965 -2.58997250000000001 -1.06441279999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[28]" " -type \"float3\" 1.04200960000000009 -3.30566020000000016 -0.49399313"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[29]" " -type \"float3\" 2.68331810000000015 -2.01696710000000001 -0.97461748000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[30]" " -type \"float3\" 1.03645659999999995 -2.80636550000000007 -0.49236706000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[31]" " -type \"float3\" 0.89623772999999995 -2.80636550000000007 -1.37516079999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[32]" " -type \"float3\" 1.80925460000000005 0.82386225000000002 1.24856780000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[33]" " -type \"float3\" 4.43118239999999997 -0.87420600999999998 3.15525149999999988"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[34]" " -type \"float3\" 1.13978990000000002 -0.87420600999999998 1.8808745"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[35]" " -type \"float3\" 3.2362833000000002 -0.87420600999999998 3.02214070000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[36]" " -type \"float3\" 4.3905763999999996 -1.0372068000000001 1.4119858999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[37]" " -type \"float3\" 3.64750240000000003 -1.0372068000000001 1.329208"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[38]" " -type \"float3\" 2.11277410000000021 -0.87420600999999998 2.5871350999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[39]" " -type \"float3\" 2.94882389999999983 -1.0372068000000001 1.05869009999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[40]" " -type \"float3\" 2.34375240000000007 -1.0372068000000001 0.61948650999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[41]" " -type \"float3\" 3.499469 0.82386225000000002 2.14055509999999982"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[42]" " -type \"float3\" 4.45976309999999998 -0.14852383999999999 3.87012460000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[43]" " -type \"float3\" 3.0791647000000002 -0.14852383999999999 3.71945570000000014"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[44]" " -type \"float3\" 2.5955111999999998 0.82386225000000002 1.8039206000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[45]" " -type \"float3\" 1.7802496000000001 -0.14852383999999999 3.21987630000000014"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[46]" " -type \"float3\" 0.65450788000000004 -0.14852383999999999 2.4065751999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[47]" " -type \"float3\" -0.28645482999999999 -0.87420600999999998 -1.34761240000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[48]" " -type \"float3\" 0.38899231000000001 -0.87420600999999998 0.94182949999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[49]" " -type \"float3\" 1.87685279999999999 -1.0372068000000001 0.035521239000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[50]" " -type \"float3\" -0.097852870999999994 -0.87420600999999998 -0.160207"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[51]" " -type \"float3\" 1.574097 -1.0372068000000001 -0.64980417000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[52]" " -type \"float3\" 1.456811 -1.0372068000000001 -1.38821829999999991"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[53]" " -type \"float3\" 1.19846809999999993 0.82386225000000002 0.50455463"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[54]" " -type \"float3\" -0.21518323 -0.14852383999999999 1.32380579999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[55]" " -type \"float3\" 0.79730999000000002 0.82386225000000002 -0.37267666999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[56]" " -type \"float3\" -0.78039908000000002 -0.14852383999999999 0.052077971000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[57]" " -type \"float3\" -1.0013278000000001 -0.14852383999999999 -1.31903180000000009"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[58]" " -type \"float3\" 4.28395409999999988 -2.01696710000000001 -3.16544990000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[59]" " -type \"float3\" 3.31749889999999992 -2.58997250000000001 -2.41548350000000012"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[60]" " -type \"float3\" 3.08615210000000006 -2.01696710000000001 -2.63629820000000015"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[61]" " -type \"float3\" 2.97322540000000002 -2.58997250000000001 -1.78305709999999995"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[62]" " -type \"float3\" 2.66273049999999989 -2.01696710000000001 -1.85847739999999995"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[63]" " -type \"float3\" 1.00082359999999992 -3.30566020000000016 -2.26216010000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[64]" " -type \"float3\" 0.99520098999999995 -2.80636550000000007 -2.263526"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[65]" " -type \"float3\" 1.8478813999999999 -3.30566020000000016 -3.81819579999999981"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[66]" " -type \"float3\" 3.104449 -2.58997250000000001 -2.121974"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[67]" " -type \"float3\" 1.32368869999999994 -3.30566020000000016 -3.09603830000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[68]" " -type \"float3\" 2.82412220000000014 -2.01696710000000001 -2.275311"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[69]" " -type \"float3\" 1.31861230000000007 -2.80636550000000007 -3.09881520000000021"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[70]" " -type \"float3\" 1.8436922 -2.80636550000000007 -3.82219430000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[71]" " -type \"float3\" 3.60077049999999987 -2.58997250000000001 -2.64196849999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[72]" " -type \"float3\" 3.43454740000000003 -2.01696710000000001 -2.91485189999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[73]" " -type \"float3\" 2.54484889999999986 -3.30566020000000016 -4.37544440000000012"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[74]" " -type \"float3\" 2.54183860000000017 -2.80636550000000007 -4.38038590000000028"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[75]" " -type \"float3\" 4.24409249999999982 -3.30566020000000016 -4.87676719999999975"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[76]" " -type \"float3\" 3.93320990000000004 -2.58997250000000001 -2.7888297999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[77]" " -type \"float3\" 3.36278990000000011 -3.30566020000000016 -4.73678539999999959"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[78]" " -type \"float3\" 3.84341450000000018 -2.01696710000000001 -3.09547660000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[79]" " -type \"float3\" 3.3611639000000002 -2.80636550000000007 -4.74233819999999984"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[80]" " -type \"float3\" 4.24395749999999961 -2.80636550000000007 -4.88255689999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[81]" " -type \"float3\" 1.620229 0.82386225000000002 -3.96954010000000013"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[82]" " -type \"float3\" 0.98792230999999997 -0.87420600999999998 -4.63900470000000009"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[83]" " -type \"float3\" -0.15334391999999999 -0.87420600999999998 -2.54251149999999981"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[84]" " -type \"float3\" 1.53958879999999998 -1.0372068000000001 -2.13129230000000014"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[85]" " -type \"float3\" 0.28166163 -0.87420600999999998 -3.66602059999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[86]" " -type \"float3\" 1.81010680000000002 -1.0372068000000001 -2.8299707999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[87]" " -type \"float3\" 2.24931029999999987 -1.0372068000000001 -3.43504239999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[88]" " -type \"float3\" 0.72824162000000003 0.82386225000000002 -2.27932569999999979"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[89]" " -type \"float3\" -0.85065882999999998 -0.14852383999999999 -2.69963"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[90]" " -type \"float3\" 1.06487620000000005 0.82386225000000002 -3.18328360000000021"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[91]" " -type \"float3\" -0.35107939999999999 -0.14852383999999999 -3.99854520000000013"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[92]" " -type \"float3\" 0.46222155999999998 -0.14852383999999999 -5.12428710000000009"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[93]" " -type \"float3\" 4.21640920000000019 -0.87420600999999998 -6.0652493999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[94]" " -type \"float3\" 1.92696730000000005 -0.87420600999999998 -5.38980250000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[95]" " -type \"float3\" 2.83327580000000001 -1.0372068000000001 -3.901942"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[96]" " -type \"float3\" 3.02900390000000019 -0.87420600999999998 -5.8766474999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[97]" " -type \"float3\" 3.51860119999999998 -1.0372068000000001 -4.20469760000000026"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[98]" " -type \"float3\" 4.25701519999999967 -1.0372068000000001 -4.32198379999999993"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[99]" " -type \"float3\" 2.36424209999999979 0.82386225000000002 -4.58032660000000025"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[100]" " -type \"float3\" 1.544991 -0.14852383999999999 -5.993978"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[101]" " -type \"float3\" 3.24147339999999984 0.82386225000000002 -4.98148489999999988"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[102]" " -type \"float3\" 2.81671860000000018 -0.14852383999999999 -6.5591936000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[103]" " -type \"float3\" 4.18782850000000018 -0.14852383999999999 -6.78012230000000038"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[104]" " -type \"float3\" 4.46359589999999962 6.3679686000000002 4.5468105999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[105]" " -type \"float3\" -1.67801390000000006 6.3679686000000002 -1.31519879999999989"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[106]" " -type \"float3\" 0.17872919000000001 6.3679686000000002 2.88777490000000014"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[107]" " -type \"float3\" 2.90802840000000007 6.3679686000000002 4.37352179999999979"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[108]" " -type \"float3\" 4.44934180000000001 3.14200690000000016 3.42273279999999991"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[109]" " -type \"float3\" 3.1847 3.14200690000000016 3.2849813000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[110]" " -type \"float3\" 4.4349236000000003 4.92784639999999996 3.3158774000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[111]" " -type \"float3\" 3.19839330000000022 4.92784639999999996 3.178129"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[112]" " -type \"float3\" 0.96349275000000001 3.14200690000000016 2.08285259999999983"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[113]" " -type \"float3\" 1.9948132999999999 3.14200690000000016 2.82761620000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[114]" " -type \"float3\" 1.44539890000000004 6.3679686000000002 3.80721329999999991"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[115]" " -type \"float3\" 2.03573989999999982 4.92784639999999996 2.727967"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[116]" " -type \"float3\" 1.02885589999999993 4.92784639999999996 1.99709979999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[117]" " -type \"float3\" -0.79868919000000005 6.3679686000000002 1.66528870000000007"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[118]" " -type \"float3\" 0.16666146000000001 3.14200690000000016 1.09121080000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[119]" " -type \"float3\" 0.25189987000000003 4.92784639999999996 1.0253372999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[120]" " -type \"float3\" -0.55393612000000003 3.14200690000000016 -1.329453"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[121]" " -type \"float3\" -0.3513096 3.14200690000000016 -0.073572106999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[122]" " -type \"float3\" -1.4324844000000001 6.3679686000000002 0.23061324999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[123]" " -type \"float3\" -0.25190783 4.92784639999999996 -0.11509513"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[124]" " -type \"float3\" -0.4470807 4.92784639999999996 -1.34387089999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[125]" " -type \"float3\" 4.40439079999999983 7.36821370000000009 2.0050631000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[126]" " -type \"float3\" 1.934152 7.36821370000000009 1.04862370000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[127]" " -type \"float3\" 3.50760149999999982 7.36821370000000009 1.90516130000000006"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[128]" " -type \"float3\" 4.44746020000000009 7.34196139999999975 3.8540757000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[129]" " -type \"float3\" 3.0714378 7.34196139999999975 3.70078750000000012"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[130]" " -type \"float3\" 2.664391 7.36821370000000009 1.57868279999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[131]" " -type \"float3\" 1.77762639999999994 7.34196139999999975 3.1998435999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[132]" " -type \"float3\" 0.65715712000000004 7.34196139999999975 2.38652750000000013"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[133]" " -type \"float3\" 4.36503740000000029 7.38061050000000041 0.31556737000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[134]" " -type \"float3\" 3.90613680000000008 7.38061050000000041 0.26444607999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[135]" " -type \"float3\" 3.47465320000000011 7.38061050000000041 0.097382143000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[136]" " -type \"float3\" 3.10097859999999992 7.38061050000000041 -0.17385692999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[137]" " -type \"float3\" 0.86373376999999996 7.36821370000000009 -1.37440370000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[138]" " -type \"float3\" 1.37066719999999997 7.36821370000000009 0.34385653999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[139]" " -type \"float3\" -0.20744689999999999 7.34196139999999975 1.30514189999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[140]" " -type \"float3\" 1.00528240000000002 7.36821370000000009 -0.48323833999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[141]" " -type \"float3\" -0.7680884 7.34196139999999975 0.036058134999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[142]" " -type \"float3\" -0.98527878999999996 7.34196139999999975 -1.33133469999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[143]" " -type \"float3\" 2.81263489999999994 7.38061050000000041 -0.53449720000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[144]" " -type \"float3\" 2.6256621 7.38061050000000041 -0.95773410999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[145]" " -type \"float3\" 2.55322929999999992 7.38061050000000041 -1.41375720000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[146]" " -type \"float3\" 4.18399569999999965 6.3679686000000002 -7.45680859999999957"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[147]" " -type \"float3\" -0.018978150999999999 6.3679686000000002 -5.60006570000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[148]" " -type \"float3\" -1.50472490000000003 6.3679686000000002 -2.87076639999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[149]" " -type \"float3\" -0.41618433999999999 3.14200690000000016 -2.59409480000000014"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[150]" " -type \"float3\" -0.30933221999999999 4.92784639999999996 -2.58040139999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[151]" " -type \"float3\" 0.78594410000000003 3.14200690000000016 -4.81530189999999969"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[152]" " -type \"float3\" 0.041180494999999998 3.14200690000000016 -3.78398130000000021"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[153]" " -type \"float3\" -0.93841660000000005 6.3679686000000002 -4.333396"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[154]" " -type \"float3\" 0.14082966999999999 4.92784639999999996 -3.74305490000000018"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[155]" " -type \"float3\" 0.87169706999999996 4.92784639999999996 -4.749939"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[156]" " -type \"float3\" 1.20350810000000008 6.3679686000000002 -6.57748410000000039"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[157]" " -type \"float3\" 1.777586 3.14200690000000016 -5.61213349999999966"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[158]" " -type \"float3\" 1.84345939999999997 4.92784639999999996 -5.526895"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[159]" " -type \"float3\" 4.19824980000000014 3.14200690000000016 -6.33273080000000022"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[160]" " -type \"float3\" 2.942369 3.14200690000000016 -6.13010449999999985"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[161]" " -type \"float3\" 2.63818360000000007 6.3679686000000002 -7.21127889999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[162]" " -type \"float3\" 2.983892 4.92784639999999996 -6.03070259999999969"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[163]" " -type \"float3\" 4.21266750000000023 4.92784639999999996 -6.22587539999999962"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[164]" " -type \"float3\" 1.8201731000000001 7.36821370000000009 -3.8446425999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[165]" " -type \"float3\" 0.96363555999999995 7.36821370000000009 -2.27119330000000019"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[166]" " -type \"float3\" -0.83199078000000004 7.34196139999999975 -2.70735690000000018"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[167]" " -type \"float3\" 1.29011389999999992 7.36821370000000009 -3.1144037"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[168]" " -type \"float3\" -0.33104682000000002 7.34196139999999975 -4.00116829999999979"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[169]" " -type \"float3\" 0.48226934999999999 7.34196139999999975 -5.12163780000000024"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[170]" " -type \"float3\" 2.60435080000000019 7.38061050000000041 -1.872658"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[171]" " -type \"float3\" 2.77141480000000007 7.38061050000000041 -2.30414150000000006"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[172]" " -type \"float3\" 3.042654 7.38061050000000041 -2.67781620000000009"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[173]" " -type \"float3\" 4.24320029999999981 7.36821370000000009 -4.915061"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[174]" " -type \"float3\" 2.52494029999999992 7.36821370000000009 -4.4081273000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[175]" " -type \"float3\" 1.5636547999999999 7.34196139999999975 -5.98624180000000017"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[176]" " -type \"float3\" 3.352035 7.36821370000000009 -4.77351240000000043"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[177]" " -type \"float3\" 2.83273859999999988 7.34196139999999975 -6.54688309999999962"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[178]" " -type \"float3\" 4.20013140000000007 7.34196139999999975 -6.76407340000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[179]" " -type \"float3\" 3.4032941000000001 7.38061050000000041 -2.96615979999999979"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[180]" " -type \"float3\" 3.82653089999999985 7.38061050000000041 -3.15313270000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[181]" " -type \"float3\" 4.28255409999999959 7.38061050000000041 -3.2255653999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[182]" " -type \"float3\" 5.71452 -2.58997250000000001 -1.48739310000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[183]" " -type \"float3\" 8.01355550000000072 0.82386225000000002 -1.58866039999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[184]" " -type \"float3\" 6.03424639999999979 -2.01696710000000001 -1.49484050000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[185]" " -type \"float3\" 5.28428029999999982 -2.58997250000000001 -2.46129579999999981"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[186]" " -type \"float3\" 5.505095 -2.01696710000000001 -2.69264269999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[187]" " -type \"float3\" 4.651854 -2.58997250000000001 -2.80556919999999987"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[188]" " -type \"float3\" 4.72727390000000014 -2.01696710000000001 -3.11606430000000012"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[189]" " -type \"float3\" 5.13095709999999983 -3.30566020000000016 -4.77797129999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[190]" " -type \"float3\" 5.13232279999999985 -2.80636550000000007 -4.78359369999999995"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[191]" " -type \"float3\" 6.68699259999999995 -3.30566020000000016 -3.9309132"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[192]" " -type \"float3\" 4.99077079999999995 -2.58997250000000001 -2.67434569999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[193]" " -type \"float3\" 5.96483519999999956 -3.30566020000000016 -4.45510580000000012"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[194]" " -type \"float3\" 5.14410779999999956 -2.01696710000000001 -2.95467259999999987"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[195]" " -type \"float3\" 5.96761229999999987 -2.80636550000000007 -4.46018220000000021"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[196]" " -type \"float3\" 6.6909913999999997 -2.80636550000000007 -3.93510250000000017"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[197]" " -type \"float3\" 5.51076560000000004 -2.58997250000000001 -2.17802430000000014"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[198]" " -type \"float3\" 5.78364849999999997 -2.01696710000000001 -2.34424710000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[199]" " -type \"float3\" 7.24424080000000004 -3.30566020000000016 -3.23394579999999987"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[200]" " -type \"float3\" 7.24918270000000042 -2.80636550000000007 -3.2369561"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[201]" " -type \"float3\" 7.745564 -3.30566020000000016 -1.53470229999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[202]" " -type \"float3\" 5.65762660000000039 -2.58997250000000001 -1.84558489999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[203]" " -type \"float3\" 7.60558180000000039 -3.30566020000000016 -2.4160048999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[204]" " -type \"float3\" 5.96427350000000001 -2.01696710000000001 -1.93538019999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[205]" " -type \"float3\" 7.611135 -2.80636550000000007 -2.41763089999999981"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[206]" " -type \"float3\" 7.75135370000000012 -2.80636550000000007 -1.53483710000000007"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[207]" " -type \"float3\" 6.83833689999999983 0.82386225000000002 -4.15856549999999991"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[208]" " -type \"float3\" 7.50780150000000024 -0.87420600999999998 -4.79087260000000015"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[209]" " -type \"float3\" 5.41130829999999996 -0.87420600999999998 -5.93213840000000037"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[210]" " -type \"float3\" 5.00008919999999968 -1.0372068000000001 -4.23920579999999969"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[211]" " -type \"float3\" 6.53481719999999999 -0.87420600999999998 -5.49713329999999978"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[212]" " -type \"float3\" 5.69876770000000032 -1.0372068000000001 -3.968688"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[213]" " -type \"float3\" 6.30383919999999964 -1.0372068000000001 -3.52948450000000014"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[214]" " -type \"float3\" 5.14812229999999982 0.82386225000000002 -5.0505532999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[215]" " -type \"float3\" 5.56842659999999956 -0.14852383999999999 -6.6294537"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[216]" " -type \"float3\" 6.05208060000000003 0.82386225000000002 -4.7139186999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[217]" " -type \"float3\" 6.867342 -0.14852383999999999 -6.12987419999999972"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[218]" " -type \"float3\" 7.99308350000000001 -0.14852383999999999 -5.31657310000000027"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[219]" " -type \"float3\" 8.93404669999999967 -0.87420600999999998 -1.56238560000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[220]" " -type \"float3\" 8.2585993000000002 -0.87420600999999998 -3.8518273999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[221]" " -type \"float3\" 6.77073859999999961 -1.0372068000000001 -2.945519"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[222]" " -type \"float3\" 8.74544430000000084 -0.87420600999999998 -2.74979089999999982"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[223]" " -type \"float3\" 7.0734944000000004 -1.0372068000000001 -2.26019380000000014"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[224]" " -type \"float3\" 7.19078060000000008 -1.0372068000000001 -1.52177969999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[225]" " -type \"float3\" 7.44912340000000039 0.82386225000000002 -3.4145525000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[226]" " -type \"float3\" 8.8627748000000004 -0.14852383999999999 -4.23380370000000017"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[227]" " -type \"float3\" 7.85028170000000003 0.82386225000000002 -2.53732129999999989"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[228]" " -type \"float3\" 9.42799089999999929 -0.14852383999999999 -2.96207619999999983"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[229]" " -type \"float3\" 9.64891910000000053 -0.14852383999999999 -1.59096609999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[230]" " -type \"float3\" 5.33009239999999984 -2.58997250000000001 -0.49451466999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[231]" " -type \"float3\" 5.56143949999999965 -2.01696710000000001 -0.27369981999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[232]" " -type \"float3\" 5.674366 -2.58997250000000001 -1.12694059999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[233]" " -type \"float3\" 5.98486090000000015 -2.01696710000000001 -1.05152029999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[234]" " -type \"float3\" 7.64676810000000007 -3.30566020000000016 -0.64783782000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[235]" " -type \"float3\" 7.6523905000000001 -2.80636550000000007 -0.64647204000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[236]" " -type \"float3\" 6.7997103000000001 -3.30566020000000016 0.90819788000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[237]" " -type \"float3\" 5.54314280000000004 -2.58997250000000001 -0.78802401"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[238]" " -type \"float3\" 7.32390260000000026 -3.30566020000000016 0.18604045999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[239]" " -type \"float3\" 5.82346960000000013 -2.01696710000000001 -0.63468712999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[240]" " -type \"float3\" 7.328979 -2.80636550000000007 0.18881730999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[241]" " -type \"float3\" 6.80389930000000032 -2.80636550000000007 0.91219645999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[242]" " -type \"float3\" 5.04682109999999984 -2.58997250000000001 -0.26802942000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[243]" " -type \"float3\" 5.21304419999999968 -2.01696710000000001 0.0048539079999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[244]" " -type \"float3\" 6.1027427000000003 -3.30566020000000016 1.46544619999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[245]" " -type \"float3\" 6.10575289999999971 -2.80636550000000007 1.47038779999999991"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[246]" " -type \"float3\" 4.71438169999999968 -2.58997250000000001 -0.12116782"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[247]" " -type \"float3\" 5.28480150000000037 -3.30566020000000016 1.82678720000000006"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[248]" " -type \"float3\" 4.80417679999999958 -2.01696710000000001 0.18547857000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[249]" " -type \"float3\" 5.28642750000000028 -2.80636550000000007 1.83234009999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[250]" " -type \"float3\" 7.02736230000000006 0.82386225000000002 1.0595422000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[251]" " -type \"float3\" 7.65966940000000029 -0.87420600999999998 1.7290068999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[252]" " -type \"float3\" 8.80093570000000014 -0.87420600999999998 -0.36748657000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[253]" " -type \"float3\" 7.10800270000000012 -1.0372068000000001 -0.77870547999999995"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[254]" " -type \"float3\" 8.36592959999999941 -0.87420600999999998 0.75602263000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[255]" " -type \"float3\" 6.83748480000000036 -1.0372068000000001 -0.080026805000000006"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[256]" " -type \"float3\" 6.39828110000000017 -1.0372068000000001 0.52504432000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[257]" " -type \"float3\" 7.91934969999999971 0.82386225000000002 -0.63067222000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[258]" " -type \"float3\" 9.49825 -0.14852383999999999 -0.21036793000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[259]" " -type \"float3\" 7.58271549999999994 0.82386225000000002 0.27328565999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[260]" " -type \"float3\" 8.99867060000000052 -0.14852383999999999 1.08854720000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[261]" " -type \"float3\" 8.18537040000000005 -0.14852383999999999 2.21428890000000012"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[262]" " -type \"float3\" 6.72062440000000016 -0.87420600999999998 2.47980450000000019"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[263]" " -type \"float3\" 5.81431580000000015 -1.0372068000000001 0.99194406999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[264]" " -type \"float3\" 5.618588 -0.87420600999999998 2.96664979999999989"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[265]" " -type \"float3\" 5.12899019999999961 -1.0372068000000001 1.29469970000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[266]" " -type \"float3\" 6.28334949999999992 0.82386225000000002 1.67032859999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[267]" " -type \"float3\" 7.10260059999999971 -0.14852383999999999 3.08398009999999978"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[268]" " -type \"float3\" 5.40611789999999992 0.82386225000000002 2.0714866999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[269]" " -type \"float3\" 5.830873 -0.14852383999999999 3.64919590000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[270]" " -type \"float3\" 10.325605 6.3679686000000002 -1.59479919999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[271]" " -type \"float3\" 8.46886250000000018 6.3679686000000002 -5.79777290000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[272]" " -type \"float3\" 5.739563 6.3679686000000002 -7.28351970000000026"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[273]" " -type \"float3\" 5.46289159999999985 3.14200690000000016 -6.19497919999999969"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[274]" " -type \"float3\" 5.44919819999999966 4.92784639999999996 -6.08812710000000035"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[275]" " -type \"float3\" 7.68409869999999984 3.14200690000000016 -4.99285080000000026"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[276]" " -type \"float3\" 6.65277809999999992 3.14200690000000016 -5.73761420000000033"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[277]" " -type \"float3\" 7.20219279999999973 6.3679686000000002 -6.71721120000000038"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[278]" " -type \"float3\" 6.61185169999999989 4.92784639999999996 -5.63796520000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[279]" " -type \"float3\" 7.61873579999999961 4.92784639999999996 -4.90709779999999984"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[280]" " -type \"float3\" 9.4462805000000003 6.3679686000000002 -4.57528690000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[281]" " -type \"float3\" 8.4809303000000007 3.14200690000000016 -4.00120879999999968"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[282]" " -type \"float3\" 8.39569189999999921 4.92784639999999996 -3.93533540000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[283]" " -type \"float3\" 9.20152760000000036 3.14200690000000016 -1.58054490000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[284]" " -type \"float3\" 8.99890139999999938 3.14200690000000016 -2.83642580000000022"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[285]" " -type \"float3\" 10.080076 6.3679686000000002 -3.14061119999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[286]" " -type \"float3\" 8.89949889999999932 4.92784639999999996 -2.79490280000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[287]" " -type \"float3\" 9.09467219999999976 4.92784639999999996 -1.56612710000000011"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[288]" " -type \"float3\" 6.71343949999999978 7.36821370000000009 -3.95862150000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[289]" " -type \"float3\" 5.13998989999999978 7.36821370000000009 -4.81515930000000036"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[290]" " -type \"float3\" 5.57615380000000016 7.34196139999999975 -6.61078550000000043"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[291]" " -type \"float3\" 5.98320059999999998 7.36821370000000009 -4.48868080000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[292]" " -type \"float3\" 6.86996509999999994 7.34196139999999975 -6.10984130000000025"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[293]" " -type \"float3\" 7.99043460000000039 7.34196139999999975 -5.29652550000000044"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[294]" " -type \"float3\" 4.74145459999999996 7.38061050000000041 -3.174444"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[295]" " -type \"float3\" 5.17293830000000021 7.38061050000000041 -3.00738"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[296]" " -type \"float3\" 5.54661269999999984 7.38061050000000041 -2.73614069999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[297]" " -type \"float3\" 7.78385779999999983 7.36821370000000009 -1.53559420000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[298]" " -type \"float3\" 7.27692409999999956 7.36821370000000009 -3.25385450000000009"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[299]" " -type \"float3\" 8.85503860000000032 7.34196139999999975 -4.21513989999999961"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[300]" " -type \"float3\" 7.64230919999999969 7.36821370000000009 -2.42675969999999985"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[301]" " -type \"float3\" 9.41567990000000066 7.34196139999999975 -2.94605609999999984"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[302]" " -type \"float3\" 9.63287069999999979 7.34196139999999975 -1.5786633000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[303]" " -type \"float3\" 5.83495659999999994 7.38061050000000041 -2.37550069999999991"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[304]" " -type \"float3\" 6.02192930000000004 7.38061050000000041 -1.95226370000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[305]" " -type \"float3\" 6.09436230000000023 7.38061050000000041 -1.49624069999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[306]" " -type \"float3\" 8.66656970000000015 6.3679686000000002 2.69006750000000006"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[307]" " -type \"float3\" 10.152316 6.3679686000000002 -0.039231621000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[308]" " -type \"float3\" 9.063776 3.14200690000000016 -0.31590312999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[309]" " -type \"float3\" 8.95692350000000026 4.92784639999999996 -0.32959652"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[310]" " -type \"float3\" 7.8616476000000004 3.14200690000000016 1.90530409999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[311]" " -type \"float3\" 8.606411 3.14200690000000016 0.87398343999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[312]" " -type \"float3\" 9.58600810000000081 6.3679686000000002 1.4233979000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[313]" " -type \"float3\" 8.50676160000000081 4.92784639999999996 0.83305680999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[314]" " -type \"float3\" 7.77589459999999999 4.92784639999999996 1.83994089999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[315]" " -type \"float3\" 7.44408370000000019 6.3679686000000002 3.667486"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[316]" " -type \"float3\" 6.87000559999999982 3.14200690000000016 2.70213530000000013"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[317]" " -type \"float3\" 6.804132 4.92784639999999996 2.61689689999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[318]" " -type \"float3\" 5.70522259999999992 3.14200690000000016 3.22010640000000015"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[319]" " -type \"float3\" 6.009408 6.3679686000000002 4.301281"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[320]" " -type \"float3\" 5.66369960000000017 4.92784639999999996 3.12070470000000011"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[321]" " -type \"float3\" 6.82741829999999972 7.36821370000000009 0.93464475999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[322]" " -type \"float3\" 7.68395609999999962 7.36821370000000009 -0.63880473000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[323]" " -type \"float3\" 9.47958279999999931 7.34196139999999975 -0.20264094999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[324]" " -type \"float3\" 7.35747769999999957 7.36821370000000009 0.20440570999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[325]" " -type \"float3\" 8.97863860000000003 7.34196139999999975 1.09117039999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[326]" " -type \"float3\" 8.1653222999999997 7.34196139999999975 2.21163959999999982"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[327]" " -type \"float3\" 6.043241 7.38061050000000041 -1.03733980000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[328]" " -type \"float3\" 5.87617679999999964 7.38061050000000041 -0.60585635999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[329]" " -type \"float3\" 5.60493760000000041 7.38061050000000041 -0.23218164999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[330]" " -type \"float3\" 6.12265109999999968 7.36821370000000009 1.49812949999999989"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[331]" " -type \"float3\" 7.08393669999999975 7.34196139999999975 3.07624360000000019"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[332]" " -type \"float3\" 5.2955565 7.36821370000000009 1.8635143999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[333]" " -type \"float3\" 5.81485270000000032 7.34196139999999975 3.63688520000000004"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[334]" " -type \"float3\" 5.24429750000000006 7.38061050000000041 0.056161801999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[335]" " -type \"float3\" 4.32379580000000008 7.38621950000000016 -1.454999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pnts[336]" " -type \"float3\" 4.82106070000000031 7.38061050000000041 0.24313473999999999"
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pt[0:165]" (" -type \"float3\" 4.35618969999999983 -2.58997250000000001 -0.064274586999999994 4.29140139999999981 -2.58997250000000001 -2.84572339999999979 4.45745710000000006 0.82386225000000002 2.2347608000000001 4.1901345000000001 0.82386225000000002 -5.14475869999999968 0.63403606000000001 0.82386225000000002 -1.32133759999999989 2.93307140000000022 -2.58997250000000001 -1.4226048 4.3636374 -2.01696710000000001 0.25545189000000001 2.61334489999999997 -2.01696710000000001 -1.41515740000000001 3.14249659999999986 -2.01696710000000001 -0.21735536999999999 3.36331129999999989 -2.58997250000000001 -0.44870239000000001 3.92031740000000006 -2.01696710000000001 0.20606632999999999 3.99573780000000012 -2.58997250000000001 -0.10442844 4.40349910000000033 -3.30566020000000016 1.96676920000000011 3.5166347 -3.30566020000000016 1.8679732 4.40363409999999966 -2.80636550000000007 1.97255910000000001 3.51526879999999986 -2.80636550000000007 1.87359579999999992 1.96059889999999992 -3.30566020000000016 1.02091540000000003 3.6568208000000"
+		+ "002 -2.58997250000000001 -0.23565212999999999 2.68275640000000015 -3.30566020000000016 1.545108 3.50348380000000015 -2.01696710000000001 0.044674709 2.6799795999999998 -2.80636550000000007 1.55018450000000008 1.95660030000000007 -2.80636550000000007 1.02510459999999992 2.86394290000000007 -2.01696710000000001 -0.56575083999999998 3.13682630000000007 -2.58997250000000001 -0.73197365000000003 1.4033506 -3.30566020000000016 0.32394793999999999 1.39840889999999995 -2.80636550000000007 0.32695812000000002 0.90202760999999998 -3.30566020000000016 -1.37529579999999996 2.989965 -2.58997250000000001 -1.06441279999999994 1.04200960000000009 -3.30566020000000016 -0.49399313 2.68331810000000015 -2.01696710000000001 -0.97461748000000004 1.03645659999999995 -2.80636550000000007 -0.49236706000000002 0.89623772999999995 -2.80636550000000007 -1.37516079999999996 1.80925460000000005 0.82386225000000002 1.24856780000000001 4.43118239999999997 -0.87420600999999998 3.15525149999999988 1.13978990000000002 -0.87420600999999998 1.88"
+		+ "08745 3.2362833000000002 -0.87420600999999998 3.02214070000000001 4.3905763999999996 -1.0372068000000001 1.4119858999999999 3.64750240000000003 -1.0372068000000001 1.329208 2.11277410000000021 -0.87420600999999998 2.5871350999999998 2.94882389999999983 -1.0372068000000001 1.05869009999999997 2.34375240000000007 -1.0372068000000001 0.61948650999999999 3.499469 0.82386225000000002 2.14055509999999982 4.45976309999999998 -0.14852383999999999 3.87012460000000003 3.0791647000000002 -0.14852383999999999 3.71945570000000014 2.5955111999999998 0.82386225000000002 1.8039206000000001 1.7802496000000001 -0.14852383999999999 3.21987630000000014 0.65450788000000004 -0.14852383999999999 2.4065751999999998 -0.28645482999999999 -0.87420600999999998 -1.34761240000000004 0.38899231000000001 -0.87420600999999998 0.94182949999999999 1.87685279999999999 -1.0372068000000001 0.035521239000000003 -0.097852870999999994 -0.87420600999999998 -0.160207 1.574097 -1.0372068000000001 -0.64980417000000001 1.456811 -1.0372068000000001 -1.388"
+		+ "21829999999991 1.19846809999999993 0.82386225000000002 0.50455463 -0.21518323 -0.14852383999999999 1.32380579999999992 0.79730999000000002 0.82386225000000002 -0.37267666999999999 -0.78039908000000002 -0.14852383999999999 0.052077971000000001 -1.0013278000000001 -0.14852383999999999 -1.31903180000000009 4.28395409999999988 -2.01696710000000001 -3.16544990000000004 3.31749889999999992 -2.58997250000000001 -2.41548350000000012 3.08615210000000006 -2.01696710000000001 -2.63629820000000015 2.97322540000000002 -2.58997250000000001 -1.78305709999999995 2.66273049999999989 -2.01696710000000001 -1.85847739999999995 1.00082359999999992 -3.30566020000000016 -2.26216010000000001 0.99520098999999995 -2.80636550000000007 -2.263526 1.8478813999999999 -3.30566020000000016 -3.81819579999999981 3.104449 -2.58997250000000001 -2.121974 1.32368869999999994 -3.30566020000000016 -3.09603830000000002 2.82412220000000014 -2.01696710000000001 -2.275311 1.31861230000000007 -2.80636550000000007 -3.09881520000000021 1.8436922 -2.8063655"
+		+ "0000000007 -3.82219430000000004 3.60077049999999987 -2.58997250000000001 -2.64196849999999994 3.43454740000000003 -2.01696710000000001 -2.91485189999999994 2.54484889999999986 -3.30566020000000016 -4.37544440000000012 2.54183860000000017 -2.80636550000000007 -4.38038590000000028 4.24409249999999982 -3.30566020000000016 -4.87676719999999975 3.93320990000000004 -2.58997250000000001 -2.7888297999999998 3.36278990000000011 -3.30566020000000016 -4.73678539999999959 3.84341450000000018 -2.01696710000000001 -3.09547660000000002 3.3611639000000002 -2.80636550000000007 -4.74233819999999984 4.24395749999999961 -2.80636550000000007 -4.88255689999999998 1.620229 0.82386225000000002 -3.96954010000000013 0.98792230999999997 -0.87420600999999998 -4.63900470000000009 -0.15334391999999999 -0.87420600999999998 -2.54251149999999981 1.53958879999999998 -1.0372068000000001 -2.13129230000000014 0.28166163 -0.87420600999999998 -3.66602059999999996 1.81010680000000002 -1.0372068000000001 -2.8299707999999999 2.24931029999999987 -1.03"
+		+ "72068000000001 -3.43504239999999994 0.72824162000000003 0.82386225000000002 -2.27932569999999979 -0.85065882999999998 -0.14852383999999999 -2.69963 1.06487620000000005 0.82386225000000002 -3.18328360000000021 -0.35107939999999999 -0.14852383999999999 -3.99854520000000013 0.46222155999999998 -0.14852383999999999 -5.12428710000000009 4.21640920000000019 -0.87420600999999998 -6.0652493999999999 1.92696730000000005 -0.87420600999999998 -5.38980250000000005 2.83327580000000001 -1.0372068000000001 -3.901942 3.02900390000000019 -0.87420600999999998 -5.8766474999999998 3.51860119999999998 -1.0372068000000001 -4.20469760000000026 4.25701519999999967 -1.0372068000000001 -4.32198379999999993 2.36424209999999979 0.82386225000000002 -4.58032660000000025 1.544991 -0.14852383999999999 -5.993978 3.24147339999999984 0.82386225000000002 -4.98148489999999988 2.81671860000000018 -0.14852383999999999 -6.5591936000000004 4.18782850000000018 -0.14852383999999999 -6.78012230000000038 4.46359589999999962 6.3679686000000002 4.54681059"
+		+ "99999997 -1.67801390000000006 6.3679686000000002 -1.31519879999999989 0.17872919000000001 6.3679686000000002 2.88777490000000014 2.90802840000000007 6.3679686000000002 4.37352179999999979 4.44934180000000001 3.14200690000000016 3.42273279999999991 3.1847 3.14200690000000016 3.2849813000000001 4.4349236000000003 4.92784639999999996 3.3158774000000002 3.19839330000000022 4.92784639999999996 3.178129 0.96349275000000001 3.14200690000000016 2.08285259999999983 1.9948132999999999 3.14200690000000016 2.82761620000000002 1.44539890000000004 6.3679686000000002 3.80721329999999991 2.03573989999999982 4.92784639999999996 2.727967 1.02885589999999993 4.92784639999999996 1.99709979999999998 -0.79868919000000005 6.3679686000000002 1.66528870000000007 0.16666146000000001 3.14200690000000016 1.09121080000000004 0.25189987000000003 4.92784639999999996 1.0253372999999999 -0.55393612000000003 3.14200690000000016 -1.329453 -0.3513096 3.14200690000000016 -0.073572106999999998 -1.4324844000000001 6.3679686000000002 0.230613249999"
+		+ "99999 -0.25190783 4.92784639999999996 -0.11509513 -0.4470807 4.92784639999999996 -1.34387089999999998 4.40439079999999983 7.36821370000000009 2.0050631000000001 1.934152 7.36821370000000009 1.04862370000000005 3.50760149999999982 7.36821370000000009 1.90516130000000006 4.44746020000000009 7.34196139999999975 3.8540757000000001 3.0714378 7.34196139999999975 3.70078750000000012 2.664391 7.36821370000000009 1.57868279999999994 1.77762639999999994 7.34196139999999975 3.1998435999999999 0.65715712000000004 7.34196139999999975 2.38652750000000013 4.36503740000000029 7.38061050000000041 0.31556737000000001 3.90613680000000008 7.38061050000000041 0.26444607999999997 3.47465320000000011 7.38061050000000041 0.097382143000000004 3.10097859999999992 7.38061050000000041 -0.17385692999999999 0.86373376999999996 7.36821370000000009 -1.37440370000000001 1.37066719999999997 7.36821370000000009 0.34385653999999999 -0.20744689999999999 7.34196139999999975 1.30514189999999997 1.00528240000000002 7.36821370000000009 -0.4832383399"
+		+ "9999999 -0.7680884 7.34196139999999975 0.036058134999999998 -0.98527878999999996 7.34196139999999975 -1.33133469999999998 2.81263489999999994 7.38061050000000041 -0.53449720000000001 2.6256621 7.38061050000000041 -0.95773410999999997 2.55322929999999992 7.38061050000000041 -1.41375720000000005 4.18399569999999965 6.3679686000000002 -7.45680859999999957 -0.018978150999999999 6.3679686000000002 -5.60006570000000004 -1.50472490000000003 6.3679686000000002 -2.87076639999999994 -0.41618433999999999 3.14200690000000016 -2.59409480000000014 -0.30933221999999999 4.92784639999999996 -2.58040139999999996 0.78594410000000003 3.14200690000000016 -4.81530189999999969 0.041180494999999998 3.14200690000000016 -3.78398130000000021 -0.93841660000000005 6.3679686000000002 -4.333396 0.14082966999999999 4.92784639999999996 -3.74305490000000018 0.87169706999999996 4.92784639999999996 -4.749939 1.20350810000000008 6.3679686000000002 -6.57748410000000039 1.777586 3.14200690000000016 -5.61213349999999966 1.84345939999999997 4.927846"
+		+ "39999999996 -5.526895 4.19824980000000014 3.14200690000000016 -6.33273080000000022 2.942369 3.14200690000000016 -6.13010449999999985 2.63818360000000007 6.3679686000000002 -7.21127889999999994 2.983892 4.92784639999999996 -6.03070259999999969 4.21266750000000023 4.92784639999999996 -6.22587539999999962 1.8201731000000001 7.36821370000000009 -3.8446425999999998 0.96363555999999995 7.36821370000000009 -2.27119330000000019"
+		)
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pt[166:331]" (" -0.83199078000000004 7.34196139999999975 -2.70735690000000018 1.29011389999999992 7.36821370000000009 -3.1144037 -0.33104682000000002 7.34196139999999975 -4.00116829999999979 0.48226934999999999 7.34196139999999975 -5.12163780000000024 2.60435080000000019 7.38061050000000041 -1.872658 2.77141480000000007 7.38061050000000041 -2.30414150000000006 3.042654 7.38061050000000041 -2.67781620000000009 4.24320029999999981 7.36821370000000009 -4.915061 2.52494029999999992 7.36821370000000009 -4.4081273000000003 1.5636547999999999 7.34196139999999975 -5.98624180000000017 3.352035 7.36821370000000009 -4.77351240000000043 2.83273859999999988 7.34196139999999975 -6.54688309999999962 4.20013140000000007 7.34196139999999975 -6.76407340000000001 3.4032941000000001 7.38061050000000041 -2.96615979999999979 3.82653089999999985 7.38061050000000041 -3.15313270000000001 4.28255409999999959 7.38061050000000041 -3.2255653999999998 5.71452 -2.58997250000000001 -1.48739310000000002 8.01355550000000072 0.82386225000000002 -1.5886603999"
+		+ "9999997 6.03424639999999979 -2.01696710000000001 -1.49484050000000002 5.28428029999999982 -2.58997250000000001 -2.46129579999999981 5.505095 -2.01696710000000001 -2.69264269999999994 4.651854 -2.58997250000000001 -2.80556919999999987 4.72727390000000014 -2.01696710000000001 -3.11606430000000012 5.13095709999999983 -3.30566020000000016 -4.77797129999999992 5.13232279999999985 -2.80636550000000007 -4.78359369999999995 6.68699259999999995 -3.30566020000000016 -3.9309132 4.99077079999999995 -2.58997250000000001 -2.67434569999999994 5.96483519999999956 -3.30566020000000016 -4.45510580000000012 5.14410779999999956 -2.01696710000000001 -2.95467259999999987 5.96761229999999987 -2.80636550000000007 -4.46018220000000021 6.6909913999999997 -2.80636550000000007 -3.93510250000000017 5.51076560000000004 -2.58997250000000001 -2.17802430000000014 5.78364849999999997 -2.01696710000000001 -2.34424710000000003 7.24424080000000004 -3.30566020000000016 -3.23394579999999987 7.24918270000000042 -2.80636550000000007 -3.2369561 7.745"
+		+ "564 -3.30566020000000016 -1.53470229999999996 5.65762660000000039 -2.58997250000000001 -1.84558489999999997 7.60558180000000039 -3.30566020000000016 -2.4160048999999999 5.96427350000000001 -2.01696710000000001 -1.93538019999999999 7.611135 -2.80636550000000007 -2.41763089999999981 7.75135370000000012 -2.80636550000000007 -1.53483710000000007 6.83833689999999983 0.82386225000000002 -4.15856549999999991 7.50780150000000024 -0.87420600999999998 -4.79087260000000015 5.41130829999999996 -0.87420600999999998 -5.93213840000000037 5.00008919999999968 -1.0372068000000001 -4.23920579999999969 6.53481719999999999 -0.87420600999999998 -5.49713329999999978 5.69876770000000032 -1.0372068000000001 -3.968688 6.30383919999999964 -1.0372068000000001 -3.52948450000000014 5.14812229999999982 0.82386225000000002 -5.0505532999999998 5.56842659999999956 -0.14852383999999999 -6.6294537 6.05208060000000003 0.82386225000000002 -4.7139186999999998 6.867342 -0.14852383999999999 -6.12987419999999972 7.99308350000000001 -0.148523839999999"
+		+ "99 -5.31657310000000027 8.93404669999999967 -0.87420600999999998 -1.56238560000000004 8.2585993000000002 -0.87420600999999998 -3.8518273999999999 6.77073859999999961 -1.0372068000000001 -2.945519 8.74544430000000084 -0.87420600999999998 -2.74979089999999982 7.0734944000000004 -1.0372068000000001 -2.26019380000000014 7.19078060000000008 -1.0372068000000001 -1.52177969999999996 7.44912340000000039 0.82386225000000002 -3.4145525000000001 8.8627748000000004 -0.14852383999999999 -4.23380370000000017 7.85028170000000003 0.82386225000000002 -2.53732129999999989 9.42799089999999929 -0.14852383999999999 -2.96207619999999983 9.64891910000000053 -0.14852383999999999 -1.59096609999999994 5.33009239999999984 -2.58997250000000001 -0.49451466999999999 5.56143949999999965 -2.01696710000000001 -0.27369981999999998 5.674366 -2.58997250000000001 -1.12694059999999996 5.98486090000000015 -2.01696710000000001 -1.05152029999999996 7.64676810000000007 -3.30566020000000016 -0.64783782000000001 7.6523905000000001 -2.80636550000000007 "
+		+ "-0.64647204000000003 6.7997103000000001 -3.30566020000000016 0.90819788000000001 5.54314280000000004 -2.58997250000000001 -0.78802401 7.32390260000000026 -3.30566020000000016 0.18604045999999999 5.82346960000000013 -2.01696710000000001 -0.63468712999999999 7.328979 -2.80636550000000007 0.18881730999999999 6.80389930000000032 -2.80636550000000007 0.91219645999999999 5.04682109999999984 -2.58997250000000001 -0.26802942000000002 5.21304419999999968 -2.01696710000000001 0.0048539079999999997 6.1027427000000003 -3.30566020000000016 1.46544619999999992 6.10575289999999971 -2.80636550000000007 1.47038779999999991 4.71438169999999968 -2.58997250000000001 -0.12116782 5.28480150000000037 -3.30566020000000016 1.82678720000000006 4.80417679999999958 -2.01696710000000001 0.18547857000000001 5.28642750000000028 -2.80636550000000007 1.83234009999999992 7.02736230000000006 0.82386225000000002 1.0595422000000001 7.65966940000000029 -0.87420600999999998 1.7290068999999999 8.80093570000000014 -0.87420600999999998 -0.36748657000"
+		+ "000001 7.10800270000000012 -1.0372068000000001 -0.77870547999999995 8.36592959999999941 -0.87420600999999998 0.75602263000000003 6.83748480000000036 -1.0372068000000001 -0.080026805000000006 6.39828110000000017 -1.0372068000000001 0.52504432000000001 7.91934969999999971 0.82386225000000002 -0.63067222000000001 9.49825 -0.14852383999999999 -0.21036793000000001 7.58271549999999994 0.82386225000000002 0.27328565999999999 8.99867060000000052 -0.14852383999999999 1.08854720000000005 8.18537040000000005 -0.14852383999999999 2.21428890000000012 6.72062440000000016 -0.87420600999999998 2.47980450000000019 5.81431580000000015 -1.0372068000000001 0.99194406999999996 5.618588 -0.87420600999999998 2.96664979999999989 5.12899019999999961 -1.0372068000000001 1.29469970000000001 6.28334949999999992 0.82386225000000002 1.67032859999999994 7.10260059999999971 -0.14852383999999999 3.08398009999999978 5.40611789999999992 0.82386225000000002 2.0714866999999999 5.830873 -0.14852383999999999 3.64919590000000005 10.325605 6.3679686"
+		+ "000000002 -1.59479919999999997 8.46886250000000018 6.3679686000000002 -5.79777290000000001 5.739563 6.3679686000000002 -7.28351970000000026 5.46289159999999985 3.14200690000000016 -6.19497919999999969 5.44919819999999966 4.92784639999999996 -6.08812710000000035 7.68409869999999984 3.14200690000000016 -4.99285080000000026 6.65277809999999992 3.14200690000000016 -5.73761420000000033 7.20219279999999973 6.3679686000000002 -6.71721120000000038 6.61185169999999989 4.92784639999999996 -5.63796520000000001 7.61873579999999961 4.92784639999999996 -4.90709779999999984 9.4462805000000003 6.3679686000000002 -4.57528690000000005 8.4809303000000007 3.14200690000000016 -4.00120879999999968 8.39569189999999921 4.92784639999999996 -3.93533540000000004 9.20152760000000036 3.14200690000000016 -1.58054490000000003 8.99890139999999938 3.14200690000000016 -2.83642580000000022 10.080076 6.3679686000000002 -3.14061119999999994 8.89949889999999932 4.92784639999999996 -2.79490280000000002 9.09467219999999976 4.92784639999999996 -1.56"
+		+ "612710000000011 6.71343949999999978 7.36821370000000009 -3.95862150000000002 5.13998989999999978 7.36821370000000009 -4.81515930000000036 5.57615380000000016 7.34196139999999975 -6.61078550000000043 5.98320059999999998 7.36821370000000009 -4.48868080000000003 6.86996509999999994 7.34196139999999975 -6.10984130000000025 7.99043460000000039 7.34196139999999975 -5.29652550000000044 4.74145459999999996 7.38061050000000041 -3.174444 5.17293830000000021 7.38061050000000041 -3.00738 5.54661269999999984 7.38061050000000041 -2.73614069999999998 7.78385779999999983 7.36821370000000009 -1.53559420000000002 7.27692409999999956 7.36821370000000009 -3.25385450000000009 8.85503860000000032 7.34196139999999975 -4.21513989999999961 7.64230919999999969 7.36821370000000009 -2.42675969999999985 9.41567990000000066 7.34196139999999975 -2.94605609999999984 9.63287069999999979 7.34196139999999975 -1.5786633000000001 5.83495659999999994 7.38061050000000041 -2.37550069999999991 6.02192930000000004 7.38061050000000041 -1.9522637000000"
+		+ "0005 6.09436230000000023 7.38061050000000041 -1.49624069999999998 8.66656970000000015 6.3679686000000002 2.69006750000000006 10.152316 6.3679686000000002 -0.039231621000000001 9.063776 3.14200690000000016 -0.31590312999999998 8.95692350000000026 4.92784639999999996 -0.32959652 7.8616476000000004 3.14200690000000016 1.90530409999999994 8.606411 3.14200690000000016 0.87398343999999994 9.58600810000000081 6.3679686000000002 1.4233979000000001 8.50676160000000081 4.92784639999999996 0.83305680999999998 7.77589459999999999 4.92784639999999996 1.83994089999999999 7.44408370000000019 6.3679686000000002 3.667486 6.87000559999999982 3.14200690000000016 2.70213530000000013 6.804132 4.92784639999999996 2.61689689999999997 5.70522259999999992 3.14200690000000016 3.22010640000000015 6.009408 6.3679686000000002 4.301281 5.66369960000000017 4.92784639999999996 3.12070470000000011 6.82741829999999972 7.36821370000000009 0.93464475999999996 7.68395609999999962 7.36821370000000009 -0.63880473000000004 9.47958279999999931 7.341"
+		+ "96139999999975 -0.20264094999999999 7.35747769999999957 7.36821370000000009 0.20440570999999999 8.97863860000000003 7.34196139999999975 1.09117039999999998 8.1653222999999997 7.34196139999999975 2.21163959999999982 6.043241 7.38061050000000041 -1.03733980000000003 5.87617679999999964 7.38061050000000041 -0.60585635999999998 5.60493760000000041 7.38061050000000041 -0.23218164999999999 6.12265109999999968 7.36821370000000009 1.49812949999999989 7.08393669999999975 7.34196139999999975 3.07624360000000019"
+		)
+		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:VaseShape" "pt[332:336]" " 5.2955565 7.36821370000000009 1.8635143999999999 5.81485270000000032 7.34196139999999975 3.63688520000000004 5.24429750000000006 7.38061050000000041 0.056161801999999997 4.32379580000000008 7.38621950000000016 -1.454999 4.82106070000000031 7.38061050000000041 0.24313473999999999"
 		
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1" "rotatePivot" " -type \"double3\" 4.35698505945700809 3.61340830171540173 -1.46639832913587465"
 		
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1" "scalePivot" " -type \"double3\" 4.35698505945700809 3.61340830171540173 -1.46639832913587465"
 		
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts" " -s 77"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[0]" " -type \"float3\" 4.34798569999999973 -1.624992 -0.20644568999999999"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[1]" " -type \"float3\" 4.41769079999999992 -8.66180420000000062 2.43362670000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[2]" " -type \"float3\" 4.42121839999999988 -8.5416641000000002 2.58485869999999984"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[3]" " -type \"float3\" 4.34822229999999976 -1.74804709999999996 -0.17489398"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[4]" " -type \"float3\" 4.33560370000000006 -6.56770180000000003 -0.60776627000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[5]" " -type \"float3\" 4.38128950000000028 -6.03079650000000012 1.2471371"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[6]" " -type \"float3\" 4.86537790000000037 -6.04969789999999996 0.52103758"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[7]" " -type \"float3\" 4.35569 -1.15865759999999995 0.039307176999999999"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[8]" " -type \"float3\" 4.329505 -4.48158030000000007 -0.62230920999999995"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[9]" " -type \"float3\" 4.28779839999999979 -4.05398369999999986 0.24016982000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[10]" " -type \"float3\" 4.32038260000000029 -4.29076340000000034 -0.41660534999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[11]" " -type \"float3\" 4.35004040000000014 -1.39922060000000004 -0.15893768999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[12]" " -type \"float3\" 4.33616729999999961 -3.26243470000000002 -0.42459332999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[13]" " -type \"float3\" 4.29362340000000042 -3.04199889999999984 -0.28924543000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[14]" " -type \"float3\" 4.30149559999999997 -4.11987210000000026 -0.10579079"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[15]" " -type \"float3\" 4.35361050000000027 -1.1861695000000001 -0.043384372999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[16]" " -type \"float3\" 4.25895829999999975 -2.85303620000000002 -0.069287360000000006"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[17]" " -type \"float3\" 4.24381349999999991 -2.81096410000000008 0.16653195000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[18]" " -type \"float3\" 4.6216955000000004 -6.47603560000000034 -0.36752256999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[19]" " -type \"float3\" 4.32763529999999985 -5.37615439999999989 -0.75122606999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[20]" " -type \"float3\" 4.40294890000000017 -5.22547479999999975 -0.50010460999999995"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[21]" " -type \"float3\" 4.32958269999999956 -6.0402288000000004 -0.76234071999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[22]" " -type \"float3\" 4.51268289999999972 -5.92687849999999994 -0.49755465999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[23]" " -type \"float3\" 4.43932250000000028 -4.95933060000000037 0.297793"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[24]" " -type \"float3\" 4.43772840000000013 -5.05987930000000041 -0.1194371"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[25]" " -type \"float3\" 4.81087539999999958 -6.257566 0.061916857999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[26]" " -type \"float3\" 4.62246609999999958 -5.74748850000000022 -0.075074315000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[27]" " -type \"float3\" 4.64839360000000035 -5.60027689999999989 0.378566"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[28]" " -type \"float3\" 4.36884210000000017 -4.518115 0.92647855999999995"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[29]" " -type \"float3\" 4.35419269999999958 -1.40916320000000006 0.015799165"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[30]" " -type \"float3\" 4.291945 -4.14793210000000023 0.55651128000000005"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[31]" " -type \"float3\" 4.25713779999999975 -2.98209290000000005 0.35884737999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[32]" " -type \"float3\" 4.35074230000000028 -1.70878079999999999 -0.076992482000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[33]" " -type \"float3\" 4.31826639999999973 -4.33497290000000035 0.79848874000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[34]" " -type \"float3\" 4.29727169999999958 -3.23620129999999984 0.48568338"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[35]" " -type \"float3\" 4.35970309999999994 -3.394063 0.53459561"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[36]" " -type \"float3\" 4.7669902000000004 -5.95927429999999969 0.87904632000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[37]" " -type \"float3\" 4.41692160000000023 -4.981811 0.66874778000000001"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[38]" " -type \"float3\" 4.5892343999999996 -5.56061940000000021 0.75633645000000005"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[39]" " -type \"float3\" 4.37497950000000024 -5.24826719999999991 1.10656139999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[40]" " -type \"float3\" 4.38866089999999964 -5.09609459999999981 0.94969230999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[41]" " -type \"float3\" 4.57806919999999984 -5.96910139999999956 1.117799"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[42]" " -type \"float3\" 4.48315239999999982 -5.61111689999999985 1.02725979999999995"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[43]" " -type \"float3\" 4.3783259000000001 -5.71099089999999965 1.17921089999999995"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[44]" " -type \"float3\" 4.42283630000000016 -8.67266270000000006 2.65389279999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[45]" " -type \"float3\" 4.36159560000000024 -7.47453449999999986 0.26731133000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[46]" " -type \"float3\" 5.13228940000000033 -6.70780370000000037 1.08906790000000009"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[47]" " -type \"float3\" 4.743052 -7.37222430000000006 0.36495680000000003"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[48]" " -type \"float3\" 4.346478 -7.03809880000000021 -0.25534140999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[49]" " -type \"float3\" 4.70465369999999972 -6.94485949999999974 -0.078442394999999998"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[50]" " -type \"float3\" 5.03289079999999966 -7.03833529999999996 0.70140517000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[51]" " -type \"float3\" 4.96026369999999961 -6.66345209999999977 0.31938939999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[52]" " -type \"float3\" 5.0420771000000002 -6.38506079999999976 0.75634610999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[53]" " -type \"float3\" 4.4183855000000003 -8.70764830000000067 2.48438569999999981"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[54]" " -type \"float3\" 4.37963910000000034 -7.88544029999999996 0.91781002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[55]" " -type \"float3\" 4.71989540000000041 -7.78845450000000028 0.94897330000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[56]" " -type \"float3\" 4.39890670000000039 -8.27855779999999974 1.65397320000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[57]" " -type \"float3\" 4.61777929999999959 -8.22328470000000067 1.66013670000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[58]" " -type \"float3\" 5.09020470000000014 -7.12544250000000012 1.51722029999999997"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[59]" " -type \"float3\" 4.99212270000000036 -7.45530559999999998 1.20616070000000009"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[60]" " -type \"float3\" 4.4205646999999999 -8.70662880000000072 2.5776273999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[61]" " -type \"float3\" 4.80085280000000036 -7.98697519999999983 1.83215890000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[62]" " -type \"float3\" 4.86955019999999994 -7.74509809999999987 2.03913739999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[63]" " -type \"float3\" 4.39354750000000038 -6.65779109999999985 1.61720749999999991"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[64]" " -type \"float3\" 4.982688 -6.56321330000000014 1.37526510000000002"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[65]" " -type \"float3\" 4.91013379999999966 -6.2584023000000002 1.08464880000000008"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[66]" " -type \"float3\" 4.68816279999999974 -6.57440469999999966 1.54491390000000006"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[67]" " -type \"float3\" 4.65177390000000024 -6.25981089999999973 1.29029379999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[68]" " -type \"float3\" 4.38630720000000007 -6.3223022999999996 1.39256"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[69]" " -type \"float3\" 4.423142 -8.62321659999999923 2.6671263999999999"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[70]" " -type \"float3\" 4.94957829999999976 -6.9851150999999998 1.74169160000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[71]" " -type \"float3\" 4.77528760000000041 -7.63514949999999981 2.1750364000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[72]" " -type \"float3\" 4.40247060000000001 -7.09878870000000006 1.902779"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[73]" " -type \"float3\" 4.67238039999999977 -7.00431779999999993 1.86471959999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[74]" " -type \"float3\" 4.42236419999999963 -8.57372280000000053 2.63386319999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[75]" " -type \"float3\" 4.58916330000000006 -7.640645 2.23306389999999988"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf1|Unit4_CurvesLab1:LeafShape1" 
-		"pnts[76]" " -type \"float3\" 4.41218950000000021 -7.7064938999999999 2.23122"
+		"pt[0:76]" (" -s 77 -type \"float3\" 4.34798569999999973 -1.624992 -0.20644568999999999 4.41769079999999992 -8.66180420000000062 2.43362670000000003 4.42121839999999988 -8.5416641000000002 2.58485869999999984 4.34822229999999976 -1.74804709999999996 -0.17489398 4.33560370000000006 -6.56770180000000003 -0.60776627000000005 4.38128950000000028 -6.03079650000000012 1.2471371 4.86537790000000037 -6.04969789999999996 0.52103758 4.35569 -1.15865759999999995 0.039307176999999999 4.329505 -4.48158030000000007 -0.62230920999999995 4.28779839999999979 -4.05398369999999986 0.24016982000000001 4.32038260000000029 -4.29076340000000034 -0.41660534999999999 4.35004040000000014 -1.39922060000000004 -0.15893768999999999 4.33616729999999961 -3.26243470000000002 -0.42459332999999999 4.29362340000000042 -3.04199889999999984 -0.28924543000000003 4.30149559999999997 -4.11987210000000026 -0.10579079 4.35361050000000027 -1.1861695000000001 -0.043384372999999997 4.25895829999999975 -2.85303620000000002 -0.069287360000000006 4.24381349999999991 -2.8"
+		+ "1096410000000008 0.16653195000000001 4.6216955000000004 -6.47603560000000034 -0.36752256999999999 4.32763529999999985 -5.37615439999999989 -0.75122606999999997 4.40294890000000017 -5.22547479999999975 -0.50010460999999995 4.32958269999999956 -6.0402288000000004 -0.76234071999999997 4.51268289999999972 -5.92687849999999994 -0.49755465999999998 4.43932250000000028 -4.95933060000000037 0.297793 4.43772840000000013 -5.05987930000000041 -0.1194371 4.81087539999999958 -6.257566 0.061916857999999998 4.62246609999999958 -5.74748850000000022 -0.075074315000000003 4.64839360000000035 -5.60027689999999989 0.378566 4.36884210000000017 -4.518115 0.92647855999999995 4.35419269999999958 -1.40916320000000006 0.015799165 4.291945 -4.14793210000000023 0.55651128000000005 4.25713779999999975 -2.98209290000000005 0.35884737999999999 4.35074230000000028 -1.70878079999999999 -0.076992482000000001 4.31826639999999973 -4.33497290000000035 0.79848874000000003 4.29727169999999958 -3.23620129999999984 0.48568338 4.35970309999999994 -3."
+		+ "394063 0.53459561 4.7669902000000004 -5.95927429999999969 0.87904632000000005 4.41692160000000023 -4.981811 0.66874778000000001 4.5892343999999996 -5.56061940000000021 0.75633645000000005 4.37497950000000024 -5.24826719999999991 1.10656139999999992 4.38866089999999964 -5.09609459999999981 0.94969230999999998 4.57806919999999984 -5.96910139999999956 1.117799 4.48315239999999982 -5.61111689999999985 1.02725979999999995 4.3783259000000001 -5.71099089999999965 1.17921089999999995 4.42283630000000016 -8.67266270000000006 2.65389279999999994 4.36159560000000024 -7.47453449999999986 0.26731133000000001 5.13228940000000033 -6.70780370000000037 1.08906790000000009 4.743052 -7.37222430000000006 0.36495680000000003 4.346478 -7.03809880000000021 -0.25534140999999999 4.70465369999999972 -6.94485949999999974 -0.078442394999999998 5.03289079999999966 -7.03833529999999996 0.70140517000000002 4.96026369999999961 -6.66345209999999977 0.31938939999999999 5.0420771000000002 -6.38506079999999976 0.75634610999999996 4.418385500000"
+		+ "0003 -8.70764830000000067 2.48438569999999981 4.37963910000000034 -7.88544029999999996 0.91781002 4.71989540000000041 -7.78845450000000028 0.94897330000000002 4.39890670000000039 -8.27855779999999974 1.65397320000000003 4.61777929999999959 -8.22328470000000067 1.66013670000000002 5.09020470000000014 -7.12544250000000012 1.51722029999999997 4.99212270000000036 -7.45530559999999998 1.20616070000000009 4.4205646999999999 -8.70662880000000072 2.5776273999999999 4.80085280000000036 -7.98697519999999983 1.83215890000000003 4.86955019999999994 -7.74509809999999987 2.03913739999999999 4.39354750000000038 -6.65779109999999985 1.61720749999999991 4.982688 -6.56321330000000014 1.37526510000000002 4.91013379999999966 -6.2584023000000002 1.08464880000000008 4.68816279999999974 -6.57440469999999966 1.54491390000000006 4.65177390000000024 -6.25981089999999973 1.29029379999999994 4.38630720000000007 -6.3223022999999996 1.39256 4.423142 -8.62321659999999923 2.6671263999999999 4.94957829999999976 -6.9851150999999998 1.74169160"
+		+ "000000001 4.77528760000000041 -7.63514949999999981 2.1750364000000002 4.40247060000000001 -7.09878870000000006 1.902779 4.67238039999999977 -7.00431779999999993 1.86471959999999992 4.42236419999999963 -8.57372280000000053 2.63386319999999996 4.58916330000000006 -7.640645 2.23306389999999988 4.41218950000000021 -7.7064938999999999 2.23122"
+		)
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2" "rotatePivot" " -type \"double3\" 4.29133684469143528 3.58969250529162842 -1.53672777380399528"
 		
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2" "scalePivot" " -type \"double3\" 4.29133684469143528 3.58969250529162842 -1.53672777380399528"
 		
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts" " -s 39"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[0]" " -type \"float3\" 4.58111569999999979 -10.510598 -6.15521429999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[1]" " -type \"float3\" 4.33464619999999989 -4.36798950000000019 -3.06761149999999994"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[2]" " -type \"float3\" 4.32898810000000012 -3.72893380000000008 -3.310524"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[3]" " -type \"float3\" 4.57778449999999992 -9.86464020000000019 -6.26735069999999972"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[4]" " -type \"float3\" 4.289371 -8.48576450000000015 -4.74127909999999986"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[5]" " -type \"float3\" 4.26905350000000006 -6.544487 -5.7954106000000003"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[6]" " -type \"float3\" 4.27627850000000009 -10.011666 -5.21210669999999965"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[7]" " -type \"float3\" 4.25545880000000043 -7.98213479999999986 -6.10928869999999957"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[8]" " -type \"float3\" 4.30243640000000038 -10.406809 -5.775938"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[9]" " -type \"float3\" 4.32997890000000041 -8.98667619999999978 -6.26790809999999965"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[10]" " -type \"float3\" 4.916337 -9.86011219999999966 -6.02135040000000021"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[11]" " -type \"float3\" 4.95561790000000002 -10.534019 -6.519917"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[12]" " -type \"float3\" 4.93413259999999987 -8.80655669999999979 -5.70859909999999982"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[13]" " -type \"float3\" 4.27268169999999969 -10.199501 -5.3435630999999999"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[14]" " -type \"float3\" 4.91693689999999961 -9.07912450000000071 -5.77247709999999969"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[15]" " -type \"float3\" 4.25810620000000029 -8.23428730000000009 -6.1597824000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[16]" " -type \"float3\" 4.27959919999999983 -9.76332659999999919 -5.09194040000000037"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[17]" " -type \"float3\" 4.2570686000000002 -7.71900750000000002 -6.05528829999999996"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[18]" " -type \"float3\" 4.96291159999999998 -8.53184410000000071 -5.64125540000000036"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[19]" " -type \"float3\" 5.1476898000000002 -7.44672010000000029 -5.27443979999999968"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[20]" " -type \"float3\" 4.2851581999999997 -9.14996340000000075 -4.88862850000000027"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[21]" " -type \"float3\" 5.05237479999999994 -7.9838180999999997 -5.476902"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[22]" " -type \"float3\" 4.26265050000000034 -7.14891819999999978 -5.939363"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[23]" " -type \"float3\" 4.30012460000000019 -6.95504090000000019 -4.4732094"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[24]" " -type \"float3\" 4.28677650000000021 -5.1272316 -5.12272070000000035"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[25]" " -type \"float3\" 4.29289960000000015 -7.86486149999999995 -4.64944649999999982"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[26]" " -type \"float3\" 4.27541260000000012 -5.94120410000000021 -5.59549710000000022"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[27]" " -type \"float3\" 5.19961260000000003 -6.93146039999999974 -5.040195"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[28]" " -type \"float3\" 5.09070490000000042 -6.225832 -4.635745"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[29]" " -type \"float3\" 4.29724790000000034 -7.26432129999999976 -4.55052189999999968"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[30]" " -type \"float3\" 5.158772 -6.45015669999999997 -4.77733760000000007"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[31]" " -type \"float3\" 4.28245740000000019 -5.37982750000000021 -5.307806"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[32]" " -type \"float3\" 4.30359550000000013 -6.63050169999999994 -4.3636961000000003"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[33]" " -type \"float3\" 4.2916894000000001 -4.89312930000000001 -4.91180609999999973"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[34]" " -type \"float3\" 4.99552490000000038 -6.01196670000000033 -4.48944709999999958"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[35]" " -type \"float3\" 4.32081560000000042 -4.873908 -3.66139750000000008"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[36]" " -type \"float3\" 4.31725069999999977 -5.54529620000000012 -3.81442259999999989"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[37]" " -type \"float3\" 4.63080119999999962 -5.42209390000000013 -4.04803319999999989"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf2|Unit4_CurvesLab1:LeafShape2" 
-		"pnts[38]" " -type \"float3\" 4.30917840000000041 -4.27536540000000009 -4.16098120000000016"
-		
+		"pt[0:38]" (" -s 39 -type \"float3\" 4.58111569999999979 -10.510598 -6.15521429999999992 4.33464619999999989 -4.36798950000000019 -3.06761149999999994 4.32898810000000012 -3.72893380000000008 -3.310524 4.57778449999999992 -9.86464020000000019 -6.26735069999999972 4.289371 -8.48576450000000015 -4.74127909999999986 4.26905350000000006 -6.544487 -5.7954106000000003 4.27627850000000009 -10.011666 -5.21210669999999965 4.25545880000000043 -7.98213479999999986 -6.10928869999999957 4.30243640000000038 -10.406809 -5.775938 4.32997890000000041 -8.98667619999999978 -6.26790809999999965 4.916337 -9.86011219999999966 -6.02135040000000021 4.95561790000000002 -10.534019 -6.519917 4.93413259999999987 -8.80655669999999979 -5.70859909999999982 4.27268169999999969 -10.199501 -5.3435630999999999 4.91693689999999961 -9.07912450000000071 -5.77247709999999969 4.25810620000000029 -8.23428730000000009 -6.1597824000000001 4.27959919999999983 -9.76332659999999919 -5.09194040000000037 4.2570686000000002 -7.71900750000000002 -6.05528829999999996 4.9629"
+		+ "1159999999998 -8.53184410000000071 -5.64125540000000036 5.1476898000000002 -7.44672010000000029 -5.27443979999999968 4.2851581999999997 -9.14996340000000075 -4.88862850000000027 5.05237479999999994 -7.9838180999999997 -5.476902 4.26265050000000034 -7.14891819999999978 -5.939363 4.30012460000000019 -6.95504090000000019 -4.4732094 4.28677650000000021 -5.1272316 -5.12272070000000035 4.29289960000000015 -7.86486149999999995 -4.64944649999999982 4.27541260000000012 -5.94120410000000021 -5.59549710000000022 5.19961260000000003 -6.93146039999999974 -5.040195 5.09070490000000042 -6.225832 -4.635745 4.29724790000000034 -7.26432129999999976 -4.55052189999999968 5.158772 -6.45015669999999997 -4.77733760000000007 4.28245740000000019 -5.37982750000000021 -5.307806 4.30359550000000013 -6.63050169999999994 -4.3636961000000003 4.2916894000000001 -4.89312930000000001 -4.91180609999999973 4.99552490000000038 -6.01196670000000033 -4.48944709999999958 4.32081560000000042 -4.873908 -3.66139750000000008 4.31725069999999977 -5.5452"
+		+ "9620000000012 -3.81442259999999989 4.63080119999999962 -5.42209390000000013 -4.04803319999999989 4.30917840000000041 -4.27536540000000009 -4.16098120000000016"
+		)
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3" "rotatePivot" " -type \"double3\" 4.30370779553125882 3.60840134158503201 -1.52660362549623785"
 		
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3" "scalePivot" " -type \"double3\" 4.30370779553125882 3.60840134158503201 -1.52660362549623785"
 		
 		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts" " -s 27"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[0]" " -type \"float3\" 4.3310808999999999 -9.536478 0.12510192000000001"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[1]" " -type \"float3\" 4.34470419999999979 -20.215178 0.91884695999999999"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[2]" " -type \"float3\" 3.76083610000000013 -20.693579 -0.10834984"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[3]" " -type \"float3\" 4.3139504999999998 -9.00615879999999969 -0.53598486999999995"
+		"pt[0:26]" (" -s 27 -type \"float3\" 4.3310808999999999 -9.536478 0.12510192000000001 4.34470419999999979 -20.215178 0.91884695999999999 3.76083610000000013 -20.693579 -0.10834984 4.3139504999999998 -9.00615879999999969 -0.53598486999999995 4.38573270000000015 -13.248713 2.28696440000000001 3.86596820000000019 -13.169095 -2.00407219999999997 4.3763747000000004 -11.709984 1.89319339999999992 4.15576360000000022 -11.493996 -1.89981149999999999 5.6406307 -13.935218 -0.80994474999999999 4.494411 -10.261206 -0.52688164000000004 4.35638569999999969 -10.532836 1.10720280000000004 5.30588339999999992 -12.161179 -0.84948265999999995 4.27699660000000037 -10.163842 -1.33342889999999992 5.362031 -15.539915 -0.2286754 4.38271470000000019 -12.422852 2.15136340000000015 5.563168 -14.746322 -0.56503462999999998 4.03720329999999983 -12.277647 -2.02414849999999991 4.3809155999999998 -15.26955 2.15777539999999979 3.42031030000000014 -15.313641 -1.52162480000000011 4.83202510000000007 -17.254532 0.36529967000000002 4.384985 -14.202634 2.283654"
+		+ "49999999992 5.09804250000000003 -16.360989 0.11086003 3.643645 -14.183901 -1.8240094 4.32378769999999957 -21.661503 0.16640246 4.365468 -17.651968 1.636366 4.45715090000000025 -19.340023 0.44077018000000001 3.21940230000000005 -17.860252 -0.75378668000000004"
+		);
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Sofa_End_TableRN";
+	rename -uid "8D17116A-46E5-B7C8-38A6-CBAB8645D87B";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Sofa_End_TableRN"
+		"Sofa_End_TableRN" 0
+		"Sofa_End_TableRN" 15
+		0 "|Sofa_End_TableRNfosterParent1|Book_12" "|Sofa_End_Table:Table_Surface1" 
+		"-s -r "
+		0 "|Sofa_End_TableRNfosterParent1|Book_11" "|Sofa_End_Table:Table_Surface1" 
+		"-s -r "
+		2 "|Sofa_End_Table:Leg4" "translate" " -type \"double3\" 0 0 0"
+		2 "|Sofa_End_Table:Leg4" "rotate" " -type \"double3\" 0 0 0"
+		2 "|Sofa_End_Table:Leg4" "scale" " -type \"double3\" 1 1 1"
+		2 "|Sofa_End_Table:Leg4" "rotatePivot" " -type \"double3\" -2.08308531444816047 0 -1.85609201401294954"
 		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[4]" " -type \"float3\" 4.38573270000000015 -13.248713 2.28696440000000001"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[5]" " -type \"float3\" 3.86596820000000019 -13.169095 -2.00407219999999997"
+		2 "|Sofa_End_Table:Leg4" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[6]" " -type \"float3\" 4.3763747000000004 -11.709984 1.89319339999999992"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[7]" " -type \"float3\" 4.15576360000000022 -11.493996 -1.89981149999999999"
+		2 "|Sofa_End_Table:Leg4" "scalePivot" " -type \"double3\" -2.08308531444816047 0 -1.85609201401294954"
 		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[8]" " -type \"float3\" 5.6406307 -13.935218 -0.80994474999999999"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[9]" " -type \"float3\" 4.494411 -10.261206 -0.52688164000000004"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[10]" " -type \"float3\" 4.35638569999999969 -10.532836 1.10720280000000004"
+		2 "|Sofa_End_Table:Leg4" "scalePivotTranslate" " -type \"double3\" 0 0 0"
 		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[11]" " -type \"float3\" 5.30588339999999992 -12.161179 -0.84948265999999995"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[12]" " -type \"float3\" 4.27699660000000037 -10.163842 -1.33342889999999992"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[13]" " -type \"float3\" 5.362031 -15.539915 -0.2286754"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[14]" " -type \"float3\" 4.38271470000000019 -12.422852 2.15136340000000015"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[15]" " -type \"float3\" 5.563168 -14.746322 -0.56503462999999998"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[16]" " -type \"float3\" 4.03720329999999983 -12.277647 -2.02414849999999991"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[17]" " -type \"float3\" 4.3809155999999998 -15.26955 2.15777539999999979"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[18]" " -type \"float3\" 3.42031030000000014 -15.313641 -1.52162480000000011"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[19]" " -type \"float3\" 4.83202510000000007 -17.254532 0.36529967000000002"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[20]" " -type \"float3\" 4.384985 -14.202634 2.28365449999999992"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[21]" " -type \"float3\" 5.09804250000000003 -16.360989 0.11086003"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[22]" " -type \"float3\" 3.643645 -14.183901 -1.8240094"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[23]" " -type \"float3\" 4.32378769999999957 -21.661503 0.16640246"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[24]" " -type \"float3\" 4.365468 -17.651968 1.636366"
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[25]" " -type \"float3\" 4.45715090000000025 -19.340023 0.44077018000000001"
-		
-		2 "|Unit4_CurvesLab1:Vase|Unit4_CurvesLab1:Leaf3|Unit4_CurvesLab1:LeafShape3" 
-		"pnts[26]" " -type \"float3\" 3.21940230000000005 -17.860252 -0.75378668000000004";
+		2 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape" "pnts" " -s 811"
+		2 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape" "pt[0:165]" (" -type \"float3\" -0.098473765000000005 0.0083500277000000001 -2.84762549999999992 -0.066018350000000003 0.0083500277000000001 -2.8112986000000002 -0.023925852000000001 0.0083500277000000001 -2.78677919999999979 0.023683444000000001 0.0083500277000000001 -2.77646680000000012 0.072149469999999993 0.0083500277000000001 -2.78137159999999994 0.11672751000000001 0.0083500277000000001 -2.80101280000000008 0.15305400999999999 0.0083500277000000001 -2.83346819999999999 0.17757368000000001 0.0083500277000000001 -2.87556080000000014 0.18788584 0.0083500277000000001 -2.92316989999999999 0.18298127 0.0083500277000000001 -2.97163559999999993 0.16333992999999999 0.0083500277000000001 -3.01621389999999989 0.13088466000000001 0.0083500277000000001 -3.05254080000000005 0.088792063000000004 0.0083500277000000001 -3.07706 0.041182745 0.0083500277000000001 -3.08737230000000018 -0.0072829829999999998 0.0083500277000000001 -3.08246779999999987 -0.051860734999999998 0.0083500277000000001 -3.06282660000000018 -0.088187515999999994 0.0"
+		+ "083500277000000001 -3.03037119999999982 -0.11270727 0.0083500277000000001 -2.98827860000000012 -0.12301937 0.0083500277000000001 -2.94066949999999983 -0.11811478 0.0083500277000000001 -2.89220360000000021 -0.098473765000000005 -3.15169189999999988 -2.84762549999999992 -0.066018350000000003 -3.15169189999999988 -2.8112986000000002 -0.023925852000000001 -3.15169189999999988 -2.78677919999999979 0.023683444000000001 -3.15169189999999988 -2.77646680000000012 0.072149469999999993 -3.15169189999999988 -2.78137159999999994 0.11672751000000001 -3.15169189999999988 -2.80101280000000008 0.15305400999999999 -3.15169189999999988 -2.83346819999999999 0.17757368000000001 -3.15169189999999988 -2.87556080000000014 0.18788584 -3.15169189999999988 -2.92316989999999999 0.18298127 -3.15169189999999988 -2.97163559999999993 0.16333992999999999 -3.15169189999999988 -3.01621389999999989 0.13088466000000001 -3.15169189999999988 -3.05254080000000005 0.088792063000000004 -3.15169189999999988 -3.07706 0.041182745 -3.15169189999999988 -3"
+		+ ".08737230000000018 -0.0072829829999999998 -3.15169189999999988 -3.08246779999999987 -0.051860734999999998 -3.15169189999999988 -3.06282660000000018 -0.088187515999999994 -3.15169189999999988 -3.03037119999999982 -0.11270727 -3.15169189999999988 -2.98827860000000012 -0.12301937 -3.15169189999999988 -2.94066949999999983 -0.11811478 -3.15169189999999988 -2.89220360000000021 0.032433387000000001 0.0083500277000000001 -2.93191960000000007 0.032433387000000001 -3.15169189999999988 -2.93191960000000007 -1.71646560000000004 0.0083500277000000001 1.96050780000000002 -1.68401029999999996 0.0083500277000000001 1.9968345999999999 -1.64191770000000004 0.0083500277000000001 2.02135420000000021 -1.59430849999999991 0.0083500277000000001 2.03166650000000004 -1.54584260000000007 0.0083500277000000001 2.02676180000000006 -1.50126460000000006 0.0083500277000000001 2.00712059999999992 -1.4649376999999999 0.0083500277000000001 1.97466530000000007 -1.44041820000000009 0.0083500277000000001 1.93257260000000008 -1.430106 0.008350027"
+		+ "7000000001 1.8849632999999999 -1.43501070000000008 0.0083500277000000001 1.83649749999999989 -1.45465179999999994 0.0083500277000000001 1.79191959999999995 -1.48710729999999991 0.0083500277000000001 1.75559280000000006 -1.52919969999999994 0.0083500277000000001 1.7310734000000001 -1.576809 0.0083500277000000001 1.72076089999999993 -1.62527479999999991 0.0083500277000000001 1.72566550000000007 -1.66985289999999997 0.0083500277000000001 1.74530680000000005 -1.70617960000000002 0.0083500277000000001 1.77776240000000008 -1.7306992000000001 0.0083500277000000001 1.81985470000000005 -1.7410114000000001 0.0083500277000000001 1.86746410000000007 -1.73610690000000001 0.0083500277000000001 1.91592980000000002 -1.71646560000000004 -3.15169189999999988 1.96050780000000002 -1.68401029999999996 -3.15169189999999988 1.9968345999999999 -1.64191770000000004 -3.15169189999999988 2.02135420000000021 -1.59430849999999991 -3.15169189999999988 2.03166650000000004 -1.54584260000000007 -3.15169189999999988 2.02676180000000006 -1.501"
+		+ "26460000000006 -3.15169189999999988 2.00712059999999992 -1.4649376999999999 -3.15169189999999988 1.97466530000000007 -1.44041820000000009 -3.15169189999999988 1.93257260000000008 -1.430106 -3.15169189999999988 1.8849632999999999 -1.43501070000000008 -3.15169189999999988 1.83649749999999989 -1.45465179999999994 -3.15169189999999988 1.79191959999999995 -1.48710729999999991 -3.15169189999999988 1.75559280000000006 -1.52919969999999994 -3.15169189999999988 1.7310734000000001 -1.576809 -3.15169189999999988 1.72076089999999993 -1.62527479999999991 -3.15169189999999988 1.72566550000000007 -1.66985289999999997 -3.15169189999999988 1.74530680000000005 -1.70617960000000002 -3.15169189999999988 1.77776240000000008 -1.7306992000000001 -3.15169189999999988 1.81985470000000005 -1.7410114000000001 -3.15169189999999988 1.86746410000000007 -1.73610690000000001 -3.15169189999999988 1.91592980000000002 -1.58555880000000005 0.0083500277000000001 1.8762137000000001 -1.58555880000000005 -3.15169189999999988 1.8762137000000001 -4.3"
+		+ "4453770000000006 -3.28432009999999996 1.13355849999999991 -4.344553 -3.29432269999999994 1.13357519999999989 -4.353054 -3.2943532000000002 1.15082449999999992 -4.353054 -3.28429960000000021 1.15082449999999992 -4.36161330000000014 -3.31503509999999979 1.11638269999999995 -4.37143420000000038 -3.317379 1.13230190000000008 -4.36189270000000029 -3.31026769999999981 1.141938 -4.35213610000000006 -3.30796910000000022 1.12593410000000005 -4.33247040000000005 -3.28444219999999998 1.28410890000000011 -4.33258529999999986 -3.294343 1.2837651000000001 -4.33066130000000005 -3.294162 1.30405140000000008 -4.33066130000000005 -3.28449059999999982 1.30405140000000008 -4.3653259000000002 -3.3565668999999998 1.26948170000000005 -4.36395979999999994 -3.35088350000000013 1.25237569999999998 -4.37339829999999985 -3.3577634999999999 1.24263560000000006 -4.37484260000000003 -3.36366129999999997 1.25989069999999992 -4.39332250000000002 -3.32068709999999978 1.084427 -4.406271 -3.32397220000000004 1.097194 -4.39278220000000008 -3.323"
+		+ "97890000000018 1.11080850000000009 -4.37991859999999988 -3.32068709999999978 1.097935 -4.42110540000000007 -3.30796910000000022 1.056428 -4.43715860000000006 -3.31027080000000007 1.06606660000000009 -4.427629 -3.31739119999999987 1.07569089999999989 -4.41162779999999977 -3.31503509999999979 1.06597940000000002 -4.44924639999999982 -3.38126589999999982 1.16642749999999995 -4.46241280000000007 -3.3810948999999999 1.15293029999999996 -4.471343 -3.38936830000000011 1.16227790000000009 -4.45837069999999969 -3.38936830000000011 1.17535110000000009 -4.55523490000000031 -3.36366129999999997 1.07809869999999997 -4.53837060000000037 -3.35779119999999986 1.07661180000000001 -4.54748489999999972 -3.35066940000000013 1.06719779999999997 -4.56475109999999962 -3.3565668999999998 1.06850829999999997 -4.51673219999999986 -3.43523120000000004 1.23374120000000009 -4.5301828000000004 -3.435236 1.22019480000000002 -4.543714 -3.434402 1.2335974999999999 -4.53024770000000032 -3.434402 1.24716870000000002 -4.66661069999999967 -3.388"
+		+ "957 1.08270880000000003 -4.679347 -3.38836069999999978 1.09691150000000004 -4.66982080000000011 -3.395458 1.10651989999999989 -4.657105 -3.39604259999999991 1.09228689999999995 -4.5614195000000004 -3.401207 1.27813280000000007 -4.5749101999999997 -3.40120010000000006 1.26456149999999989 -4.58038 -3.3911528999999998 1.26960110000000004 -4.56653310000000001 -3.3911528999999998 1.28355489999999994 -4.66545529999999964 -3.36502789999999985 1.18380489999999994 -4.66951560000000043 -3.37199589999999993 1.169197 -4.67905239999999978 -3.36488560000000003 1.1596112999999999 -4.6749710999999996 -3.35793350000000013 1.1742146 -4.73158410000000007 -3.284306 1.04426989999999997 -4.73158070000000031 -3.2943484999999999 1.0442806 -4.71917249999999999 -3.29434009999999988 1.02972960000000002 -4.71917249999999999 -3.284313 1.02972960000000002 -4.71004579999999962 -3.28416540000000001 1.1389281 -4.71030380000000015 -3.294343 1.13860790000000001 -4.71824460000000023 -3.294358 1.12009 -4.71824460000000023 -3.28429480000000007 1."
+		+ "12009 -4.59782120000000027 -3.27721520000000011 1.28729640000000001 -4.58436250000000012 -3.27721520000000011 1.30085870000000003 -4.57484629999999992 -3.28430940000000016 1.31044969999999994 -4.57484629999999992 -3.294343 1.31044969999999994 -4.58436250000000012 -3.30143740000000019 1.30085870000000003 -4.59782120000000027 -3.30143740000000019 1.28729640000000001 -4.607338 -3.294343 1.2777056 -4.607338 -3.28430940000000016 1.2777056 -4.446003 -3.28429960000000021 1.05715420000000004 -4.446022 -3.29436330000000011 1.05715610000000004 -4.42867180000000005 -3.29433249999999989 1.04877160000000003 -4.42867180000000005 -3.28432009999999996 1.04877160000000003 -4.59905149999999985 -3.28449059999999982 1.03357769999999993 -4.59932470000000038 -3.294343 1.033667 -4.57912449999999982 -3.29421039999999987 1.0355411000000001 -4.57912449999999982 -3.28444219999999998 1.0355411000000001 -4.32774210000000004 -3.284313 1.424198 -4.32774020000000004 -3.294337 1.42420909999999989 -4.34237770000000012 -3.29434560000000021 1.4"
+		+ "3649690000000008 -4.34237770000000012 -3.284306 1.43649690000000008 -4.41809269999999987 -3.28429480000000007 1.42257110000000009 -4.41811509999999963 -3.294343 1.422574 -4.43686769999999964 -3.29448749999999979 1.41422739999999991 -4.43686769999999964 -3.28416540000000001 1.41422739999999991 -4.47188140000000001 -3.35793350000000013 1.37888110000000008 -4.45727679999999982 -3.3648798000000002 1.38308370000000003"
+		)
+		2 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape" "pt[166:331]" (" -4.46682739999999967 -3.37198 1.37348439999999994 -4.48139809999999983 -3.36502789999999985 1.36929110000000009 -4.38981870000000018 -3.39604259999999991 1.3616492 -4.4041370999999998 -3.39545990000000009 1.3742582000000001 -4.39462089999999961 -3.388355 1.38385639999999999 -4.38031340000000036 -3.388957 1.37122790000000006 -4.3493233 -3.3543238999999998 1.04071190000000002 -4.33586449999999957 -3.3543238999999998 1.05427460000000006 -4.35387660000000043 -3.33073379999999997 1.07277690000000003 -4.36782029999999999 -3.330611 1.05906680000000009 -4.37839750000000016 -3.32425810000000022 1.06963680000000005 -4.36501360000000016 -3.32425810000000022 1.0831248 -4.40009880000000031 -3.31755950000000022 1.04784410000000006 -4.39521409999999957 -3.32231830000000006 1.03111759999999997 -4.40500830000000043 -3.31497170000000008 1.02159019999999989 -4.40961550000000013 -3.31046489999999993 1.03825370000000006 -4.40900230000000004 -3.3317391999999999 0.98056935999999995 -4.39948609999999984 -3.33883360000000007 0.99015"
+		+ "975000000001 -4.429781 -3.28430940000000016 0.95962954 -4.429781 -3.294343 0.95962954 -4.41856239999999989 -3.284337 1.02916 -4.41857339999999965 -3.294343 1.02922650000000004 -4.4164633999999996 -3.29457690000000003 1.00970380000000004 -4.4164633999999996 -3.28407479999999996 1.00970380000000004 -4.25540689999999966 -3.294343 1.13535680000000005 -4.25540689999999966 -3.28430940000000016 1.13535680000000005 -4.30537610000000015 -3.28407479999999996 1.1216524000000001 -4.30571220000000032 -3.294343 1.12165680000000001 -4.32484870000000043 -3.29431459999999987 1.12360159999999998 -4.32484870000000043 -3.284337 1.12360159999999998 -4.33387279999999997 -3.31046489999999993 1.11458459999999993 -4.31666419999999995 -3.314893 1.11027739999999997 -4.32669070000000033 -3.32206560000000017 1.10051560000000004 -4.343389 -3.31755950000000022 1.10499379999999991 -4.28570180000000001 -3.33883360000000007 1.10482659999999999 -4.27618550000000042 -3.3317391999999999 1.11441769999999996 -4.56475109999999962 -3.222086 1.068508"
+		+ "29999999997 -4.54763509999999993 -3.22776910000000017 1.0672739 -4.53796860000000013 -3.22088909999999995 1.07678819999999997 -4.55523490000000031 -3.21499129999999989 1.07809869999999997 -4.41162779999999977 -3.263618 1.06597940000000002 -4.42762279999999997 -3.26127270000000014 1.0756768000000001 -4.43718430000000019 -3.26838490000000004 1.06606139999999994 -4.42110540000000007 -3.27068329999999996 1.056428 -4.37991859999999988 -3.25796460000000021 1.097935 -4.39278549999999957 -3.25467940000000011 1.1107845999999999 -4.40629530000000003 -3.25467370000000011 1.09719089999999997 -4.39332250000000002 -3.25796460000000021 1.084427 -4.35213610000000006 -3.27068329999999996 1.12593389999999993 -4.36189840000000029 -3.26838229999999985 1.141912 -4.371448 -3.26126149999999981 1.13230849999999994 -4.36161330000000014 -3.263618 1.11638269999999995 -4.46234890000000028 -3.197387 1.15322269999999993 -4.44895460000000043 -3.19755669999999981 1.16649340000000001 -4.45837069999999969 -3.18928460000000014 1.17535110000000"
+		+ "009 -4.471343 -3.18928460000000014 1.16227790000000009 -4.37484260000000003 -3.21499129999999989 1.25989090000000004 -4.37322520000000026 -3.22086190000000006 1.24303849999999994 -4.36388160000000003 -3.22798320000000016 1.252226 -4.3653259000000002 -3.222086 1.26948170000000005 -4.38031340000000036 -3.18969579999999997 1.37122790000000006 -4.39461519999999961 -3.19029190000000007 1.38385449999999999 -4.40414860000000008 -3.18319490000000016 1.374254 -4.38981870000000018 -3.18261 1.3616492 -4.48139809999999983 -3.2136247 1.36929110000000009 -4.46682260000000042 -3.20665690000000003 1.37346459999999992 -4.45731069999999985 -3.2137671000000001 1.38307479999999994 -4.47188140000000001 -3.22071959999999979 1.37888110000000008 -4.53018240000000016 -3.14342189999999988 1.22018650000000006 -4.51674129999999963 -3.14341690000000007 1.23374150000000005 -4.53024770000000032 -3.1442505999999999 1.24716870000000002 -4.543714 -3.1442505999999999 1.2335974999999999 -4.57491830000000022 -3.17744589999999993 1.26452879999999"
+		+ "99 -4.5614524000000003 -3.17745260000000007 1.27812459999999994 -4.56653310000000001 -3.1875 1.28355489999999994 -4.58038 -3.1875 1.26960110000000004 -4.6749710999999996 -3.22071959999999979 1.1742146 -4.67906089999999963 -3.2137728000000001 1.15957749999999993 -4.66953559999999968 -3.20667269999999993 1.16920209999999991 -4.66545529999999964 -3.2136247 1.18380489999999994 -4.657105 -3.18261 1.09228689999999995 -4.6698246000000001 -3.183193 1.106508 -4.67934849999999969 -3.19029780000000018 1.09691770000000011 -4.66661069999999967 -3.18969579999999997 1.08270880000000003 -4.33586449999999957 -3.224329 1.05427460000000006 -4.3493233 -3.224329 1.04071190000000002 -4.36796380000000006 -3.24791909999999984 1.05857929999999989 -4.354362 -3.24804190000000004 1.07262970000000002 -4.36501360000000016 -3.25439450000000008 1.0831248 -4.37839750000000016 -3.25439450000000008 1.06963680000000005 -4.343389 -3.26109310000000008 1.10499379999999991 -4.3266252999999999 -3.25633339999999993 1.10023840000000006 -4.317174399999"
+		+ "99986 -3.26368120000000017 1.1101061000000001 -4.33387279999999997 -3.268188 1.11458459999999993 -4.27618550000000042 -3.2469136999999999 1.11441769999999996 -4.28570180000000001 -3.23981880000000011 1.10482659999999999 -4.40961550000000013 -3.268188 1.03825370000000006 -4.40517570000000003 -3.26375990000000016 1.0210785 -4.39549159999999972 -3.25658609999999982 1.03118069999999995 -4.40009880000000031 -3.26109310000000008 1.04784410000000006 -4.39948609999999984 -3.23981880000000011 0.99015975000000001 -4.40900230000000004 -3.2469136999999999 0.98056935999999995 -4.78523250000000022 -3.52244089999999987 0.054336010999999997 -3.35381529999999994 -3.52244089999999987 1.6564991 -4.41574859999999969 -3.52244089999999987 -2.11507770000000006 -2.50249720000000009 -2.912338 -0.56889212 -2.50831559999999998 -2.912338 -0.56632864000000005 -2.48156759999999998 -2.912338 -0.53638892999999999 -2.51305719999999999 -2.912338 -0.56209195000000001 -2.48631020000000014 -2.912338 -0.53215224000000005 -2.51625869999999985 -2.9"
+		+ "12338 -0.55659692999999999 -2.49212960000000017 -2.912338 -0.52958828000000002 -2.51760440000000019 -2.912338 -0.55038237999999995 -2.49845529999999982 -2.912338 -0.52894794999999994 -2.51696419999999987 -2.912338 -0.54405552000000001 -2.5046697 -2.912338 -0.5302943 -2.5144 -2.912338 -0.53823650000000001 -2.51016430000000001 -2.912338 -0.53349489000000005 -4.80572459999999957 -3.52244089999999987 -1.44561080000000008 -1.86564179999999991 -3.5067933 1.84517749999999991 -4.33042139999999964 -3.51973750000000019 -2.04543330000000001 -4.06315090000000012 -2.93063640000000003 1.36919609999999992 -4.703053 -3.51973750000000019 -1.405742 -4.85976979999999958 -3.51973750000000019 -0.68221109999999996 -4.55297950000000018 -2.912338 0.77426404000000004 -4.78523250000000022 -3.51973750000000019 0.054336010999999997 -4.48673919999999971 -3.51973750000000019 0.73180109000000004 -4.80572459999999957 -3.5067933 -1.44561080000000008 -1.89373710000000006 -3.52244089999999987 1.73867980000000011 -3.99350620000000012 -3.5197375"
+		+ "0000000019 1.28386880000000003 -4.89173080000000038 -3.52244089999999987 0.082431226999999996 -3.35381529999999994 -3.51973750000000019 1.6564991 -4.96973610000000043 -3.52244089999999987 -0.68840080000000003 -2.6302840999999999 -3.51973750000000019 1.81321639999999995 -3.39368340000000002 -3.5067933 1.75917150000000011 -3.39368340000000002 -2.93063640000000003 1.75917150000000011 -4.89172980000000024 -3.5067933 0.082431003000000003 -4.96973610000000043 -3.5067933 -0.68840080000000003 -4.06315090000000012 -3.5067933 1.36919590000000002 -4.85976979999999958 -3.52244089999999987 -0.68221122000000001 -2.63647389999999993 -3.52244089999999987 1.92318359999999999 -3.38244610000000012 -2.912338 1.72978779999999999 -4.57934190000000019 -3.5067933 0.79143059000000004 -4.48673919999999971 -3.52244089999999987 0.73180109000000004 -4.57934090000000005 -3.52244089999999987 0.79143028999999998 -2.63028450000000014 -3.52244089999999987 1.81321679999999996 -3.39368340000000002 -3.52244089999999987 1.75917150000000011 -4.415"
+		+ "74859999999969 -3.5067933 -2.11507770000000006 -4.8613533999999996 -2.912338 0.074251129999999999 -4.330421 -3.52244089999999987 -2.04543330000000001 -4.04338409999999993 -2.912338 1.34472330000000007 -3.12898370000000003 -2.93063640000000003 -2.94365809999999994 -3.12080339999999978 -2.912338 -2.91328049999999994 -3.99350620000000012 -3.52244089999999987 1.28386890000000009 -2.63647410000000004 -3.5067933 1.92318359999999999 -4.06315090000000012 -3.52244089999999987 1.36919630000000003 -3.83798340000000016 -2.93063640000000003 -2.63126969999999982 -3.82081649999999984 -2.912338 -2.60490749999999993 -0.57887732999999997 -2.93063640000000003 1.01659769999999994 -0.60335028000000002 -2.912338 0.99683040000000001 -4.41574859999999969 -2.93063640000000003 -2.11507729999999983 -4.39127639999999975 -2.912338 -2.09531020000000012 -1.86564250000000009 -3.52244089999999987 1.84517770000000003 -1.89373710000000006 -3.51973750000000019 1.73867980000000011 -4.70305160000000022 -3.52244089999999987 -1.40574189999999999 -1"
+		+ ".15664220000000006 -2.93063640000000003 1.53278929999999991")
+		2 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape" "pt[332:497]" (" -1.17380939999999989 -2.912338 1.50642619999999994 -4.80572459999999957 -2.93063640000000003 -1.44561080000000008 -4.77634049999999988 -2.912338 -1.43437309999999996 -1.86564179999999991 -2.93063640000000003 1.84517749999999991 -1.87382209999999993 -2.912338 1.8148 -4.96973610000000043 -2.93063640000000003 -0.68840080000000003 -4.93831829999999972 -2.912338 -0.68679345000000003 -4.57934190000000019 -2.93063640000000003 0.79143059000000004 -2.63647339999999986 -2.93063640000000003 1.92318330000000004 -2.63486649999999978 -2.912338 1.89176549999999999 -4.89173170000000024 -2.93063640000000003 0.082431487999999997 -5.01942060000000012 0.0083499513999999997 -1.5494311999999999 -4.98696569999999983 0.0083499513999999997 -1.51310440000000002 -4.94487290000000002 0.0083499513999999997 -1.48858489999999999 -4.89726350000000021 0.0083499513999999997 -1.4782727 -4.84879779999999982 0.0083499513999999997 -1.48317720000000008 -4.80421969999999998 0.0083499513999999997 -1.50281850000000006 -4.76789280000000026 0.00834995"
+		+ "13999999997 -1.53527389999999997 -4.7433734000000003 0.0083499513999999997 -1.57736649999999989 -4.73306130000000014 0.0083499513999999997 -1.62497570000000002 -4.73796559999999989 0.0083499513999999997 -1.67344139999999997 -4.757607 0.0083499513999999997 -1.71801950000000003 -4.79006240000000005 0.0083499513999999997 -1.75434629999999991 -4.83215479999999964 0.0083499513999999997 -1.77886579999999994 -4.87976410000000005 0.0083499513999999997 -1.78917809999999999 -4.92822980000000044 0.0083499513999999997 -1.78427340000000001 -4.97280790000000028 0.0083499513999999997 -1.76463210000000004 -5.0091348 0.0083499513999999997 -1.73217679999999996 -5.03365419999999997 0.0083499513999999997 -1.69008430000000009 -5.04396679999999975 0.0083499513999999997 -1.642475 -5.039062 0.0083499513999999997 -1.59400929999999996 -5.01942060000000012 -3.15169189999999988 -1.5494311999999999 -4.98696569999999983 -3.15169189999999988 -1.51310440000000002 -4.94487290000000002 -3.15169189999999988 -1.48858489999999999 -4.897263500000"
+		+ "00021 -3.15169189999999988 -1.4782727 -4.84879779999999982 -3.15169189999999988 -1.48317720000000008 -4.80421969999999998 -3.15169189999999988 -1.50281850000000006 -4.76789280000000026 -3.15169189999999988 -1.53527389999999997 -4.7433734000000003 -3.15169189999999988 -1.57736649999999989 -4.73306130000000014 -3.15169189999999988 -1.62497570000000002 -4.73796559999999989 -3.15169189999999988 -1.67344139999999997 -4.757607 -3.15169189999999988 -1.71801950000000003 -4.79006240000000005 -3.15169189999999988 -1.75434629999999991 -4.83215479999999964 -3.15169189999999988 -1.77886579999999994 -4.87976410000000005 -3.15169189999999988 -1.78917809999999999 -4.92822980000000044 -3.15169189999999988 -1.78427340000000001 -4.97280790000000028 -3.15169189999999988 -1.76463210000000004 -5.0091348 -3.15169189999999988 -1.73217679999999996 -5.03365419999999997 -3.15169189999999988 -1.69008430000000009 -5.04396679999999975 -3.15169189999999988 -1.642475 -5.039062 -3.15169189999999988 -1.59400929999999996 -4.888514 0.0083499513"
+		+ "999999997 -1.63372540000000011 -4.888514 -3.15169189999999988 -1.63372540000000011 -3.83768440000000011 -0.57903439000000001 1.17778150000000004 -3.83768440000000011 -0.97442161999999999 1.17778150000000004 -4.41659880000000005 -0.97442161999999999 0.52981155999999996 -4.41659880000000005 -0.57903439000000001 0.52981155999999996 -4.7669435 -0.97442161999999999 -0.26533917000000001 -4.7669435 -0.57903439000000001 -0.26533917000000001 -2.08158110000000018 -0.57903439000000001 -0.97376417999999998 -3.0868701999999999 -0.57903439000000001 1.61514310000000005 -3.0868701999999999 -0.97442161999999999 1.61514310000000005 -4.85442830000000036 -0.57903439000000001 -1.12983469999999997 -4.85442830000000036 -0.97442161999999999 -1.12983469999999997 -2.23765159999999996 -0.57903439000000001 1.79908409999999996 -2.23765159999999996 -0.97442161999999999 1.79908409999999996 -4.67048690000000022 -0.57903439000000001 -1.97905289999999989 -4.67048690000000022 -0.97442161999999999 -1.97905289999999989 -1.37315570000000009 -0.57"
+		+ "903439000000001 1.71159970000000006 -1.37315570000000009 -0.97442161999999999 1.71159970000000006 -4.23312519999999992 -0.57903439000000001 -2.72986649999999997 -4.23312519999999992 -0.97442161999999999 -2.72986649999999997 -0.57800543000000004 -0.57903439000000001 1.3612531000000001 -0.57800543000000004 -0.97442161999999999 1.3612531000000001 -3.585156 -0.57903439000000001 -3.30878039999999984 -3.585156 -0.97442161999999999 -3.30878039999999984 0.069964132999999998 -0.57903439000000001 0.78233850000000005 0.069964132999999998 -0.97442161999999999 0.78233850000000005 -2.7900062000000001 -0.57903439000000001 -3.659127 -2.7900062000000001 -0.97442161999999999 -3.659127 0.50732535000000001 -0.57903439000000001 0.031524706999999999 0.50732535000000001 -0.97442161999999999 0.031524706999999999 -1.92551059999999996 -0.57903439000000001 -3.74661160000000004 -1.92551059999999996 -0.97442161999999999 -3.74661160000000004 0.69126659999999995 -0.57903439000000001 -0.81769382999999995 0.69126659999999995 -0.9744216199999"
+		+ "9999 -0.81769382999999995 -1.07629229999999998 -0.57903439000000001 -3.5626701999999999 -1.07629229999999998 -0.97442161999999999 -3.5626701999999999 0.603782 -0.57903439000000001 -1.68218930000000011 0.603782 -0.97442161999999999 -1.68218930000000011 -0.32547858000000002 -0.57903439000000001 -3.125309 -0.32547858000000002 -0.97442161999999999 -3.125309 0.25343573000000003 -0.57903439000000001 -2.47733949999999981 0.25343573000000003 -0.97442161999999999 -2.47733949999999981 -3.83768440000000011 -2.88830350000000013 1.17778150000000004 -3.83768319999999985 -3.53877780000000008 1.17778120000000008 -4.41659929999999967 -3.53877780000000008 0.52981173999999998 -4.41659880000000005 -2.88830350000000013 0.52981155999999996 -3.0868701999999999 -2.88830350000000013 1.61514310000000005 -3.0868701999999999 -3.53877780000000008 1.61514310000000005 -4.766942 -3.53877780000000008 -0.26533961 -4.7669435 -2.88830350000000013 -0.26533917000000001 -2.08158090000000007 -0.57903439000000001 -0.97376423999999995 -2.095994500000"
+		+ "0002 -0.97442161999999999 -0.95610421999999995 -2.100745 -0.97442161999999999 -0.96142070999999996 -2.08157989999999993 -0.57903439000000001 -0.97376174000000004 -2.10361930000000008 -0.97442161999999999 -0.96794784 -2.0815785 -0.57903439000000001 -0.97376209000000002 -2.08158140000000014 -0.57903439000000001 -0.97376454000000001 -2.089833 -0.97442161999999999 -0.95251518000000002 -2.10433840000000005 -0.97442161999999999 -0.97504526000000002 -2.081579 -0.57903439000000001 -0.97376375999999998 -2.08158140000000014 -0.57903439000000001 -0.97376472000000003 -2.08286309999999997 -0.97442161999999999 -0.95100563999999999 -2.10282869999999988 -0.97442161999999999 -0.98201477999999998 -2.08157870000000012 -0.57903439000000001 -0.97376346999999996 -2.08158110000000018 -0.57903439000000001 -0.97376478 -2.0757667999999998 -0.97442161999999999 -0.95172435 -2.09923929999999981 -0.97442161999999999 -0.98817688000000004 -2.08157939999999986 -0.57903439000000001 -0.97376293000000003 -2.08158179999999993 -0.5790343900000000"
+		+ "1 -0.97376436 -2.06924080000000021 -0.97442161999999999 -0.95459908000000004 -2.09392090000000008 -0.97442161999999999 -0.99292826999999995 -2.08157969999999981 -0.57903439000000001 -0.97376304999999996 -2.08158209999999988 -0.57903439000000001 -0.97376406000000004 -2.06392240000000005 -0.97442161999999999 -0.95935064999999997 -2.08739469999999994 -0.97442161999999999 -0.99580365000000004 -2.08158179999999993 -0.57903439000000001 -0.97376214999999999 -2.0815823 -0.57903439000000001 -0.97376388000000003 -2.0603324999999999 -0.97442161999999999 -0.96551304999999998 -2.08029960000000003 -0.97442161999999999 -0.99652171000000001 -2.0815804 -0.57903439000000001 -0.97376293000000003 -2.08158179999999993 -0.57903439000000001 -0.97376381999999995 -2.05882239999999994 -0.97442161999999999 -0.97248279999999998 -2.07332990000000006 -0.97442161999999999 -0.99501203999999999 -2.08158110000000018 -0.57903439000000001 -0.97376280999999998 -2.08158250000000011 -0.57903439000000001 -0.97376381999999995 -2.05954170000000003 -0"
+		+ ".97442161999999999 -0.97957844000000005 -2.067168 -0.97442161999999999 -0.99142246999999994 -2.08158159999999981 -0.57903439000000001 -0.97376317000000001 -2.08158209999999988 -0.57903439000000001 -0.97376364000000004 -2.06241679999999983 -0.97442161999999999 -0.98610472999999998 -2.09599469999999988 -2.88830350000000013 -0.95610487 -2.10074469999999991 -2.88830350000000013 -0.96142083 -2.08983249999999998 -2.88830350000000013 -0.95251542 -2.10361909999999996 -2.88830350000000013 -0.96794789999999997 -2.08286239999999978 -2.88830350000000013 -0.95100594000000005 -2.10433819999999994 -2.88830350000000013 -0.97504526000000002 -2.07576660000000013 -2.88830350000000013 -0.95172393 -2.10282850000000021 -2.88830350000000013 -0.98201466000000004 -2.06924080000000021 -2.88830350000000013 -0.95459901999999996 -2.09923910000000014 -2.88830350000000013 -0.98817670000000002 -2.06392290000000012 -2.88830350000000013 -0.95935046999999996 -2.09392090000000008 -2.88830350000000013 -0.99292796999999999 -2.06033329999999992 -2"
+		+ ".88830350000000013 -0.96551299000000002 -2.08739469999999994 -2.88830350000000013 -0.99580347999999996 -2.0588232999999998 -2.88830350000000013 -0.97248292000000003 -2.08029989999999998 -2.88830350000000013 -0.99652171000000001 -2.05954170000000003 -2.88830350000000013 -0.97957844000000005 -2.07333020000000001 -2.88830350000000013 -0.99501169 -2.062417 -2.88830350000000013 -0.98610461000000005 -2.067168 -2.88830350000000013 -0.99142229999999998 -4.41659880000000005 -2.937777 0.52981155999999996 -3.83768440000000011 -2.937777 1.17778150000000004 -3.0868701999999999 -2.937777 1.61514310000000005 -4.7669435 -2.937777 -0.26533917000000001"
+		)
+		2 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape" "pt[498:663]" (" -2.23765159999999996 -2.93777679999999997 1.79908409999999996 -4.85442830000000036 -2.93777679999999997 -1.12983570000000011 -3.75957730000000012 -3.495703 1.0820862 -2.08158110000000018 -3.495703 -0.97376417999999998 -4.31274270000000026 -3.495703 0.46293640000000003 -3.04215739999999979 -3.495703 1.499995 -4.64750529999999973 -3.495703 -0.29684806000000002 -2.23070980000000008 -3.495703 1.67575490000000005 -4.73109909999999978 -3.495703 -1.122893 -1.40466460000000004 -3.495703 1.59216139999999995 -4.55533889999999975 -3.495703 -1.93434010000000001 -0.64488065000000006 -3.495703 1.25739749999999995 -4.13743019999999984 -3.495703 -2.65175939999999999 -0.025731166999999999 -3.495703 0.70423144000000004 -3.51828070000000004 -3.495703 -3.20492480000000013 0.39217731 -3.495703 -0.013188004 -2.758497 -3.495703 -3.53968859999999985 0.56793737 -3.495703 -0.82463545000000005 -1.93245219999999995 -3.495703 -3.6232823999999999 0.48434368 -3.495703 -1.65068039999999994 -1.12100489999999997 -3.495703 -3.4475223999999999"
+		+ "9 0.14958012000000001 -3.495703 -2.41046430000000012 -0.40358560999999998 -3.495703 -3.02961370000000008 -2.19493459999999985 -0.97442161999999999 -1.0662841999999999 -2.04426070000000015 -0.97442161999999999 -0.83228493000000003 -2.21797680000000019 -0.97442161999999999 -1.02672739999999996 -2.089802 -0.97442161999999999 -0.82767707000000001 -2.22766919999999979 -0.97442161999999999 -0.98198003 -2.1345426999999999 -0.97442161999999999 -0.83736557 0.48434368 -0.97442161999999999 -1.65068039999999994 -4.64750529999999973 -0.97442161999999999 -0.29684806000000002 -2.17409780000000019 -0.97442161999999999 -0.86040704999999995 -2.067168 -0.97442161999999999 -0.99142246999999994 -1.12100489999999997 -0.97442161999999999 -3.44752239999999999 -2.02861670000000016 -0.97442161999999999 -1.11016010000000009 -1.940105 -0.97442161999999999 -1.01108869999999995 -0.40358618000000002 -0.97442161999999999 -3.02961370000000008 -1.9890616000000001 -0.97442161999999999 -1.087118 0.56793510999999997 -0.97442161999999999 -0.82463"
+		+ "485000000003 -2.07335849999999988 -0.97442161999999999 -1.11985120000000005 -1.93245270000000002 -0.97442161999999999 -3.62328219999999979 -1.94518609999999992 -0.97442161999999999 -0.92079960999999999 0.39217731 -0.97442161999999999 -0.013188004 -4.13743019999999984 -0.97442161999999999 -2.65175939999999999 -1.40466460000000004 -0.97442161999999999 1.59216139999999995 -4.55533840000000012 -0.97442161999999999 -1.93434039999999996 -2.23071030000000015 -0.97442161999999999 1.67575490000000005 -4.73109870000000043 -0.97442161999999999 -1.12289290000000008 -3.04215739999999979 -0.97442161999999999 1.4999956000000001 -2.20460650000000014 -0.97442161999999999 -0.89455050000000003 -4.31274270000000026 -0.97442161999999999 0.46293676 -3.75957510000000017 -0.97442161999999999 1.08208560000000009 -2.22305539999999979 -0.97442161999999999 -0.93644457999999997 -1.958559 -0.97442161999999999 -1.05297839999999998 0.14958045 -0.97442161999999999 -2.41046430000000012 -3.75957730000000012 -3.53877780000000008 1.0820862 -4.31"
+		+ "274270000000026 -3.53877780000000008 0.46293640000000003 -3.04215739999999979 -3.53877780000000008 1.499995 -4.64750529999999973 -3.53877780000000008 -0.29684806000000002 -2.23765159999999996 -3.53877780000000008 1.79908409999999996 -2.23070980000000008 -3.53877780000000008 1.67575490000000005 -4.85442830000000036 -3.53877780000000008 -1.12983570000000011 -4.73109909999999978 -3.53877780000000008 -1.122893 -1.37315570000000009 -3.53877780000000008 1.71159970000000006 -1.40466460000000004 -3.53877780000000008 1.59216139999999995 -4.67048690000000022 -3.53877780000000008 -1.97905289999999989 -4.55533889999999975 -3.53877780000000008 -1.93434010000000001 -0.57800543000000004 -3.53877780000000008 1.3612531000000001 -0.64488065000000006 -3.53877780000000008 1.25739749999999995 -4.23312519999999992 -3.53877780000000008 -2.72986649999999997 -4.13743019999999984 -3.53877780000000008 -2.65175939999999999 0.069964132999999998 -3.53877780000000008 0.78233850000000005 -0.025731166999999999 -3.53877780000000008 0.70423144"
+		+ "000000004 -3.585156 -3.53877780000000008 -3.30878039999999984 -3.51828070000000004 -3.53877780000000008 -3.20492480000000013 0.50732535000000001 -3.53877780000000008 0.031524706999999999 0.39217731 -3.53877780000000008 -0.013188004 -2.7900062000000001 -3.53877780000000008 -3.659127 -2.758497 -3.53877780000000008 -3.53968859999999985 0.69126659999999995 -3.53877780000000008 -0.81769382999999995 0.56793737 -3.53877780000000008 -0.82463545000000005 -1.92551059999999996 -3.53877780000000008 -3.74661160000000004 -1.93245219999999995 -3.53877780000000008 -3.6232823999999999 0.603782 -3.53877780000000008 -1.68218930000000011 0.48434368 -3.53877780000000008 -1.65068039999999994 -1.07629229999999998 -3.53877780000000008 -3.5626701999999999 -1.12100489999999997 -3.53877780000000008 -3.44752239999999999 0.25343573000000003 -3.53877780000000008 -2.47733949999999981 0.14958012000000001 -3.53877780000000008 -2.41046430000000012 -0.32547858000000002 -3.53877780000000008 -3.125309 -0.40358560999999998 -3.53877780000000008 -3"
+		+ ".02961370000000008 -4.41659880000000005 -3.495703 0.52981155999999996 -3.83768440000000011 -3.495703 1.17778150000000004 -3.0868701999999999 -3.495703 1.61514310000000005 -4.7669435 -3.495703 -0.26533917000000001 -2.06241679999999983 -0.97442161999999999 -0.98610472999999998 -1.93549250000000006 -0.97442161999999999 -0.96554315000000002 -0.64488065000000006 -0.97442161999999999 1.25739749999999995 -2.00236629999999982 -0.97442161999999999 -0.85074209999999995 -2.09599469999999988 -0.97442161999999999 -0.95610476 -2.100745 -0.97442161999999999 -0.96142070999999996 -3.51828070000000004 -0.97442161999999999 -3.20492480000000013 -2.10361930000000008 -0.97442161999999999 -0.96794784 -2.16079519999999992 -0.97442161999999999 -1.0967848 -2.08983279999999993 -0.97442161999999999 -0.95251523999999999 -0.025731166999999999 -0.97442161999999999 0.70423144000000004 -2.10433840000000005 -0.97442161999999999 -0.97504526000000002 -1.96822610000000009 -0.97442161999999999 -0.88124477999999995 -2.08286239999999978 -0.97442161"
+		+ "999999999 -0.95100582 -2.758497 -0.97442161999999999 -3.53968859999999985 -2.10282869999999988 -0.97442161999999999 -0.98201477999999998 -2.1189032000000001 -0.97442161999999999 -1.11524179999999995 -2.07576660000000013 -0.97442161999999999 -0.95172374999999998 -2.09923929999999981 -0.97442161999999999 -0.98817688000000004 -2.06924080000000021 -0.97442161999999999 -0.95459877999999998 -2.09392090000000008 -0.97442161999999999 -0.99292826999999995 -2.06392290000000012 -0.97442161999999999 -0.95935022999999997 -2.08739469999999994 -0.97442161999999999 -0.99580365000000004 -2.060333 -0.97442161999999999 -0.96551286999999997 -2.08029960000000003 -0.97442161999999999 -0.99652171000000001 -2.05882310000000013 -0.97442161999999999 -0.97248292000000003 -2.07332990000000006 -0.97442161999999999 -0.99501203999999999 -2.05954170000000003 -0.97442161999999999 -0.97957844000000005 -4.42374129999999965 -1.05200150000000003 0.5316959 -3.84482720000000011 -1.05200150000000003 1.17966579999999999 -3.7667202999999998 -1.052001"
+		+ "50000000003 1.08397049999999995 -4.31988570000000038 -1.05200150000000003 0.46482074000000001 -4.77408650000000012 -1.05200150000000003 -0.26345481999999998 -4.65464780000000022 -1.05200150000000003 -0.29496371999999998 -3.094013 -1.05200150000000003 1.6170274 -3.04930039999999991 -1.05200150000000003 1.50187929999999992 -4.86157079999999997 -1.05200150000000003 -1.12795029999999996 -4.73824169999999967 -1.05200150000000003 -1.12100859999999991 -2.24479439999999997 -1.05200150000000003 1.80096839999999991 -2.23785260000000008 -1.05200150000000003 1.67763909999999994 -4.67762990000000034 -1.05200150000000003 -1.97716840000000005 -4.56248140000000024 -1.05200150000000003 -1.93245589999999989 -1.38029810000000008 -1.05200150000000003 1.71348389999999995 -1.41180780000000006 -1.05200150000000003 1.59404579999999996 -4.24026820000000004 -1.05200150000000003 -2.72798229999999986 -4.14457270000000033 -1.05200150000000003 -2.64987519999999988 -0.58514785999999996 -1.05200150000000003 1.36313740000000005 -0.6520232000"
+		+ "0000002 -1.05200150000000003 1.2592817999999999 -3.59229870000000018 -1.05200150000000003 -3.30689620000000017 -3.52542329999999993 -1.05200150000000003 -3.20304060000000002 0.062821046000000005 -1.05200150000000003 0.78422289999999995 -0.032873831999999999 -1.05200150000000003 0.70611577999999997 -2.79714889999999983 -1.05200150000000003 -3.65724280000000013 -2.7656398000000002 -1.05200150000000003 -3.53780440000000018 0.50018293000000003 -1.05200150000000003 0.033409253 0.38503464999999998 -1.05200150000000003 -0.0113037 -1.93265320000000007 -1.05200150000000003 -3.74472739999999993 -1.939595 -1.05200150000000003 -3.621398 0.68412375000000003 -1.05200150000000003 -0.81580949000000003 0.56079458999999998 -1.05200150000000003 -0.82275105000000004 -1.08343509999999998 -1.05200150000000003 -3.560786 -1.12814769999999998 -1.05200150000000003 -3.44563789999999992 0.59663922000000003 -1.05200150000000003 -1.680305 0.47720087 -1.05200150000000003 -1.648796 -0.33262165999999999 -1.05200150000000003 -3.12342450000000"
+		+ "005 -0.41072841999999998 -1.05200150000000003 -3.02772949999999996 0.24629292 -1.05200150000000003 -2.475455 0.14243732000000001 -1.05200150000000003 -2.40857980000000005 -3.83768419999999999 -0.96147435999999997 1.17778129999999992 -3.83887530000000021 -0.98735613 1.17809570000000008 -4.41659880000000005 -0.96147358000000005 0.52981155999999996"
+		)
+		2 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape" "pt[664:810]" (" -4.417789 -0.98735392 0.53012568000000004 -3.83768459999999978 -0.59734010999999998 1.1777816000000001 -3.81536650000000011 -0.57903439000000001 1.15043760000000006 -4.41659880000000005 -0.59734010999999998 0.52981155999999996 -4.38692279999999979 -0.57903439000000001 0.51070278999999996 -4.7669435 -0.96147358000000005 -0.26533917000000001 -4.76813410000000015 -0.98735392 -0.26502508000000002 -4.7669435 -0.59734010999999998 -0.26533908 -4.73281530000000039 -0.57903439000000001 -0.27434241999999998 -3.0868701999999999 -0.59734010999999998 1.61514310000000005 -3.07409409999999994 -0.57903439000000001 1.58224070000000006 -3.0868701999999999 -0.96147548999999999 1.61514310000000005 -3.08806160000000007 -0.98735969999999995 1.6154573000000001 -4.85442830000000036 -0.96147287000000003 -1.12983469999999997 -4.855619 -0.98735463999999995 -1.12952040000000009 -4.85442830000000036 -0.59734010999999998 -1.12983469999999997 -4.81918809999999986 -0.57903439000000001 -1.1278511 -2.23765159999999996 -0.59734010999999998 1."
+		+ "79908409999999996 -2.23566820000000011 -0.57903439000000001 1.763844 -2.23765159999999996 -0.96147667999999997 1.79908409999999996 -2.23884319999999981 -0.98736327999999995 1.79939840000000006 -4.67048690000000022 -0.96147311000000002 -1.97905289999999989 -4.67167810000000028 -0.98735731999999998 -1.97873870000000007 -4.67048690000000022 -0.59734010999999998 -1.97905289999999989 -4.63758469999999967 -0.57903439000000001 -1.96627660000000004 -1.37315570000000009 -0.59734010999999998 1.71159970000000006 -1.382159 -0.57903439000000001 1.67747139999999995 -1.37315570000000009 -0.96147740000000004 1.71159970000000006 -1.3743474 -0.98736542000000005 1.71191409999999999 -4.23312519999999992 -0.96147435999999997 -2.72986649999999997 -4.23431680000000021 -0.98736084000000002 -2.72955229999999993 -4.23312519999999992 -0.59734010999999998 -2.72986649999999997 -4.20578149999999962 -0.57903439000000001 -2.70754839999999986 -0.57800543000000004 -0.59734010999999998 1.3612531000000001 -0.59711437999999994 -0.579034390000000"
+		+ "01 1.33157740000000002 -0.57800543000000004 -0.96147596999999996 1.3612531000000001 -0.57919704999999999 -0.98736398999999997 1.36156750000000004 -3.585156 -0.96147596999999996 -3.30878039999999984 -3.58634759999999986 -0.98736398999999997 -3.3084661999999998 -3.585156 -0.59734010999999998 -3.30878039999999984 -3.566047 -0.57903439000000001 -3.27910469999999998 0.069964132999999998 -0.59734010999999998 0.78233850000000005 0.042620170999999998 -0.57903439000000001 0.76002026 0.069964132999999998 -0.96147435999999997 0.78233850000000005 0.068772867000000001 -0.98736084000000002 0.78265273999999996 -2.7900062000000001 -0.96147740000000004 -3.659127 -2.79119779999999995 -0.98736542000000005 -3.6588124999999998 -2.7900062000000001 -0.59734010999999998 -3.659127 -2.7810028 -0.57903439000000001 -3.62499880000000019 0.50732535000000001 -0.59734010999999998 0.031524706999999999 0.47442301999999997 -0.57903439000000001 0.018748478999999998 0.50732535000000001 -0.96147311000000002 0.031524706999999999 0.5061343900000000"
+		+ "5 -0.98735731999999998 0.031838897999999997 -1.92551059999999996 -0.96147667999999997 -3.74661160000000004 -1.92670209999999997 -0.98736327999999995 -3.74629710000000005 -1.92551059999999996 -0.59734010999999998 -3.74661160000000004 -1.927494 -0.57903439000000001 -3.71137139999999999 0.69126659999999995 -0.59734010999999998 -0.81769382999999995 0.65602647999999997 -0.57903439000000001 -0.81967723000000003 0.69126659999999995 -0.96147287000000003 -0.81769382999999995 0.69007576000000004 -0.98735463999999995 -0.81737965000000001 -1.07629229999999998 -0.96147548999999999 -3.5626701999999999 -1.07748350000000004 -0.98735969999999995 -3.562356 -1.07629229999999998 -0.59734010999999998 -3.5626701999999999 -1.08906839999999994 -0.57903439000000001 -3.529768 0.603782 -0.59734010999999998 -1.68218930000000011 0.56965368999999999 -0.57903439000000001 -1.6731860999999999 0.603782 -0.96147358000000005 -1.68218930000000011 0.60259145000000003 -0.98735392 -1.68187529999999996 -0.32547858000000002 -0.96147435999999997 -3.12"
+		+ "5309 -0.32666941999999999 -0.98735613 -3.124995 -0.32547858000000002 -0.59734010999999998 -3.125309 -0.34779683 -0.57903439000000001 -3.097965 0.25343573000000003 -0.59734010999999998 -2.47733949999999981 0.22375998999999999 -0.57903439000000001 -2.4582307000000001 0.25343573000000003 -0.96147358000000005 -2.47733949999999981 0.25224516000000002 -0.98735392 -2.47702549999999988 -2.23765159999999996 -2.9071425999999998 1.79908409999999996 -2.27271560000000017 -2.88830350000000013 1.7914892 -2.23566820000000011 -2.88830350000000013 1.763844 -2.23765159999999996 -2.90660929999999995 1.79908409999999996 -1.37315570000000009 -2.90660190000000007 1.71159970000000006 -1.38232970000000011 -2.88830350000000013 1.67753149999999995 -2.23765159999999996 -3.48275880000000004 1.79908409999999996 -2.23765159999999996 -3.50864719999999997 1.79908409999999996 -2.26174350000000013 -3.495703 1.7938658999999999 -1.37315570000000009 -3.48275880000000004 1.71159970000000006 -1.37315570000000009 -3.50864719999999997 1.7115997000000"
+		+ "0006 -4.8519464000000001 -3.495703 -1.10530919999999999 -4.85442830000000036 -3.50864719999999997 -1.12983570000000011 -4.85442830000000036 -3.48275880000000004 -1.12983570000000011 -4.67048690000000022 -3.48275880000000004 -1.97905289999999989 -4.67048690000000022 -3.50864719999999997 -1.97905289999999989 -4.85442830000000036 -2.90660929999999995 -1.12983570000000011 -4.81918809999999986 -2.88830350000000013 -1.1278511 -4.85081619999999969 -2.88830350000000013 -1.0941398 -4.85442830000000036 -2.91303750000000017 -1.12983570000000011 -4.67048690000000022 -2.90660190000000007 -1.97905289999999989 -4.6375327000000004 -2.88830350000000013 -1.96645 -0.57800543000000004 -2.90660190000000007 1.3612531000000001 -0.59725815000000004 -2.88830350000000013 1.33168719999999996 -0.57800543000000004 -3.48275880000000004 1.3612531000000001 -0.57800543000000004 -3.50864719999999997 1.3612531000000001 -4.23312519999999992 -3.48275880000000004 -2.72986649999999997 -4.23312519999999992 -3.50864719999999997 -2.72986649999999997 "
+		+ "-4.23312519999999992 -2.90660190000000007 -2.72986649999999997 -4.20567889999999966 -2.88830350000000013 -2.70769720000000014 0.069964132999999998 -2.90660190000000007 0.78233850000000005 0.042517464999999997 -2.88830350000000013 0.76016914999999996 0.069964132999999998 -3.48275880000000004 0.78233850000000005 0.069964132999999998 -3.50864719999999997 0.78233850000000005 -3.585156 -3.48275880000000004 -3.30878039999999984 -3.585156 -3.50864719999999997 -3.30878039999999984 -3.585156 -2.90660190000000007 -3.30878039999999984 -3.56590320000000016 -2.88830350000000013 -3.27921459999999998 0.50732535000000001 -2.90660190000000007 0.031524706999999999 0.47437128000000001 -2.88830350000000013 0.018921866999999998 0.50732535000000001 -3.48275880000000004 0.031524706999999999 0.50732535000000001 -3.50864719999999997 0.031524706999999999 -2.7900062000000001 -3.48275880000000004 -3.659127 -2.7900062000000001 -3.50864719999999997 -3.659127 -2.7900062000000001 -2.90660190000000007 -3.659127 -2.78083210000000003 -2.888303"
+		+ "50000000013 -3.62505889999999997 0.69126659999999995 -2.90660190000000007 -0.81769382999999995 0.65603089000000003 -2.88830350000000013 -0.81949638999999996 0.69126659999999995 -3.48275880000000004 -0.81769382999999995 0.69126659999999995 -3.50864719999999997 -0.81769382999999995 -1.92551059999999996 -3.48275880000000004 -3.74661160000000004 -1.92551059999999996 -3.50864719999999997 -3.74661160000000004 -1.92551059999999996 -2.90660190000000007 -3.74661160000000004 -1.92731319999999995 -2.88830350000000013 -3.711376 0.603782 -2.90660190000000007 -1.68218930000000011 0.56971377000000001 -2.88830350000000013 -1.67301539999999993 0.603782 -3.48275880000000004 -1.68218930000000011 0.603782 -3.50864719999999997 -1.68218930000000011 -1.07629229999999998 -3.48275880000000004 -3.5626701999999999 -1.07629229999999998 -3.50864719999999997 -3.5626701999999999 -1.07629229999999998 -2.90660190000000007 -3.5626701999999999 -1.0888951 -2.88830350000000013 -3.52971630000000003 0.25343573000000003 -2.90660190000000007 -2.4773"
+		+ "3949999999981 0.22386985000000001 -2.88830350000000013 -2.45808669999999996 0.25343573000000003 -3.48275880000000004 -2.47733949999999981 0.25343573000000003 -3.50864719999999997 -2.47733949999999981 -0.32547858000000002 -3.48275880000000004 -3.125309 -0.32547858000000002 -3.50864719999999997 -3.125309 -0.32547858000000002 -2.90660190000000007 -3.125309 -0.34764791 -2.88830350000000013 -3.09786250000000019"
+		);
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -37250,7 +36473,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 3 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -37258,9 +36481,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 35 ".dsm";
+	setAttr -s 39 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 74 ".gn";
+	setAttr -s 75 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -37281,8 +36504,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId104.id" "Rounded_Seat_BaseShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Rounded_Seat_BaseShape.iog.og[0].gco";
 connectAttr "groupId105.id" "Rounded_Seat_CushionShape.iog.og[0].gid";
@@ -37362,6 +36583,7 @@ connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "|Window_Wall|Window_Wall.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "lambert2.msg" "materialInfo1.m";
+connectAttr "Sofa_End_TableRNfosterParent1.msg" "Sofa_End_TableRN.fp";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
@@ -37397,6 +36619,8 @@ connectAttr "Rounded_Seat_BaseShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "Rounded_Seat_CushionShape.iog.og[0]" ":initialShadingGroup.dsm" -na
 		;
 connectAttr "Rounded_Seat_BackShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "Book_Shape11.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "Book_Shape12.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId5.msg" ":initialShadingGroup.gn" -na;
