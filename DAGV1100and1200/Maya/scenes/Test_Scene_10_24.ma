@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Test_Scene_10_24.ma
-//Last modified: Fri, Oct 24, 2025 01:10:48 PM
+//Last modified: Fri, Oct 24, 2025 01:35:48 PM
 //Codeset: 1252
 file -rdi 1 -ns "Unit4_CurvesLab1" -dr 1 -rfn "Unit4_CurvesLabRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Curved_Leaf_Plant.ma";
@@ -44,26 +44,25 @@ requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.3";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "2B2F0736-4167-7122-BA8C-CEB70D9ED82B";
+fileInfo "UUID" "461C4119-4160-6673-DEDE-2AA73BFB0F31";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "E3966AD9-4062-017F-1FED-7F839BC7DA88";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.5357308401813867 6.5794104836079335 14.729290285929576 ;
-	setAttr ".r" -type "double3" -19.800000000016993 686.79999999998802 -1.900508082327496e-15 ;
+	setAttr ".t" -type "double3" -10.992728579350302 9.9983114635063508 21.544352760534835 ;
+	setAttr ".r" -type "double3" -21.000000000000345 687.99999999998852 9.3761034777361483e-16 ;
 	setAttr ".rpt" -type "double3" 1.6274873696827714e-16 -2.3510523053056138e-16 -4.1022956404332476e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8A35ECD4-4F5D-7B3A-9404-50AD140B47CA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 19.139492769621313;
+	setAttr ".coi" 29.517015125905768;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -26387,7 +26386,7 @@ createNode mesh -n "FrilledPillowShape" -p "FrilledPillow";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "Sofa_End_TableRNfosterParent1";
-	rename -uid "E8BDD70A-43DD-3CFA-0248-D890EE3F1D87";
+	rename -uid "AB160236-4733-668C-7F5D-0D9584CF92B2";
 createNode mesh -n "Sofa_End_Table:polySurfaceShape2" -p "Sofa_End_TableRNfosterParent1";
 	rename -uid "67AFC7F6-45EF-67F9-B2ED-D2BCAB513A0B";
 	setAttr -k off ".v";
@@ -29379,20 +29378,20 @@ createNode mesh -n "Book_Shape12" -p "Book_12";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D7DAE29E-433B-80F6-4375-9FB8BA43B430";
+	rename -uid "1C18564D-48A6-E938-EDFF-33BD27C7ED3A";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B38A49B9-4A0C-D3C6-F2F4-8CB198D06F62";
+	rename -uid "A497EE7F-4AB6-5B90-9D71-ABAD466A1BBB";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "2223AA38-4CCB-15D2-AF66-8D8056416822";
+	rename -uid "849CB309-4746-EE3C-9317-23B4D6E0F6D9";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C32E586A-4186-2460-A6EA-428FAFF13F4F";
+	rename -uid "1FED10FF-456A-57D9-60BF-458E93E310D4";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C5F3650C-4608-A791-43D6-A796AC86CC7A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "325573B3-413E-20B3-9F61-F2B575A3CB1E";
+	rename -uid "D03EEFD1-4518-C13D-FECD-EC9DD31CDC9A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "54FE33CF-4F57-48F0-EBD4-E9BCAB99B87A";
 	setAttr ".g" yes;
@@ -32768,15 +32767,15 @@ createNode reference -n "Sofa_End_TableRN";
 		
 		2 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape" "pnts[363]" " -type \"float3\" 0 0 0"
 		
+		3 "Sofa_End_Table:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "Sofa_End_Table:file1.message" ":initialMaterialInfo.texture" "-na"
 		3 ":initialShadingGroup.memberWireframeColor" "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "Sofa_End_Table:groupId1.groupId" "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "Sofa_End_Table:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "Sofa_End_Table:file1.message" ":initialMaterialInfo.texture" "-na"
 		5 3 "Sofa_End_TableRN" "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[1]" 
 		"Sofa_End_TableRN.placeHolderList[1]" ""
 		5 4 "Sofa_End_TableRN" "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[1].objectGroupId" 
@@ -32797,14 +32796,20 @@ createNode reference -n "Cushy_PillowRN";
 	rename -uid "1F9AC955-4254-94F9-0271-899B94199F47";
 	setAttr ".fn[0]" -type "string" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/Cushy_Pillow.ma";
 	setAttr -s 4 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
 	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Cushy_PillowRN"
-		"Cushy_PillowRN" 0
-		"Cushy_PillowRN" 26
+		"Cushy_PillowRN" 3
+		3 "Cushy_Pillow:polyTweakUV2.output" "|Cushy_Pillow:FrilledPillow|Cushy_Pillow:FrilledPillowShape.inMesh" 
+		""
+		3 "Cushy_Pillow:polyTweakUV2.uvTweak[0]" "|Cushy_Pillow:FrilledPillow|Cushy_Pillow:FrilledPillowShape.uvSet[0].uvSetTweakLocation" 
+		""
+		5 3 "Cushy_PillowRN" "Cushy_Pillow:polyTweakUV2.output" "Cushy_PillowRN.placeHolderList[4]" 
+		"Cushy_Pillow:FrilledPillowShape.i"
+		"Cushy_PillowRN" 23
 		2 "|Cushy_Pillow:FrilledPillow" "translate" " -type \"double3\" 0 -0.0066166214356664366 0"
 		
 		2 "|Cushy_Pillow:FrilledPillow" "rotate" " -type \"double3\" 0 0 0"
@@ -32850,18 +32855,12 @@ createNode reference -n "Cushy_PillowRN";
 		" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		3 "Cushy_Pillow:file1.message" ":initialMaterialInfo.texture" "-na"
-		3 "Cushy_Pillow:polyTweakUV2.output" "|Cushy_Pillow:FrilledPillow|Cushy_Pillow:FrilledPillowShape.inMesh" 
-		""
-		3 "Cushy_Pillow:polyTweakUV2.uvTweak[0]" "|Cushy_Pillow:FrilledPillow|Cushy_Pillow:FrilledPillowShape.uvSet[0].uvSetTweakLocation" 
-		""
-		5 4 "Cushy_PillowRN" "|Cushy_Pillow:FrilledPillow|Cushy_Pillow:FrilledPillowShape.inMesh" 
-		"Cushy_PillowRN.placeHolderList[1]" ""
 		5 4 "Cushy_PillowRN" "|Cushy_Pillow:FrilledPillow|Cushy_Pillow:FrilledPillowShape.uvSet[0].uvSetTweakLocation" 
-		"Cushy_PillowRN.placeHolderList[2]" ""
+		"Cushy_PillowRN.placeHolderList[5]" ""
+		5 4 "Cushy_PillowRN" "|Cushy_Pillow:FrilledPillow|Cushy_Pillow:FrilledPillowShape.inMesh" 
+		"Cushy_PillowRN.placeHolderList[6]" ""
 		5 3 "Cushy_PillowRN" "|Cushy_Pillow:FrilledPillow|Cushy_Pillow:FrilledPillowShape.worldMatrix" 
-		"Cushy_PillowRN.placeHolderList[3]" ""
-		5 3 "Cushy_PillowRN" "Cushy_Pillow:polyTweakUV2.output" "Cushy_PillowRN.placeHolderList[4]" 
-		"Cushy_Pillow:FrilledPillowShape.i";
+		"Cushy_PillowRN.placeHolderList[7]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode groupId -n "groupId107";
@@ -34936,12 +34935,16 @@ lockNode -l 1 ;
 createNode reference -n "Bumpy_TableRN1";
 	rename -uid "112249D5-4F22-76F3-36ED-4E97AF248BFB";
 	setAttr -s 2 ".phl";
-	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Bumpy_TableRN1"
-		"Bumpy_TableRN1" 0
-		"Bumpy_TableRN1" 10
+		"Bumpy_TableRN1" 2
+		3 "Bumpy_Table:polyTweakUV19.output" "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape.inMesh" 
+		""
+		5 3 "Bumpy_TableRN1" "Bumpy_Table:polyTweakUV19.output" "Bumpy_TableRN1.placeHolderList[2]" 
+		"Bumpy_Table:Bumpy_TableShape.i"
+		"Bumpy_TableRN1" 8
 		2 "|Bumpy_Table:Bumpy_Table" "translate" " -type \"double3\" 0 0 0"
 		2 "|Bumpy_Table:Bumpy_Table" "rotate" " -type \"double3\" 0 0 0"
 		2 "|Bumpy_Table:Bumpy_Table" "scale" " -type \"double3\" 1 1 1"
@@ -34953,12 +34956,8 @@ createNode reference -n "Bumpy_TableRN1";
 		
 		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "uvSet[0].uvSetName" 
 		" -type \"string\" \"map1\""
-		3 "Bumpy_Table:polyTweakUV19.output" "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape.inMesh" 
-		""
 		5 4 "Bumpy_TableRN1" "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape.inMesh" 
-		"Bumpy_TableRN1.placeHolderList[1]" ""
-		5 3 "Bumpy_TableRN1" "Bumpy_Table:polyTweakUV19.output" "Bumpy_TableRN1.placeHolderList[2]" 
-		"Bumpy_Table:Bumpy_TableShape.i";
+		"Bumpy_TableRN1.placeHolderList[3]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode transformGeometry -n "transformGeometry1";
@@ -34983,11 +34982,12 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 6 ".u";
+	setAttr -s 7 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 8 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 6 ".tx";
+	setAttr -s 7 ".tx";
+select -ne :lambert1;
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -35000,7 +35000,7 @@ select -ne :initialShadingGroup;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
-	setAttr -s 6 ".t";
+	setAttr -s 5 ".t";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -35019,24 +35019,20 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Sofa_End_TableRN.phl[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "Sofa_End_Table:groupId2.id" "Sofa_End_TableRN.phl[2]";
 connectAttr ":initialShadingGroup.mwc" "Sofa_End_TableRN.phl[3]";
 connectAttr "Sofa_End_Table:polyTweakUV1.uvtk[0]" "Sofa_End_TableRN.phl[4]";
 connectAttr "Sofa_End_Table:polyTweakUV1.out" "Sofa_End_TableRN.phl[5]";
-connectAttr "Sofa_End_TableRN.phl[6]" "polyPlanarProj5.mp";
-connectAttr "Sofa_End_TableRN.phl[7]" "Sofa_End_Table:polyAutoProj1.mp";
-connectAttr "polyTweakUV2.out" "Cushy_PillowRN.phl[1]";
-connectAttr "polyTweakUV2.uvtk[0]" "Cushy_PillowRN.phl[2]";
-connectAttr "Cushy_PillowRN.phl[3]" "polyAutoProj1.mp";
-connectAttr "Cushy_PillowRN.phl[4]" "Cushy_Pillow:polyTweak1.ip";
+connectAttr "Sofa_End_TableRN.phl[6]" "Sofa_End_Table:polyAutoProj1.mp";
+connectAttr "Sofa_End_TableRN.phl[7]" "polyPlanarProj5.mp";
+connectAttr "polyTweakUV2.uvtk[0]" "Cushy_PillowRN.phl[5]";
+connectAttr "polyTweakUV2.out" "Cushy_PillowRN.phl[6]";
+connectAttr "Cushy_PillowRN.phl[7]" "polyAutoProj1.mp";
 connectAttr "polyTweakUV15.uvtk[0]" "tableShapeRN.phl[5]";
 connectAttr "polyTweakUV15.out" "tableShapeRN.phl[6]";
 connectAttr "tableShapeRN.phl[7]" "polyAutoProj9.mp";
-connectAttr "transformGeometry1.og" "Bumpy_TableRN1.phl[1]";
-connectAttr "Bumpy_TableRN1.phl[2]" "transformGeometry1.ig";
+connectAttr "transformGeometry1.og" "Bumpy_TableRN1.phl[3]";
 connectAttr "groupId116.id" "Rounded_Seat_BaseShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Rounded_Seat_BaseShape.iog.og[0].gco";
 connectAttr "groupId118.id" "Rounded_Seat_CushionShape.iog.og[0].gid";
@@ -35119,6 +35115,7 @@ connectAttr "sharedReferenceNode.sr" "CarpetShapeRN.sr";
 connectAttr "sharedReferenceNode.sr" "Beanbag_ChairRN.sr";
 connectAttr "tableShapeRN.phl[4]" "polyTweakUV1.ip";
 connectAttr "Cushy_Pillow:polyTweak1.out" "polyAutoProj1.ip";
+connectAttr "Cushy_PillowRN.phl[4]" "Cushy_Pillow:polyTweak1.ip";
 connectAttr "polyAutoProj1.out" "polyTweakUV2.ip";
 connectAttr "Sofa_End_Table:groupParts1.og" "polyPlanarProj5.ip";
 connectAttr "Sofa_End_Table:polySurfaceShape2.o" "Sofa_End_Table:groupParts1.ig"
@@ -35128,6 +35125,8 @@ connectAttr "polyPlanarProj5.out" "Sofa_End_Table:polyAutoProj1.ip";
 connectAttr "Sofa_End_Table:polyAutoProj1.out" "Sofa_End_Table:polyTweakUV1.ip";
 connectAttr "polyTweakUV1.out" "polyAutoProj9.ip";
 connectAttr "polyAutoProj9.out" "polyTweakUV15.ip";
+connectAttr "sharedReferenceNode.sr" "Bumpy_TableRN1.sr";
+connectAttr "Bumpy_TableRN1.phl[2]" "transformGeometry1.ig";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
