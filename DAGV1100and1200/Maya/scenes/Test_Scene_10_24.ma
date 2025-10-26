@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Test_Scene_10_24.ma
-//Last modified: Fri, Oct 24, 2025 01:35:48 PM
+//Last modified: Sun, Oct 26, 2025 04:30:15 PM
 //Codeset: 1252
 file -rdi 1 -ns "Unit4_CurvesLab1" -dr 1 -rfn "Unit4_CurvesLabRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//scenes/Curved_Leaf_Plant.ma";
@@ -10,8 +10,6 @@ file -rdi 1 -ns "Cushy_Pillow" -rfn "Cushy_PillowRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/Cushy_Pillow.ma";
 file -rdi 1 -ns "New_Table" -dr 1 -rfn "New_TableRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/New_Table.ma";
-file -rdi 1 -ns "Bumpy_Table" -dr 1 -rfn "Bumpy_TableRN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/Bumpy_Table.ma";
 file -rdi 1 -ns "tableShape" -rfn "tableShapeRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/tableShape.ma";
 file -rdi 1 -ns "CarpetShape1" -rfn "CarpetShapeRN" -op "v=0;" -typ "mayaAscii"
@@ -29,8 +27,6 @@ file -r -ns "Sofa_End_Table" -dr 1 -rfn "Sofa_End_TableRN" -op "v=0;" -typ "maya
 file -r -ns "Cushy_Pillow" -dr 1 -rfn "Cushy_PillowRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/Cushy_Pillow.ma";
 file -r -ns "New_Table" -dr 1 -rfn "New_TableRN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/New_Table.ma";
-file -r -ns "Bumpy_Table" -dr 1 -rfn "Bumpy_TableRN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/Bumpy_Table.ma";
 file -r -ns "tableShape" -dr 1 -rfn "tableShapeRN" -op "v=0;" -typ "mayaAscii" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/tableShape.ma";
 file -r -ns "CarpetShape1" -dr 1 -rfn "CarpetShapeRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/CarpetShape.ma";
@@ -44,29 +40,30 @@ requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.3";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "461C4119-4160-6673-DEDE-2AA73BFB0F31";
+fileInfo "UUID" "C552FFD6-4AB6-8CBB-F32E-FBB900682AE7";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "E3966AD9-4062-017F-1FED-7F839BC7DA88";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -10.992728579350302 9.9983114635063508 21.544352760534835 ;
-	setAttr ".r" -type "double3" -21.000000000000345 687.99999999998852 9.3761034777361483e-16 ;
+	setAttr ".t" -type "double3" -11.505882792401607 10.230930091902 22.776434489265267 ;
+	setAttr ".r" -type "double3" -21.000000000006484 1042.7999999996657 2.9947600926595003e-15 ;
 	setAttr ".rpt" -type "double3" 1.6274873696827714e-16 -2.3510523053056138e-16 -4.1022956404332476e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8A35ECD4-4F5D-7B3A-9404-50AD140B47CA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 29.517015125905768;
+	setAttr ".coi" 26.739480014613896;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.1202309131622314 4.0953614194090244 2.9375772476196289 ;
+	setAttr ".tp" -type "double3" 5.6111458440646604 1.2502231796377892 4.0000000000000009 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "7C4EF3E3-46E3-A41D-FCBC-6F884975D565";
@@ -1400,7 +1397,8 @@ createNode transform -n "Rounded_Seat";
 	setAttr ".sp" -type "double3" 2.6108476139906909 0 3.2395210537306465 ;
 createNode transform -n "Rounded_Seat_Base" -p "Rounded_Seat";
 	rename -uid "841EDF0D-4B4D-B2AE-DB02-F9BAE3E69217";
-	setAttr ".t" -type "double3" 1.9010352956676471 0 0 ;
+	setAttr ".t" -type "double3" 2.5612127519567478 0 0 ;
+	setAttr ".s" -type "double3" 0.95141703197554217 0.95141703197554217 0.95141703197554217 ;
 createNode mesh -n "Rounded_Seat_BaseShape" -p "Rounded_Seat_Base";
 	rename -uid "878934AE-48BF-9DB0-EC44-85B36B549D5B";
 	setAttr -k off ".v";
@@ -3426,7 +3424,8 @@ createNode mesh -n "Rounded_Seat_BaseShape" -p "Rounded_Seat_Base";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Rounded_Seat_Cushion" -p "Rounded_Seat";
 	rename -uid "4A25C2E5-459B-9A16-981B-579DE3073753";
-	setAttr ".t" -type "double3" 1.9010352956676471 0 0 ;
+	setAttr ".t" -type "double3" 2.5612127519567478 0 0 ;
+	setAttr ".s" -type "double3" 0.95141703197554217 0.95141703197554217 0.95141703197554217 ;
 createNode mesh -n "Rounded_Seat_CushionShape" -p "Rounded_Seat_Cushion";
 	rename -uid "BE3AB820-44C4-59CB-E826-199B3C326554";
 	setAttr -k off ".v";
@@ -5315,7 +5314,8 @@ createNode mesh -n "Rounded_Seat_CushionShape" -p "Rounded_Seat_Cushion";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Rounded_Seat_Back" -p "Rounded_Seat";
 	rename -uid "CE574C5E-4720-8295-CF50-F19D84155448";
-	setAttr ".t" -type "double3" 1.9010352956676471 0 0 ;
+	setAttr ".t" -type "double3" 2.5612127519567478 0 0 ;
+	setAttr ".s" -type "double3" 0.95141703197554217 0.95141703197554217 0.95141703197554217 ;
 createNode mesh -n "Rounded_Seat_BackShape" -p "Rounded_Seat_Back";
 	rename -uid "19985D1D-426B-5592-984C-32B60A42F825";
 	setAttr -k off ".v";
@@ -26386,7 +26386,7 @@ createNode mesh -n "FrilledPillowShape" -p "FrilledPillow";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "Sofa_End_TableRNfosterParent1";
-	rename -uid "AB160236-4733-668C-7F5D-0D9584CF92B2";
+	rename -uid "A44D107D-4626-9FCF-64C2-FDA8592D85D1";
 createNode mesh -n "Sofa_End_Table:polySurfaceShape2" -p "Sofa_End_TableRNfosterParent1";
 	rename -uid "67AFC7F6-45EF-67F9-B2ED-D2BCAB513A0B";
 	setAttr -k off ".v";
@@ -29378,20 +29378,20 @@ createNode mesh -n "Book_Shape12" -p "Book_12";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1C18564D-48A6-E938-EDFF-33BD27C7ED3A";
-	setAttr -s 3 ".lnk";
-	setAttr -s 3 ".slnk";
+	rename -uid "E937700B-4ACA-932E-2044-CA9546E2B857";
+	setAttr -s 4 ".lnk";
+	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "A497EE7F-4AB6-5B90-9D71-ABAD466A1BBB";
+	rename -uid "EA02EE3C-46DC-6C6C-AA23-F0978E2325C2";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "849CB309-4746-EE3C-9317-23B4D6E0F6D9";
+	rename -uid "5B7C07B0-49FB-A3C3-C1FB-99B969FB8F0E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "1FED10FF-456A-57D9-60BF-458E93E310D4";
+	rename -uid "8C469FE3-453A-04F6-2411-1C809BEB2024";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C5F3650C-4608-A791-43D6-A796AC86CC7A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "D03EEFD1-4518-C13D-FECD-EC9DD31CDC9A";
+	rename -uid "02189E92-470D-0B2E-55BA-1C95C09A4B01";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "54FE33CF-4F57-48F0-EBD4-E9BCAB99B87A";
 	setAttr ".g" yes;
@@ -32767,15 +32767,15 @@ createNode reference -n "Sofa_End_TableRN";
 		
 		2 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape" "pnts[363]" " -type \"float3\" 0 0 0"
 		
-		3 "Sofa_End_Table:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "Sofa_End_Table:file1.message" ":initialMaterialInfo.texture" "-na"
 		3 ":initialShadingGroup.memberWireframeColor" "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "Sofa_End_Table:groupId1.groupId" "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Sofa_End_Table:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "Sofa_End_Table:file1.message" ":initialMaterialInfo.texture" "-na"
 		5 3 "Sofa_End_TableRN" "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[1]" 
 		"Sofa_End_TableRN.placeHolderList[1]" ""
 		5 4 "Sofa_End_TableRN" "|Sofa_End_Table:Leg4|Sofa_End_Table:Leg4Shape.instObjGroups.objectGroups[1].objectGroupId" 
@@ -32880,20 +32880,6 @@ createNode reference -n "sharedReferenceNode";
 	rename -uid "11C378B2-4E40-E05F-0D6D-698EA4A7DD01";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
-createNode reference -n "Bumpy_TableRN";
-	rename -uid "3A67396C-4B77-F409-37D5-33BF4FA1133F";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"Bumpy_TableRN"
-		"Bumpy_TableRN" 4
-		2 "|Bumpy_Table:Bumpy_Table" "translate" " -type \"double3\" 6.92139415817406878 -0.85598435120340977 3.82944997075720384"
-		
-		2 "|Bumpy_Table:Bumpy_Table" "rotate" " -type \"double3\" 0 -89.99999999999997158 0"
-		
-		2 "|Bumpy_Table:Bumpy_Table" "scale" " -type \"double3\" 0.31775759818854915 0.31775759818854915 0.44902579859053054"
-		
-		2 "|Bumpy_Table:Bumpy_Table" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode reference -n "tableShapeRN";
 	rename -uid "76BA7C69-41F7-AF9B-7E01-CE94FAD0E1C0";
 	setAttr ".fn[0]" -type "string" "C:/Users/suvis/Scripting/CleanRepo/Essentials/DAGV1100and1200/Maya//assets/tableShape.ma";
@@ -34934,30 +34920,879 @@ createNode reference -n "BookCaseGroupRN";
 lockNode -l 1 ;
 createNode reference -n "Bumpy_TableRN1";
 	rename -uid "112249D5-4F22-76F3-36ED-4E97AF248BFB";
-	setAttr -s 2 ".phl";
 	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Bumpy_TableRN1"
-		"Bumpy_TableRN1" 2
-		3 "Bumpy_Table:polyTweakUV19.output" "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape.inMesh" 
-		""
+		"Bumpy_TableRN1" 8
+		2 "|Bumpy_Table:Bumpy_Table1" "translate" " -type \"double3\" 9.26894200546887959 -0.95152725891825352 2.16647969280336028"
+		
+		2 "|Bumpy_Table:Bumpy_Table1" "rotate" " -type \"double3\" 0 -89.99999999999997158 0"
+		
+		2 "|Bumpy_Table:Bumpy_Table1" "scale" " -type \"double3\" 0.33991460789916322 0.33991460789916322 0.33991460789916322"
+		
+		2 "|Bumpy_Table:Bumpy_Table1" "rotatePivot" " -type \"double3\" -4.03417599201202393 0.95152725891825352 0.034025244414806366"
+		
+		2 "|Bumpy_Table:Bumpy_Table1" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Bumpy_Table:Bumpy_Table1" "scalePivot" " -type \"double3\" -7.84998005587923053 -1.0284661715601402 1.05430772197511047"
+		
+		2 "|Bumpy_Table:Bumpy_Table1" "scalePivotTranslate" " -type \"double3\" 3.81580406386720661 1.97999343047839371 -1.0202824775603041"
+		
 		5 3 "Bumpy_TableRN1" "Bumpy_Table:polyTweakUV19.output" "Bumpy_TableRN1.placeHolderList[2]" 
 		"Bumpy_Table:Bumpy_TableShape.i"
-		"Bumpy_TableRN1" 8
+		"Bumpy_TableRN1" 428
 		2 "|Bumpy_Table:Bumpy_Table" "translate" " -type \"double3\" 0 0 0"
 		2 "|Bumpy_Table:Bumpy_Table" "rotate" " -type \"double3\" 0 0 0"
 		2 "|Bumpy_Table:Bumpy_Table" "scale" " -type \"double3\" 1 1 1"
-		2 "|Bumpy_Table:Bumpy_Table" "rotatePivot" " -type \"double3\" 5.55818373826108925 1 4.12625843082684973"
+		2 "|Bumpy_Table:Bumpy_Table" "rotatePivot" " -type \"double3\" 5.09695863053528964 0 6.11575412750243963"
 		
 		2 "|Bumpy_Table:Bumpy_Table" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		
-		2 "|Bumpy_Table:Bumpy_Table" "scalePivot" " -type \"double3\" 5.55818373826108925 1 4.12625843082684973"
+		2 "|Bumpy_Table:Bumpy_Table" "scalePivot" " -type \"double3\" 5.09695863053528964 0 6.11575412750243963"
 		
-		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		5 4 "Bumpy_TableRN1" "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape.inMesh" 
-		"Bumpy_TableRN1.placeHolderList[3]" "";
+		2 "|Bumpy_Table:Bumpy_Table" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts" " -s 420"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[0]" " -type \"float3\" 9.12252329999999922 -1.94856370000000001 4.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[1]" " -type \"float3\" 8.41541669999999975 -1.51449689999999992 4.9395642000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[2]" " -type \"float3\" 8.41541669999999975 -2.38263079999999983 4.9395642000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[3]" " -type \"float3\" 7.70831010000000028 -1.94856370000000001 5.212604"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[4]" " -type \"float3\" 8.80155369999999948 -2.38263079999999983 5.9395642000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[5]" " -type \"float3\" 8.09444620000000015 -1.94856370000000001 6.212604"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[6]" " -type \"float3\" 9.50866030000000073 -1.94856370000000001 5.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[7]" " -type \"float3\" 8.80155369999999948 -1.51449689999999992 5.9395642000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[8]" " -type \"float3\" 3.4656693999999999 -1.94856370000000001 6.850843"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[9]" " -type \"float3\" 2.75856259999999986 -1.51449689999999992 7.12388279999999963"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[10]" " -type \"float3\" 2.75856259999999986 -2.38263079999999983 7.12388279999999963"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[11]" " -type \"float3\" 2.051456 -1.94856370000000001 7.3969225999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[12]" " -type \"float3\" 3.14469930000000009 -2.38263079999999983 8.12388319999999986"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[13]" " -type \"float3\" 2.43759270000000017 -1.94856370000000001 8.39692310000000042"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[14]" " -type \"float3\" 3.85180619999999996 -1.94856370000000001 7.850843"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[15]" " -type \"float3\" 3.14469930000000009 -1.51449689999999992 8.12388319999999986"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[16]" " -type \"float3\" 7.70831010000000028 -1.94856370000000001 5.212604"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[17]" " -type \"float3\" 7.00120309999999968 -1.51449689999999992 5.48564390000000035"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[18]" " -type \"float3\" 7.00120309999999968 -2.38263079999999983 5.48564390000000035"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[19]" " -type \"float3\" 6.2940965000000002 -1.94856370000000001 5.75868369999999974"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[20]" " -type \"float3\" 7.3873401000000003 -2.38263079999999983 6.48564390000000035"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[21]" " -type \"float3\" 6.680233 -1.94856370000000001 6.75868369999999974"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[22]" " -type \"float3\" 8.09444710000000001 -1.94856370000000001 6.212604"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[23]" " -type \"float3\" 7.3873401000000003 -1.51449689999999992 6.48564390000000035"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[24]" " -type \"float3\" 6.2940965000000002 -1.94856370000000001 5.75868369999999974"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[25]" " -type \"float3\" 5.58698989999999984 -1.51449689999999992 6.03172350000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[26]" " -type \"float3\" 5.58698989999999984 -2.38263079999999983 6.03172350000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[27]" " -type \"float3\" 4.87988279999999985 -1.94856370000000001 6.30476330000000029"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[28]" " -type \"float3\" 5.97312639999999995 -2.38263079999999983 7.03172350000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[29]" " -type \"float3\" 5.26601979999999958 -1.94856370000000001 7.30476330000000029"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[30]" " -type \"float3\" 6.680233 -1.94856370000000001 6.75868369999999974"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[31]" " -type \"float3\" 5.97312639999999995 -1.51449689999999992 7.03172350000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[32]" " -type \"float3\" 4.87988279999999985 -1.94856380000000007 6.30476330000000029"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[33]" " -type \"float3\" 4.17277620000000038 -1.51449689999999992 6.57780309999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[34]" " -type \"float3\" 4.17277620000000038 -2.38263079999999983 6.57780309999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[35]" " -type \"float3\" 3.46566919999999978 -1.94856370000000001 6.850843"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[36]" " -type \"float3\" 4.55891279999999988 -2.38263079999999983 7.57780309999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[37]" " -type \"float3\" 3.8518059 -1.94856370000000001 7.850843"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[38]" " -type \"float3\" 5.26601979999999958 -1.94856380000000007 7.30476330000000029"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[39]" " -type \"float3\" 4.55891279999999988 -1.51449689999999992 7.57780309999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[40]" " -type \"float3\" 8.24859140000000046 -2.38263079999999983 4.50752639999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[41]" " -type \"float3\" 7.54148439999999987 -1.94856370000000001 4.78056619999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[42]" " -type \"float3\" 8.26127239999999929 -1.94856370000000001 6.64464189999999988"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[43]" " -type \"float3\" 8.968379 -2.38263079999999983 6.37160159999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[44]" " -type \"float3\" 9.67548560000000002 -1.94856370000000001 6.0985617999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[45]" " -type \"float3\" 8.955698 -1.94856370000000001 4.23448660000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[46]" " -type \"float3\" 2.591737 -2.38263079999999983 6.69184490000000043"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[47]" " -type \"float3\" 1.88463040000000004 -1.94856370000000001 6.9648848000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[48]" " -type \"float3\" 2.60441829999999985 -1.94856370000000001 8.82896039999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[49]" " -type \"float3\" 3.31152490000000022 -2.38263079999999983 8.55592060000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[50]" " -type \"float3\" 4.01863189999999992 -1.94856370000000001 8.28288079999999916"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[51]" " -type \"float3\" 3.29884390000000005 -1.94856370000000001 6.41880510000000015"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[52]" " -type \"float3\" 6.83437780000000039 -2.38263079999999983 5.053606"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[53]" " -type \"float3\" 6.1272707000000004 -1.94856370000000001 5.32664589999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[54]" " -type \"float3\" 6.84705880000000011 -1.94856370000000001 7.19072150000000043"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[55]" " -type \"float3\" 7.55416539999999959 -2.38263079999999983 6.91768170000000016"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[56]" " -type \"float3\" 8.26127239999999929 -1.94856370000000001 6.64464140000000025"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[57]" " -type \"float3\" 7.54148439999999987 -1.94856370000000001 4.78056619999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[58]" " -type \"float3\" 5.42016410000000004 -2.38263079999999983 5.59968570000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[59]" " -type \"float3\" 4.71305749999999968 -1.94856370000000001 5.8727254999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[60]" " -type \"float3\" 5.43284509999999976 -1.94856370000000001 7.7368011000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[61]" " -type \"float3\" 6.13995219999999975 -2.38263079999999983 7.46376129999999982"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[62]" " -type \"float3\" 6.84705880000000011 -1.94856370000000001 7.19072150000000043"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[63]" " -type \"float3\" 6.1272707000000004 -1.94856370000000001 5.32664589999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[64]" " -type \"float3\" 4.00595049999999997 -2.38263079999999983 6.14576529999999988"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[65]" " -type \"float3\" 3.2988436000000001 -1.94856370000000001 6.41880559999999978"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[66]" " -type \"float3\" 4.01863149999999969 -1.94856370000000001 8.28288079999999916"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[67]" " -type \"float3\" 4.72573850000000029 -2.38263079999999983 8.009841"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[68]" " -type \"float3\" 5.43284509999999976 -1.94856380000000007 7.7368011000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[69]" " -type \"float3\" 4.71305749999999968 -1.94856380000000007 5.8727254999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[70]" " -type \"float3\" 8.24859140000000046 -2.38263079999999983 4.50752639999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[71]" " -type \"float3\" 7.54148439999999987 -1.94856370000000001 4.78056619999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[72]" " -type \"float3\" 8.26127239999999929 -1.94856370000000001 6.64464189999999988"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[73]" " -type \"float3\" 8.968379 -2.38263079999999983 6.37160159999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[74]" " -type \"float3\" 9.67548560000000002 -1.94856370000000001 6.0985617999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[75]" " -type \"float3\" 8.955698 -1.94856370000000001 4.23448660000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[76]" " -type \"float3\" 2.591737 -2.38263079999999983 6.69184490000000043"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[77]" " -type \"float3\" 1.88463040000000004 -1.94856370000000001 6.9648848000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[78]" " -type \"float3\" 2.60441829999999985 -1.94856370000000001 8.82896039999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[79]" " -type \"float3\" 3.31152490000000022 -2.38263079999999983 8.55592060000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[80]" " -type \"float3\" 4.01863189999999992 -1.94856370000000001 8.28288079999999916"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[81]" " -type \"float3\" 3.29884390000000005 -1.94856370000000001 6.41880510000000015"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[82]" " -type \"float3\" 6.83437780000000039 -2.38263079999999983 5.053606"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[83]" " -type \"float3\" 6.1272707000000004 -1.94856370000000001 5.32664589999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[84]" " -type \"float3\" 6.84705880000000011 -1.94856370000000001 7.19072150000000043"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[85]" " -type \"float3\" 7.55416539999999959 -2.38263079999999983 6.91768170000000016"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[86]" " -type \"float3\" 8.26127239999999929 -1.94856370000000001 6.64464140000000025"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[87]" " -type \"float3\" 7.54148439999999987 -1.94856370000000001 4.78056619999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[88]" " -type \"float3\" 14.08058 -1.07653090000000007 2.752037"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[89]" " -type \"float3\" 9.12252329999999922 -1.07653090000000007 4.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[90]" " -type \"float3\" 9.12252329999999922 -1.94856380000000007 4.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[91]" " -type \"float3\" 14.08058 -1.94856380000000007 2.752037"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[92]" " -type \"float3\" 13.913754 -1.94856370000000001 2.31999950000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[93]" " -type \"float3\" 8.955698 -1.94856370000000001 4.23448660000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[94]" " -type \"float3\" 9.67548560000000002 -1.94856370000000001 6.0985617999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[95]" " -type \"float3\" 14.633542 -1.94856370000000001 4.18407489999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[96]" " -type \"float3\" 14.466716 -1.94856380000000007 3.752037"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[97]" " -type \"float3\" 9.50866030000000073 -1.94856380000000007 5.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[98]" " -type \"float3\" 9.50866030000000073 -1.07653090000000007 5.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[99]" " -type \"float3\" 14.466716 -1.07653090000000007 3.752037"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[100]" " -type \"float3\" 5.42016410000000004 -2.38263079999999983 5.59968570000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[101]" " -type \"float3\" 4.71305749999999968 -1.94856370000000001 5.8727254999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[102]" " -type \"float3\" 5.43284509999999976 -1.94856370000000001 7.7368011000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[103]" " -type \"float3\" 6.13995219999999975 -2.38263079999999983 7.46376129999999982"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[104]" " -type \"float3\" 6.84705880000000011 -1.94856370000000001 7.19072150000000043"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[105]" " -type \"float3\" 6.1272707000000004 -1.94856370000000001 5.32664589999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[106]" " -type \"float3\" 4.00595049999999997 -2.38263079999999983 6.14576529999999988"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[107]" " -type \"float3\" 3.2988436000000001 -1.94856370000000001 6.41880559999999978"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[108]" " -type \"float3\" 4.01863149999999969 -1.94856370000000001 8.28288079999999916"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[109]" " -type \"float3\" 4.72573850000000029 -2.38263079999999983 8.009841"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[110]" " -type \"float3\" 5.43284509999999976 -1.94856380000000007 7.7368011000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[111]" " -type \"float3\" 4.71305749999999968 -1.94856380000000007 5.8727254999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[112]" " -type \"float3\" 8.24859140000000046 -2.51285049999999988 4.50752639999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[113]" " -type \"float3\" 7.4354180999999997 -2.01367379999999985 4.82152220000000042"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[114]" " -type \"float3\" 8.15520670000000081 -2.01367379999999985 6.6855973999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[115]" " -type \"float3\" 8.968379 -2.51285049999999988 6.37160159999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[116]" " -type \"float3\" 9.78155229999999953 -2.01367379999999985 6.05760569999999987"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[117]" " -type \"float3\" 9.06176379999999959 -2.01367379999999985 4.19353059999999989"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[118]" " -type \"float3\" 2.591737 -2.51285049999999988 6.69184490000000043"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[119]" " -type \"float3\" 1.7785645000000001 -2.01367379999999985 7.00584079999999965"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[120]" " -type \"float3\" 2.49835230000000008 -2.01367379999999985 8.869916"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[121]" " -type \"float3\" 3.31152490000000022 -2.51285049999999988 8.55592060000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[122]" " -type \"float3\" 4.12469820000000009 -2.01367379999999985 8.24192430000000087"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[123]" " -type \"float3\" 3.40491030000000006 -2.01367379999999985 6.37784909999999972"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[124]" " -type \"float3\" 6.83437780000000039 -2.51285049999999988 5.053606"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[125]" " -type \"float3\" 6.02120489999999986 -2.01367379999999985 5.36760190000000037"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[126]" " -type \"float3\" 6.74099249999999994 -2.01367379999999985 7.23167749999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[127]" " -type \"float3\" 7.55416539999999959 -2.51285049999999988 6.91768170000000016"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[128]" " -type \"float3\" 8.36733820000000073 -2.01367379999999985 6.60368590000000033"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[129]" " -type \"float3\" 7.64755059999999975 -2.01367379999999985 4.73961020000000044"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[130]" " -type \"float3\" 13.913754 -2.04064319999999988 2.31999950000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[131]" " -type \"float3\" 8.955698 -2.04064319999999988 4.23448660000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[132]" " -type \"float3\" 9.67548560000000002 -2.04064319999999988 6.0985617999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[133]" " -type \"float3\" 14.633542 -2.04064319999999988 4.18407489999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[134]" " -type \"float3\" 5.42016410000000004 -2.51285049999999988 5.59968570000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[135]" " -type \"float3\" 4.60699129999999979 -2.01367379999999985 5.91368150000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[136]" " -type \"float3\" 5.32677940000000039 -2.01367379999999985 7.77775719999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[137]" " -type \"float3\" 6.13995219999999975 -2.51285049999999988 7.46376129999999982"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[138]" " -type \"float3\" 6.953125 -2.01367379999999985 7.1497655"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[139]" " -type \"float3\" 6.23333690000000029 -2.01367379999999985 5.2856898000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[140]" " -type \"float3\" 4.00595049999999997 -2.51285049999999988 6.14576529999999988"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[141]" " -type \"float3\" 3.19277759999999988 -2.01367379999999985 6.4597610999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[142]" " -type \"float3\" 3.91256549999999992 -2.01367379999999985 8.32383629999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[143]" " -type \"float3\" 4.72573850000000029 -2.51285049999999988 8.009841"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[144]" " -type \"float3\" 5.53891129999999965 -2.01367379999999985 7.69584509999999966"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[145]" " -type \"float3\" 4.81912330000000022 -2.01367379999999985 5.83176950000000005"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[146]" " -type \"float3\" 5.58698989999999984 -1.51449689999999992 6.03172350000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[147]" " -type \"float3\" 4.87988279999999985 -1.08042989999999994 6.30476330000000029"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[148]" " -type \"float3\" 4.87988279999999985 -1.94856370000000001 6.30476330000000029"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[149]" " -type \"float3\" 4.17277620000000038 -1.51449689999999992 6.57780309999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[150]" " -type \"float3\" 5.26601979999999958 -1.94856370000000001 7.30476330000000029"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[151]" " -type \"float3\" 4.55891279999999988 -1.51449689999999992 7.57780309999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[152]" " -type \"float3\" 5.97312639999999995 -1.51449689999999992 7.03172350000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[153]" " -type \"float3\" 5.26601979999999958 -1.08042989999999994 7.30476330000000029"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[154]" " -type \"float3\" 8.41541669999999975 -1.51449689999999992 4.9395642000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[155]" " -type \"float3\" 7.70831010000000028 -1.08042989999999994 5.212604"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[156]" " -type \"float3\" 7.70831010000000028 -1.94856370000000001 5.212604"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[157]" " -type \"float3\" 7.00120309999999968 -1.51449689999999992 5.48564390000000035"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[158]" " -type \"float3\" 8.09444620000000015 -1.94856370000000001 6.212604"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[159]" " -type \"float3\" 7.38733959999999978 -1.51449689999999992 6.48564390000000035"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[160]" " -type \"float3\" 8.80155369999999948 -1.51449689999999992 5.9395642000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[161]" " -type \"float3\" 8.09444620000000015 -1.08042989999999994 6.212604"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[162]" " -type \"float3\" 7.00120309999999968 -1.51449689999999992 5.48564390000000035"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[163]" " -type \"float3\" 6.2940965000000002 -1.08042989999999994 5.75868369999999974"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[164]" " -type \"float3\" 6.2940965000000002 -1.94856370000000001 5.75868369999999974"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[165]" " -type \"float3\" 5.58698989999999984 -1.51449689999999992 6.03172350000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[166]" " -type \"float3\" 6.680233 -1.94856370000000001 6.75868369999999974"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[167]" " -type \"float3\" 5.97312639999999995 -1.51449689999999992 7.03172350000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[168]" " -type \"float3\" 7.38733959999999978 -1.51449689999999992 6.48564390000000035"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[169]" " -type \"float3\" 6.680233 -1.08042989999999994 6.75868369999999974"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[170]" " -type \"float3\" 9.82963089999999973 -1.51449670000000003 4.39348459999999985"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[171]" " -type \"float3\" 9.12252329999999922 -1.08042980000000011 4.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[172]" " -type \"float3\" 9.12252329999999922 -1.94856370000000001 4.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[173]" " -type \"float3\" 8.41541669999999975 -1.51449670000000003 4.9395642000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[174]" " -type \"float3\" 9.50866030000000073 -1.94856370000000001 5.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[175]" " -type \"float3\" 8.80155369999999948 -1.51449670000000003 5.9395642000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[176]" " -type \"float3\" 10.215767 -1.51449670000000003 5.39348459999999985"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[177]" " -type \"float3\" 9.50866030000000073 -1.08042980000000011 5.66652440000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[178]" " -type \"float3\" 4.17277620000000038 -1.51449670000000003 6.57780309999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[179]" " -type \"float3\" 3.4656693999999999 -1.08042980000000011 6.850843"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[180]" " -type \"float3\" 3.4656693999999999 -1.94856370000000001 6.850843"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[181]" " -type \"float3\" 2.75856259999999986 -1.51449670000000003 7.12388279999999963"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[182]" " -type \"float3\" 3.85180619999999996 -1.94856370000000001 7.850843"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[183]" " -type \"float3\" 3.14469930000000009 -1.51449670000000003 8.12388319999999986"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[184]" " -type \"float3\" 4.55891279999999988 -1.51449670000000003 7.57780309999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[185]" " -type \"float3\" 3.85180619999999996 -1.08042980000000011 7.850843"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[186]" " -type \"float3\" 2.690908 1.0284662 4.94558859999999978"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[187]" " -type \"float3\" 2.39086769999999982 1.0284662 5.06144519999999964"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[188]" " -type \"float3\" 2.71711519999999984 -1.46193590000000007 4.88641210000000026"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[189]" " -type \"float3\" 2.331691 -1.46193590000000007 5.03523829999999961"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[190]" " -type \"float3\" 2.8659412999999998 -1.46193590000000007 5.27183579999999985"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[191]" " -type \"float3\" 2.48051710000000014 -1.46193590000000007 5.42066240000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[192]" " -type \"float3\" 2.80676460000000016 1.0284662 5.24562880000000042"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[193]" " -type \"float3\" 2.50672439999999996 1.0284662 5.36148549999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[194]" " -type \"float3\" 2.8659412999999998 -0.58184952000000001 5.27183579999999985"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[195]" " -type \"float3\" 2.71711519999999984 -0.58184952000000001 4.88641210000000026"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[196]" " -type \"float3\" 2.331691 -0.58184952000000001 5.03523829999999961"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[197]" " -type \"float3\" 2.48051710000000014 -0.58184952000000001 5.42066240000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[198]" " -type \"float3\" 14.160361 1.0284662 3.57971640000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[199]" " -type \"float3\" 13.86032 1.0284662 3.69557309999999983"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[200]" " -type \"float3\" 14.186567 -1.46193590000000007 3.52054"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[201]" " -type \"float3\" 13.801144 -1.46193590000000007 3.66936609999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[202]" " -type \"float3\" 14.335394 -1.46193590000000007 3.90596390000000016"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[203]" " -type \"float3\" 13.94997 -1.46193590000000007 4.05479"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[204]" " -type \"float3\" 14.276217 1.0284662 3.87975670000000017"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[205]" " -type \"float3\" 13.976177 1.0284662 3.99561330000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[206]" " -type \"float3\" 14.335394 -0.58184952000000001 3.90596390000000016"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[207]" " -type \"float3\" 14.186567 -0.58184952000000001 3.52054"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[208]" " -type \"float3\" 13.801144 -0.58184952000000001 3.66936609999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[209]" " -type \"float3\" 13.94997 -0.58184952000000001 4.05479"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[210]" " -type \"float3\" 13.131123 1.0284662 0.91423911000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[211]" " -type \"float3\" 12.831082 1.0284662 1.03009580000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[212]" " -type \"float3\" 13.157329 -1.46193590000000007 0.85506265999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[213]" " -type \"float3\" 12.771905 -1.46193590000000007 1.00388879999999991"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[214]" " -type \"float3\" 13.306155 -1.46193590000000007 1.24048660000000011"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[215]" " -type \"float3\" 12.920732 -1.46193590000000007 1.38931270000000007"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[216]" " -type \"float3\" 13.246979 1.0284662 1.2142793999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[217]" " -type \"float3\" 12.946939 1.0284662 1.33013610000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[218]" " -type \"float3\" 13.306155 -0.58184952000000001 1.24048660000000011"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[219]" " -type \"float3\" 13.157329 -0.58184952000000001 0.85506265999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[220]" " -type \"float3\" 12.771905 -0.58184952000000001 1.00388879999999991"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[221]" " -type \"float3\" 12.920732 -0.58184952000000001 1.38931270000000007"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[222]" " -type \"float3\" 3.72462459999999984 1.0284662 7.62266349999999981"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[223]" " -type \"float3\" 3.42458440000000008 1.0284662 7.73852009999999968"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[224]" " -type \"float3\" 3.75083179999999983 -1.46193590000000007 7.56348660000000006"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[225]" " -type \"float3\" 3.3654077 -1.46193590000000007 7.71231319999999965"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[226]" " -type \"float3\" 3.899658 -1.46193590000000007 7.94891069999999988"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[227]" " -type \"float3\" 3.51423379999999996 -1.46193590000000007 8.09773730000000036"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[228]" " -type \"float3\" 3.84048129999999999 1.0284662 7.92270369999999957"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[229]" " -type \"float3\" 3.540441 1.0284662 8.0385598999999992"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[230]" " -type \"float3\" 3.899658 -0.58184952000000001 7.94891069999999988"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[231]" " -type \"float3\" 3.75083179999999983 -0.58184952000000001 7.56348660000000006"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[232]" " -type \"float3\" 3.3654077 -0.58184952000000001 7.71231319999999965"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[233]" " -type \"float3\" 3.51423379999999996 -0.58184952000000001 8.09773730000000036"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[234]" " -type \"float3\" 8.40273569999999914 -1.94856370000000001 2.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[235]" " -type \"float3\" 7.69562909999999967 -1.51449689999999992 3.07548880000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[236]" " -type \"float3\" 7.69562909999999967 -2.38263079999999983 3.07548880000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[237]" " -type \"float3\" 6.98852209999999996 -1.94856370000000001 3.34852859999999986"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[238]" " -type \"float3\" 8.08176519999999954 -2.38263079999999983 4.075489"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[239]" " -type \"float3\" 7.37465860000000006 -1.94856370000000001 4.34852889999999981"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[240]" " -type \"float3\" 8.78887270000000065 -1.94856370000000001 3.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[241]" " -type \"float3\" 8.08176519999999954 -1.51449689999999992 4.075489"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[242]" " -type \"float3\" 2.74588160000000014 -1.94856370000000001 4.98676779999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[243]" " -type \"float3\" 2.03877469999999983 -1.51449689999999992 5.25980760000000025"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[244]" " -type \"float3\" 2.03877469999999983 -2.38263079999999983 5.25980760000000025"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[245]" " -type \"float3\" 1.33166830000000003 -1.94856370000000001 5.53284739999999964"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[246]" " -type \"float3\" 2.42491149999999989 -2.38263079999999983 6.25980760000000025"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[247]" " -type \"float3\" 1.71780489999999997 -1.94856370000000001 6.53284739999999964"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[248]" " -type \"float3\" 3.13201829999999992 -1.94856370000000001 5.98676779999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[249]" " -type \"float3\" 2.42491149999999989 -1.51449689999999992 6.25980760000000025"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[250]" " -type \"float3\" 6.98852209999999996 -1.94856370000000001 3.34852859999999986"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[251]" " -type \"float3\" 6.2814154999999996 -1.51449689999999992 3.62156840000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[252]" " -type \"float3\" 6.2814154999999996 -2.38263079999999983 3.62156840000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[253]" " -type \"float3\" 5.57430839999999961 -1.94856370000000001 3.8946082999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[254]" " -type \"float3\" 6.667552 -2.38263079999999983 4.62156870000000009"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[255]" " -type \"float3\" 5.96044540000000023 -1.94856370000000001 4.89460850000000036"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[256]" " -type \"float3\" 7.37465909999999969 -1.94856370000000001 4.34852889999999981"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[257]" " -type \"float3\" 6.667552 -1.51449689999999992 4.62156870000000009"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[258]" " -type \"float3\" 5.57430890000000012 -1.94856370000000001 3.8946082999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[259]" " -type \"float3\" 4.86720180000000013 -1.51449689999999992 4.16764829999999975"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[260]" " -type \"float3\" 4.86720180000000013 -2.38263079999999983 4.16764829999999975"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[261]" " -type \"float3\" 4.16009519999999977 -1.94856370000000001 4.44068810000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[262]" " -type \"float3\" 5.25333830000000024 -2.38263079999999983 5.16764829999999975"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[263]" " -type \"float3\" 4.54623169999999988 -1.94856370000000001 5.44068810000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[264]" " -type \"float3\" 5.96044540000000023 -1.94856370000000001 4.89460850000000036"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[265]" " -type \"float3\" 5.25333830000000024 -1.51449689999999992 5.16764829999999975"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[266]" " -type \"float3\" 4.16009519999999977 -1.94856380000000007 4.44068810000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[267]" " -type \"float3\" 3.45298840000000018 -1.51449689999999992 4.713728"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[268]" " -type \"float3\" 3.45298809999999978 -2.38263079999999983 4.713728"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[269]" " -type \"float3\" 2.74588130000000019 -1.94856370000000001 4.98676779999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[270]" " -type \"float3\" 3.83912489999999984 -2.38263079999999983 5.713728"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[271]" " -type \"float3\" 3.13201809999999981 -1.94856370000000001 5.98676779999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[272]" " -type \"float3\" 4.54623169999999988 -1.94856380000000007 5.44068810000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[273]" " -type \"float3\" 3.83912489999999984 -1.51449689999999992 5.713728"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[274]" " -type \"float3\" 7.52880329999999987 -2.38263079999999983 2.643451"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[275]" " -type \"float3\" 6.82169679999999978 -1.94856370000000001 2.916491"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[276]" " -type \"float3\" 7.54148439999999987 -1.94856370000000001 4.78056619999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[277]" " -type \"float3\" 8.24859140000000046 -2.38263079999999983 4.50752639999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[278]" " -type \"float3\" 8.955698 -1.94856370000000001 4.23448660000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[279]" " -type \"float3\" 8.23591039999999985 -1.94856370000000001 2.37041119999999994"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[280]" " -type \"float3\" 1.87194919999999998 -2.38263079999999983 4.82776979999999956"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[281]" " -type \"float3\" 1.16484260000000006 -1.94856370000000001 5.10080959999999983"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[282]" " -type \"float3\" 1.88463040000000004 -1.94856370000000001 6.96488520000000033"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[283]" " -type \"float3\" 2.591737 -2.38263079999999983 6.69184540000000005"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[284]" " -type \"float3\" 3.29884390000000005 -1.94856370000000001 6.41880510000000015"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[285]" " -type \"float3\" 2.579056 -1.94856370000000001 4.55472989999999989"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[286]" " -type \"float3\" 6.11458969999999979 -2.38263079999999983 3.1895308"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[287]" " -type \"float3\" 5.40748310000000032 -1.94856370000000001 3.46257070000000011"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[288]" " -type \"float3\" 6.1272707000000004 -1.94856370000000001 5.32664589999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[289]" " -type \"float3\" 6.83437780000000039 -2.38263079999999983 5.053606"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[290]" " -type \"float3\" 7.54148439999999987 -1.94856370000000001 4.78056619999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[291]" " -type \"float3\" 6.82169679999999978 -1.94856370000000001 2.91649080000000005"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[292]" " -type \"float3\" 4.70037649999999996 -2.38263079999999983 3.73561049999999994"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[293]" " -type \"float3\" 3.99326939999999997 -1.94856370000000001 4.00865030000000022"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[294]" " -type \"float3\" 4.71305749999999968 -1.94856370000000001 5.8727254999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[295]" " -type \"float3\" 5.42016410000000004 -2.38263079999999983 5.59968570000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[296]" " -type \"float3\" 6.1272707000000004 -1.94856370000000001 5.32664589999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[297]" " -type \"float3\" 5.40748310000000032 -1.94856370000000001 3.46257070000000011"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[298]" " -type \"float3\" 3.28616259999999993 -2.38263079999999983 4.28169009999999961"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[299]" " -type \"float3\" 2.5790557999999999 -1.94856370000000001 4.55472989999999989"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[300]" " -type \"float3\" 3.2988436000000001 -1.94856370000000001 6.41880559999999978"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[301]" " -type \"float3\" 4.00595049999999997 -2.38263079999999983 6.14576580000000039"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[302]" " -type \"float3\" 4.71305749999999968 -1.94856380000000007 5.8727254999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[303]" " -type \"float3\" 3.99326969999999992 -1.94856380000000007 4.00865030000000022"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[304]" " -type \"float3\" 7.52880329999999987 -2.38263079999999983 2.643451"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[305]" " -type \"float3\" 6.82169679999999978 -1.94856370000000001 2.916491"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[306]" " -type \"float3\" 7.54148439999999987 -1.94856370000000001 4.78056619999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[307]" " -type \"float3\" 8.24859140000000046 -2.38263079999999983 4.50752639999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[308]" " -type \"float3\" 8.955698 -1.94856370000000001 4.23448660000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[309]" " -type \"float3\" 8.23591039999999985 -1.94856370000000001 2.37041119999999994"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[310]" " -type \"float3\" 1.87194919999999998 -2.38263079999999983 4.82776979999999956"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[311]" " -type \"float3\" 1.16484260000000006 -1.94856370000000001 5.10080959999999983"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[312]" " -type \"float3\" 1.88463040000000004 -1.94856370000000001 6.96488520000000033"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[313]" " -type \"float3\" 2.591737 -2.38263079999999983 6.69184540000000005"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[314]" " -type \"float3\" 3.29884390000000005 -1.94856370000000001 6.41880510000000015"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[315]" " -type \"float3\" 2.579056 -1.94856370000000001 4.55472989999999989"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[316]" " -type \"float3\" 6.11458969999999979 -2.38263079999999983 3.1895308"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[317]" " -type \"float3\" 5.40748310000000032 -1.94856370000000001 3.46257070000000011"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[318]" " -type \"float3\" 6.1272707000000004 -1.94856370000000001 5.32664589999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[319]" " -type \"float3\" 6.83437780000000039 -2.38263079999999983 5.053606"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[320]" " -type \"float3\" 7.54148439999999987 -1.94856370000000001 4.78056619999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[321]" " -type \"float3\" 6.82169679999999978 -1.94856370000000001 2.91649080000000005"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[322]" " -type \"float3\" 13.360791 -1.07653090000000007 0.88796180000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[323]" " -type \"float3\" 8.40273569999999914 -1.07653090000000007 2.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[324]" " -type \"float3\" 8.40273569999999914 -1.94856380000000007 2.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[325]" " -type \"float3\" 13.360791 -1.94856380000000007 0.88796180000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[326]" " -type \"float3\" 13.193966 -1.94856370000000001 0.45592411999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[327]" " -type \"float3\" 8.23591039999999985 -1.94856370000000001 2.37041119999999994"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[328]" " -type \"float3\" 8.955698 -1.94856370000000001 4.23448660000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[329]" " -type \"float3\" 13.913754 -1.94856370000000001 2.31999950000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[330]" " -type \"float3\" 13.746928 -1.94856380000000007 1.88796190000000008"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[331]" " -type \"float3\" 8.78887270000000065 -1.94856380000000007 3.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[332]" " -type \"float3\" 8.78887270000000065 -1.07653090000000007 3.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[333]" " -type \"float3\" 13.746928 -1.07653090000000007 1.88796190000000008"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[334]" " -type \"float3\" 4.70037649999999996 -2.38263079999999983 3.73561049999999994"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[335]" " -type \"float3\" 3.99326939999999997 -1.94856370000000001 4.00865030000000022"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[336]" " -type \"float3\" 4.71305749999999968 -1.94856370000000001 5.8727254999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[337]" " -type \"float3\" 5.42016410000000004 -2.38263079999999983 5.59968570000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[338]" " -type \"float3\" 6.1272707000000004 -1.94856370000000001 5.32664589999999993"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[339]" " -type \"float3\" 5.40748310000000032 -1.94856370000000001 3.46257070000000011"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[340]" " -type \"float3\" 3.28616259999999993 -2.38263079999999983 4.28169009999999961"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[341]" " -type \"float3\" 2.5790557999999999 -1.94856370000000001 4.55472989999999989"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[342]" " -type \"float3\" 3.2988436000000001 -1.94856370000000001 6.41880559999999978"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[343]" " -type \"float3\" 4.00595049999999997 -2.38263079999999983 6.14576580000000039"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[344]" " -type \"float3\" 4.71305749999999968 -1.94856380000000007 5.8727254999999996"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[345]" " -type \"float3\" 3.99326969999999992 -1.94856380000000007 4.00865030000000022"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[346]" " -type \"float3\" 7.52880329999999987 -2.51285049999999988 2.643451"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[347]" " -type \"float3\" 6.71563049999999961 -2.01367379999999985 2.95744680000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[348]" " -type \"float3\" 7.43541860000000021 -2.01367379999999985 4.82152220000000042"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[349]" " -type \"float3\" 8.24859140000000046 -2.51285049999999988 4.50752639999999971"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[350]" " -type \"float3\" 9.06176379999999959 -2.01367379999999985 4.19353059999999989"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[351]" " -type \"float3\" 8.34197619999999951 -2.01367379999999985 2.32945510000000011"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[352]" " -type \"float3\" 1.87194919999999998 -2.51285049999999988 4.82776979999999956"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[353]" " -type \"float3\" 1.05877660000000007 -2.01367379999999985 5.14176560000000027"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[354]" " -type \"float3\" 1.7785645000000001 -2.01367379999999985 7.00584079999999965"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[355]" " -type \"float3\" 2.591737 -2.51285049999999988 6.69184540000000005"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[356]" " -type \"float3\" 3.40491030000000006 -2.01367379999999985 6.37784909999999972"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[357]" " -type \"float3\" 2.68512249999999986 -2.01367379999999985 4.51377390000000034"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[358]" " -type \"float3\" 6.11458969999999979 -2.51285049999999988 3.1895308"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[359]" " -type \"float3\" 5.30141690000000043 -2.01367379999999985 3.5035267000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[360]" " -type \"float3\" 6.02120489999999986 -2.01367379999999985 5.36760190000000037"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[361]" " -type \"float3\" 6.83437780000000039 -2.51285049999999988 5.053606"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[362]" " -type \"float3\" 7.64755059999999975 -2.01367379999999985 4.73961020000000044"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[363]" " -type \"float3\" 6.927763 -2.01367379999999985 2.875535"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[364]" " -type \"float3\" 13.193966 -2.04064319999999988 0.45592411999999999"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[365]" " -type \"float3\" 8.23591039999999985 -2.04064319999999988 2.37041119999999994"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[366]" " -type \"float3\" 8.955698 -2.04064319999999988 4.23448660000000032"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[367]" " -type \"float3\" 13.913754 -2.04064319999999988 2.31999950000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[368]" " -type \"float3\" 4.70037649999999996 -2.51285049999999988 3.73561049999999994"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[369]" " -type \"float3\" 3.88720350000000003 -2.01367379999999985 4.04960629999999977"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[370]" " -type \"float3\" 4.60699129999999979 -2.01367379999999985 5.91368150000000004"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[371]" " -type \"float3\" 5.42016410000000004 -2.51285049999999988 5.59968570000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[372]" " -type \"float3\" 6.23333690000000029 -2.01367379999999985 5.2856898000000001"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[373]" " -type \"float3\" 5.51354930000000021 -2.01367379999999985 3.42161459999999984"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[374]" " -type \"float3\" 3.28616259999999993 -2.51285049999999988 4.28169009999999961"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[375]" " -type \"float3\" 2.47298980000000013 -2.01367379999999985 4.595686"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[376]" " -type \"float3\" 3.19277759999999988 -2.01367379999999985 6.45976160000000021"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[377]" " -type \"float3\" 4.00595049999999997 -2.51285049999999988 6.14576580000000039"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[378]" " -type \"float3\" 4.81912330000000022 -2.01367379999999985 5.83176950000000005"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[379]" " -type \"float3\" 4.09933570000000014 -2.01367379999999985 3.96769429999999979"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[380]" " -type \"float3\" 4.86720180000000013 -1.51449689999999992 4.16764829999999975"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[381]" " -type \"float3\" 4.16009519999999977 -1.08042989999999994 4.44068810000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[382]" " -type \"float3\" 4.16009519999999977 -1.94856370000000001 4.44068810000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[383]" " -type \"float3\" 3.45298840000000018 -1.51449689999999992 4.713728"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[384]" " -type \"float3\" 4.54623169999999988 -1.94856370000000001 5.44068810000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[385]" " -type \"float3\" 3.83912489999999984 -1.51449689999999992 5.713728"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[386]" " -type \"float3\" 5.25333830000000024 -1.51449689999999992 5.16764829999999975"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[387]" " -type \"float3\" 4.54623169999999988 -1.08042989999999994 5.44068810000000003"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[388]" " -type \"float3\" 7.69562909999999967 -1.51449689999999992 3.07548880000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[389]" " -type \"float3\" 6.98852209999999996 -1.08042989999999994 3.34852859999999986"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[390]" " -type \"float3\" 6.98852209999999996 -1.94856370000000001 3.34852859999999986"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[391]" " -type \"float3\" 6.2814154999999996 -1.51449689999999992 3.62156840000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[392]" " -type \"float3\" 7.37465860000000006 -1.94856370000000001 4.34852889999999981"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[393]" " -type \"float3\" 6.667552 -1.51449689999999992 4.62156870000000009"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[394]" " -type \"float3\" 8.08176519999999954 -1.51449689999999992 4.07548859999999991"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[395]" " -type \"float3\" 7.37465860000000006 -1.08042989999999994 4.34852889999999981"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[396]" " -type \"float3\" 6.2814154999999996 -1.51449689999999992 3.62156840000000013"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[397]" " -type \"float3\" 5.57430839999999961 -1.08042989999999994 3.8946082999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[398]" " -type \"float3\" 5.57430839999999961 -1.94856370000000001 3.8946082999999998"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[399]" " -type \"float3\" 4.86720180000000013 -1.51449689999999992 4.16764829999999975"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[400]" " -type \"float3\" 5.96044540000000023 -1.94856370000000001 4.89460850000000036"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[401]" " -type \"float3\" 5.25333830000000024 -1.51449689999999992 5.16764829999999975"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[402]" " -type \"float3\" 6.667552 -1.51449689999999992 4.62156870000000009"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[403]" " -type \"float3\" 5.96044540000000023 -1.08042989999999994 4.89460850000000036"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[404]" " -type \"float3\" 9.10984230000000039 -1.51449670000000003 2.52940919999999991"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[405]" " -type \"float3\" 8.40273569999999914 -1.08042980000000011 2.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[406]" " -type \"float3\" 8.40273569999999914 -1.94856370000000001 2.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[407]" " -type \"float3\" 7.69562909999999967 -1.51449670000000003 3.07548880000000002"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[408]" " -type \"float3\" 8.78887270000000065 -1.94856370000000001 3.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[409]" " -type \"float3\" 8.08176519999999954 -1.51449670000000003 4.07548859999999991"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[410]" " -type \"float3\" 9.49597930000000012 -1.51449670000000003 3.52940919999999991"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[411]" " -type \"float3\" 8.78887270000000065 -1.08042980000000011 3.802449"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[412]" " -type \"float3\" 3.45298840000000018 -1.51449670000000003 4.713728"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[413]" " -type \"float3\" 2.74588160000000014 -1.08042980000000011 4.98676779999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[414]" " -type \"float3\" 2.74588160000000014 -1.94856370000000001 4.98676779999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[415]" " -type \"float3\" 2.03877469999999983 -1.51449670000000003 5.25980760000000025"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[416]" " -type \"float3\" 3.13201829999999992 -1.94856370000000001 5.98676779999999997"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[417]" " -type \"float3\" 2.42491149999999989 -1.51449670000000003 6.25980760000000025"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[418]" " -type \"float3\" 3.83912519999999979 -1.51449670000000003 5.713728"
+		
+		2 "|Bumpy_Table:Bumpy_Table|Bumpy_Table:Bumpy_TableShape" "pnts[419]" " -type \"float3\" 3.13201829999999992 -1.08042980000000011 5.98676779999999997";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode transformGeometry -n "transformGeometry1";
@@ -34975,10 +35810,10 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 3 ".st";
+	setAttr -s 4 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 7 ".s";
+	setAttr -s 8 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
@@ -34994,9 +35829,9 @@ select -ne :standardSurface1;
 select -ne :openPBR_shader1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 32 ".dsm";
+	setAttr -s 31 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 76 ".gn";
+	setAttr -s 75 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
@@ -35019,6 +35854,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "Sofa_End_TableRN.phl[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "Sofa_End_Table:groupId2.id" "Sofa_End_TableRN.phl[2]";
 connectAttr ":initialShadingGroup.mwc" "Sofa_End_TableRN.phl[3]";
@@ -35032,7 +35869,6 @@ connectAttr "Cushy_PillowRN.phl[7]" "polyAutoProj1.mp";
 connectAttr "polyTweakUV15.uvtk[0]" "tableShapeRN.phl[5]";
 connectAttr "polyTweakUV15.out" "tableShapeRN.phl[6]";
 connectAttr "tableShapeRN.phl[7]" "polyAutoProj9.mp";
-connectAttr "transformGeometry1.og" "Bumpy_TableRN1.phl[3]";
 connectAttr "groupId116.id" "Rounded_Seat_BaseShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Rounded_Seat_BaseShape.iog.og[0].gco";
 connectAttr "groupId118.id" "Rounded_Seat_CushionShape.iog.og[0].gid";
@@ -35109,7 +35945,6 @@ connectAttr "Sofa_End_TableRNfosterParent1.msg" "Sofa_End_TableRN.fp";
 connectAttr "sharedReferenceNode.sr" "Sofa_End_TableRN.sr";
 connectAttr "sharedReferenceNode.sr" "Cushy_PillowRN.sr";
 connectAttr "sharedReferenceNode.sr" "New_TableRN.sr";
-connectAttr "sharedReferenceNode.sr" "Bumpy_TableRN.sr";
 connectAttr "sharedReferenceNode.sr" "tableShapeRN.sr";
 connectAttr "sharedReferenceNode.sr" "CarpetShapeRN.sr";
 connectAttr "sharedReferenceNode.sr" "Beanbag_ChairRN.sr";
